@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Search For Certificate Information</title>
+        <link href="https://192.168.2.203:8083/RegistrationAuthority/style/bootstrap.min.css" rel="stylesheet">
+        <link href="https://192.168.2.203:8083/RegistrationAuthority/style/font-awesome.css" rel="stylesheet">
+        <link href="https://192.168.2.203:8083/RegistrationAuthority/style/nprogress.css" rel="stylesheet">
+        <link href="https://192.168.2.203:8083/RegistrationAuthority/style/custom.min.css" rel="stylesheet">
+        <script src="https://192.168.2.203:8083/RegistrationAuthority/js/Language.js"></script>
+        <script src="https://192.168.2.203:8083/RegistrationAuthority/js/process_javajs.js"></script>
+        <script type="text/javascript" src="https://192.168.2.203:8083/RegistrationAuthority/js/jquery.js"></script>
+        <link rel="stylesheet" href="https://192.168.2.203:8083/RegistrationAuthority/js/sweetalert.css"/>
+        <script src="https://192.168.2.203:8083/RegistrationAuthority/js/sweetalert-dev.js"></script>
+        <link href="https://192.168.2.203:8083/RegistrationAuthority/style/customportal.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://192.168.2.203:8083/RegistrationAuthority/Css/GlobalAlert.js"></script>
+        <link href="https://192.168.2.203:8083/RegistrationAuthority/Css/smartpaginator.css" rel="stylesheet" type="text/css"/>
+        <script src="https://192.168.2.203:8083/RegistrationAuthority/Css/smartpaginator.js" type="text/javascript"></script>
+        <style>
+            .projects th{font-weight: bold;}
+            .navbar-right{margin-right: 0;padding-right:10px;}
+            fieldset.scheduler-border {
+                border: 1px solid #E6E9ED !important;
+                padding: 0 1.4em 7px 1.4em !important;
+                margin: 0 0 1.5em 0 !important;
+                -webkit-box-shadow:  0px 0px 0px 0px #E6E9ED;
+                box-shadow:  0px 0px 0px 0px #E6E9ED;
+            }
+            .level0{
+                background: red;
+            }
+            .collapse_abc .toggle_abc {
+                background: url("../Images/collapse.gif");
+            }
+            .expand_abc .toggle_abc {
+                background: url("../Images/expand.gif");
+            }
+            .toggle_abc {
+                height: 9px;
+                width: 9px;
+                display: inline-block;   
+            }
+        </style>
+        <script>
+            changeFavicon("../");
+            $(document).ready(function () {
+                onClearEnterprise();
+                onClearPersonal();
+            });
+            function onSubmitEnterprise()
+            {
+                if($("#idMSTBUDGET_CODE_SEARCH").val() === "")
+                {
+                    alert("Vui lòng nhập thông tin cần tìm kiếm");
+                    $("#idMSTBUDGET_CODE_SEARCH").focus();
+                    return false;
+                }
+                var isOption = document.querySelector('input[name="nameCheckEnterprise"]:checked').value;
+                var valueMST = "";
+                var valueBUDGET = "";
+                if(isOption === "CheckMST")
+                {
+                    valueMST = $("#idMSTBUDGET_CODE_SEARCH").val();
+                    valueBUDGET = "";
+                }
+                if(isOption === "CheckBUDGET_CODE")
+                {
+                    valueMST = "";
+                    valueBUDGET = $("#idMSTBUDGET_CODE_SEARCH").val();
+                }
+                $.ajax({
+                    type: "post",
+//                    url: "../GetCertificateInfo",
+                    url: "https://192.168.2.203:8083/RegistrationAuthority/GetCertificateInfo",
+                    data: {
+                        REQUEST_TYPE: 'GetInfoDateExpire',
+                        idCERT_TYPE: 'ENTERPRISE',
+                        idMST: valueMST,
+                        idBUDGET_CODE: valueBUDGET,
+                        KEY_AUTHEN: 'NcP4kkDrpDiAT+AQQ90tjg=='
+                    },
+                    cache: false,
+                    success: function (html)
+                    {
+                        if (html.length > 0)
+                        {
+                            var arr = JSON.parse(html);
+                            if (arr[0].CODE === "0")
+                            {
+                                $("#idTBodyRsEnterprise").empty();
+                                var content = "";
+                                for (var i = 0; i < arr.length; i++) {
+                                    content += "<tr>" +
+                                            "<td>" + arr[i].INDEX + "</td>" +
+                                            "<td>" + arr[i].CERT_TYPE + "</td>" +
+                                            "<td>" + arr[i].MST + "</td>" +
+                                            "<td>" + arr[i].BUDGET_CODE + "</td>" +
+                                            "<td>" + arr[i].DATE_VALID + "</td>" +
+                                            "<td>" + arr[i].DATE_EXPIRE + "</td>" +
+                                            "</tr>";
+                                }
+                                $("#idTBodyRsEnterprise").append(content);
+                                $("#idTableRsEnterprise").css("display", "");
+                            } else {
+                                $("#idTBodyRsEnterprise").empty();
+                                $("#idTableRsEnterprise").css("display", "none");
+                                swal({
+                                    title: "", text: arr[0].MESSAGE, imageUrl: "../Images/icon_error.png", imageSize: "45x45"
+                                });
+                            }
+                        }
+                    }
+                });
+                return false;
+            }
+            function onSubmitPersonal()
+            {
+                if($("#idCMNDPassport_SEARCH").val() === "")
+                {
+                    alert("Vui lòng nhập thông tin cần tìm kiếm");
+                    $("#idCMNDPassport_SEARCH").focus();
+                    return false;
+                }
+                var isOption = document.querySelector('input[name="nameCheckPersonal"]:checked').value;
+                var valueCMND = "";
+                var valuePassport = "";
+                if(isOption === "CheckCMND")
+                {
+                    valueCMND = $("#idCMNDPassport_SEARCH").val();
+                    valuePassport = "";
+                }
+                if(isOption === "CheckPassport")
+                {
+                    valueCMND = "";
+                    valuePassport = $("#idCMNDPassport_SEARCH").val();
+                }
+                $.ajax({
+                    type: "post",
+                    url: "https://192.168.2.203:8083/RegistrationAuthority/GetCertificateInfo",
+                    data: {
+                        REQUEST_TYPE: 'GetInfoDateExpire',
+                        idCERT_TYPE: 'PERSONAL',
+                        idCMND: valueCMND,
+                        idPASSPORT: valuePassport,
+                        KEY_AUTHEN: 'NcP4kkDrpDiAT+AQQ90tjg=='
+                    },
+                    cache: false,
+                    success: function (html)
+                    {
+                        if (html.length > 0)
+                        {
+                            var arr = JSON.parse(html);
+                            if (arr[0].CODE === "0")
+                            {
+                                $("#idTBodyRsPersonal").empty();
+                                var content = "";
+                                for (var i = 0; i < arr.length; i++) {
+                                    content += "<tr>" +
+                                            "<td>" + arr[i].INDEX + "</td>" +
+                                            "<td>" + arr[i].CERT_TYPE + "</td>" +
+                                            "<td>" + arr[i].CMND + "</td>" +
+                                            "<td>" + arr[i].PASSPORT + "</td>" +
+                                            "<td>" + arr[i].DATE_VALID + "</td>" +
+                                            "<td>" + arr[i].DATE_EXPIRE + "</td>" +
+                                            "</tr>";
+                                }
+                                $("#idTBodyRsPersonal").append(content);
+                                $("#idTableRsPersonal").css("display", "");
+                            } else {
+                                $("#idTBodyRsPersonal").empty();
+                                $("#idTableRsPersonal").css("display", "none");
+                                swal({
+                                    title: "", text: arr[0].MESSAGE, imageUrl: "../Images/icon_error.png", imageSize: "45x45"
+                                });
+                            }
+                        }
+                    }
+                });
+                return false;
+            }
+            function onClearEnterprise()
+            {
+                $("#idCheckMST").prop("checked", true);
+                $("#idMSTBUDGET_CODE_SEARCH").val('');
+                $("#idTBodyRsEnterprise").empty();
+                $("#idTableRsEnterprise").css("display", "none");
+            }
+            function onClearPersonal()
+            {
+                $("#idCheckCMND").prop("checked", true);
+                $("#idCMNDPassport_SEARCH").val('');
+                $("#idTBodyRsPersonal").empty();
+                $("#idTableRsPersonal").css("display", "none");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        </div>
+                    </div>
+                </div>
+                <div class="top_nav">
+                </div>
+                <div class="right_col" role="main">
+                    <div class="">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <h1>Truy vấn thời hạn chứng thư số</h1>
+                                <div class="x_content">
+                                    <form name="form" method="post" class="form-horizontal">
+                                        <ul id="myTabTypeKey" class="nav nav-tabs bar_tabs" role="tablist">
+                                            <li role="presentation" class="active" id="idLi_contentKeyUse">
+                                                <a href="#tab_contentKeyUse" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="true">
+                                                    Doanh Nghiệp
+                                                </a>
+                                            </li>
+                                            <li role="presentation" class="" id="idLi_contentKeyNew">
+                                                <a href="#tab_contentKeyNew" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">
+                                                    Cá nhân
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div id="myTabContentTypeKey" class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade active in" id="tab_contentKeyUse" aria-labelledby="home-tab1">
+                                                <div class="x_panel">
+                                                    <div class="x_title">
+                                                        <h2><i class="fa fa-search"></i> Tìm kiếm</h2>
+                                                        <ul class="nav navbar-right panel_toolbox">
+                                                            <li>
+                                                                <button type="button" class="btn btn-info" onClick="onSubmitEnterprise();">Tìm kiếm</button>
+                                                                <button type="button" class="btn btn-info" onClick="onClearEnterprise();">Làm lại</button>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="x_content" style="margin-top: 0px;">
+                                                        <div class='form-group' style='margin-bottom:10px;'>
+                                                            <label class="radio-inline"><input type="radio" name="nameCheckEnterprise" id="idCheckMST" value="CheckMST" checked>Mã số thuế <label style="color: red;">(*)</label></label>
+                                                            <label class="radio-inline"><input type="radio" name="nameCheckEnterprise" id="idCheckBUDGET_CODE" value="CheckBUDGET_CODE">Mã ngân sách <label style="color: red;">(*)</label></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input id="idMSTBUDGET_CODE_SEARCH" name="idMSTBUDGET_CODE_SEARCH" type="text" class="form-control123"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="x_panel" style="display: none;" id="idTableRsEnterprise">
+                                                        <div class="x_title">
+                                                            <h2><i class="fa fa-list-ul"></i> Kết quả</h2>
+                                                            <ul class="nav navbar-right panel_toolbox">
+                                                                <li style="color: red;font-weight: bold;"></li>
+                                                            </ul>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="x_content">
+                                                            <style type="text/css">
+                                                                .table > thead > tr > th, .table > tbody > tr > td{vertical-align: middle;}
+                                                                .btn{margin-bottom: 0px;}
+                                                            </style>
+                                                            <table class="table table-striped projects">
+                                                                <thead>
+                                                                <th>STT</th>
+                                                                <th>Loại CTS</th>
+                                                                <th>Mã số thuế</th>
+                                                                <th>Mã ngân sách</th>
+                                                                <th>Ngày hiệu lực CTS</th>
+                                                                <th>Ngày hết hiệu lực CTS</th>
+                                                                </thead>
+                                                                <tbody id="idTBodyRsEnterprise">
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade" id="tab_contentKeyNew" aria-labelledby="home-tab">
+                                                <div class="x_panel">
+                                                    <div class="x_title">
+                                                        <h2><i class="fa fa-search"></i> Tìm kiếm</h2>
+                                                        <ul class="nav navbar-right panel_toolbox">
+                                                            <li>
+                                                                <button type="button" class="btn btn-info" onClick="onSubmitPersonal();">Tìm kiếm</button>
+                                                                <button type="button" class="btn btn-info" onClick="onClearPersonal();">Làm lại</button>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="x_content" style="margin-top: 0px;">
+                                                        <div class='form-group' style='margin-bottom:10px;'>
+                                                            <label class="radio-inline"><input type="radio" name="nameCheckPersonal" id="idCheckCMND" value="CheckCMND" checked>Chứng minh nhân dân <label style="color: red;">(*)</label></label>
+                                                            <label class="radio-inline"><input type="radio" name="nameCheckPersonal" id="idCheckPassport" value="CheckPassport">Hộ chiếu <label style="color: red;">(*)</label></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input id="idCMNDPassport_SEARCH" name="idCMNDPassport_SEARCH" type="text" class="form-control123"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="x_panel" style="display: none;" id="idTableRsPersonal">
+                                                        <div class="x_title">
+                                                            <h2><i class="fa fa-list-ul"></i> Kết quả</h2>
+                                                            <ul class="nav navbar-right panel_toolbox">
+                                                                <li style="color: red;font-weight: bold;"></li>
+                                                            </ul>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="x_content">
+                                                            <style type="text/css">
+                                                                .table > thead > tr > th, .table > tbody > tr > td{vertical-align: middle;}
+                                                                .btn{margin-bottom: 0px;}
+                                                            </style>
+                                                            <table class="table table-striped projects">
+                                                                <thead>
+                                                                <th>STT</th>
+                                                                <th>Loại CTS</th>
+                                                                <th>CMND</th>
+                                                                <th>Hộ chiếu</th>
+                                                                <th>Ngày hiệu lực CTS</th>
+                                                                <th>Ngày hết hiệu lực CTS</th>
+                                                                </thead>
+                                                                <tbody id="idTBodyRsPersonal"></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://192.168.2.203:8083/RegistrationAuthority/style/bootstrap.min.js"></script>
+            <script src="https://192.168.2.203:8083/RegistrationAuthority/style/custom.min.js"></script>
+        </div>
+    </body>
+</html>

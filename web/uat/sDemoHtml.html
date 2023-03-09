@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script>
+//            $(document).ready(function () {
+//                var sNumber = "";
+//                for (var i = 0; i < 10; i++)
+//                {
+//                    sNumber += "Number: " + i + "; ";
+//                }
+//                $("#myDiv").text(sNumber);
+//            });
+        </script>
+        <script type="text/javascript">
+            var webServiceURL = 'http://192.168.2.104:8080/Word365MobileWebApp/NewWebService?wsdl';
+//            var soapMessage = '<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"><soap12:Body><GetAllCategoryFamilies xmlns="http://tempuri.org/" /></soap12:Body></soap12:Envelope';
+            var soapMessage = '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.mobileid.com/"><soap:Header/>   <soap:Body><ws:hello><name>viet</name></ws:hello></soap:Body></soap:Envelope>';
+
+            function CallService()
+            {
+                $.ajax({
+                   url: webServiceURL, 
+                    type: "POST",
+                    dataType: "xml", 
+                    data: soapMessage, 
+                    processData: false,
+                    contentType: "text/xml; charset=\"utf-8\"",
+                    success: OnSuccess, 
+                    error: OnError
+                });
+
+                return false;
+            }
+
+            function OnSuccess(data, status)
+            {
+                alert(data.d);
+            }
+
+            function OnError(request, status, error)
+            {
+                alert('error');
+            }
+
+            $(document).ready(function () {
+                jQuery.support.cors = true;
+            });
+        </script>
+    </head>
+    <body>
+        <form method="post" action="">
+            <div>
+                <input type="button" value="Call Web Service" onclick="CallService();return false;" />
+            </div>
+            <br/>
+            <div id="myDiv"></div>
+        </form>
+    </body>
+</html>

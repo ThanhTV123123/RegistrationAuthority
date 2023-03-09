@@ -1,0 +1,69 @@
+I - CHANGE BUILD SOURCE FOR CAs
+1. js/Language.js: change var IsWhichCA = "7";
+2. LFooter.jsp: close Email: info (if is FEITIAN)
+3. note: CLIENT-CERT->EFY TMS SSL LOGIN in page: web.xml, jboss-web.xml
+4. log4j.properties -> mark code: log4j.rootLogger = INFO, FILE, stdout
+5. style/customportal.min.css close css of /*ICA*/
+6. config.properties, jboss-web.xml, context.xml and change war name file
+
+IV - Convert FrontEnd va BackEnd
+1. Properties -> Packaging -> change name war file
+2. META-INF: change context war file
+3. web.xml: open web-resource-name
+4. config.properties: change value tag IS_BACKEND=1:0, khac 0 va 1 login chung
+
+II-Future
+1. page down/upload image BLOB (Certificate Digital) của chức năng CA ATTR TYPE
+
+III - KEYBOARD NETBEANS
+1. SEARCH AND REPLACE
+- Alt-Shift-L: copy url file opened in netbeans
+- Ctrl + R: Rename nhiều biến cùng 1 lúc.
+- Ctrl-F3: search character at cursor position
+- Alt-F7: tìm vị trí hàm được sử dụng trong projects
+2. Coding trong Java
+- Alt-Insert: sinh ra code
+- Ctrl-Shift-I: auto imports class Necessary
+- Ctrl-/: on off comment close row
+- Ctrl-E/X: delete row at cursor
+- Ctrl-Shift-Up/D: copy row at cursor
+- Alt-Shift-F: format code
+- Ctrl + 7: open nhanh Navigator function in class java (enter keyboard tab).
+- Ctrl + Q: trở về vị trí edit cuối cùng
+- Ctrl + Shitf + 1: Định vị 1 file đang mở hiện tại trong project.
+- Ctl + B: Di chuyển đến chỗ khai báo function.
+3. build, checking and run project
+- F11: build project primary
+- F9: compilation package/file
+- Shift-F11: clean and build project primary
+- Shift-F6: run file current
+- F6: run project current
+4. Debugging
+- Ctrl-F5: begin debugging project primary
+- Ctrl-Shift-F5: begin debugging file current
+- Ctrl-Shift-F6: begin debugging file
+- Ctrl-Shift-F8: put breakpoint new
+5. 
+6. Other - TAB
+- Type the keyboard: sout , enter keyboard tab => System.out.println("");
+- Type the keyboard: fcom , enter keyboard tab =>
+//<editor-fold defaultstate="collapsed" desc="comment">
+//</editor-fold>
+- Type the keyboard: bcom , enter keyboard tab => /**/
+- sw, enter keyboard tab => switch , case
+- ifelse, enter keyboar tab => mệnh đề if else
+
+III - System Operation
+1. Certificate Registration:
+- 
+V- Nhom chuc nang
+1. CTS
+- RegisterCertificate, RenewCertList, CertView, RenewCertView, ChangeCertView, ReIssueCertView, RecoveryCertView, RevokeCertView, SuspendCertView
+- CertificateList, CertificateApprove
+
+VI - print reissue, change, revoke, register config.properties
+- 1: trust, misa, newtel, efy, bcy
+- 2: nc
+
+VII - Bootstrap icon
+fontawesome . bootstrapcheatsheets . com

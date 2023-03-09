@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk1.8.0_251\bin\wsimport.exe" -d src -extension -keep -p vn.mobileid.esigncloud.management -XadditionalHeaders https://rssp.mobile-id.vn/eSignCloud/Management?wsdl

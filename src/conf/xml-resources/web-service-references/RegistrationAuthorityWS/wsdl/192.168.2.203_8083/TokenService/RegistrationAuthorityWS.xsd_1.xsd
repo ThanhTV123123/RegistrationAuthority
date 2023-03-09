@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1 (UNKNOWN_BRANCH-false; 2015-01-15T16:53:43+0100) JAXWS-RI/2.2.10 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://raservice.mobileid.vn/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://raservice.mobileid.vn/">
+
+<xs:element name="enrollCertificate" type="tns:enrollCertificate"/>
+
+<xs:element name="enrollCertificateResponse" type="tns:enrollCertificateResponse"/>
+
+<xs:element name="generateDigitalCertification" type="tns:generateDigitalCertification"/>
+
+<xs:element name="generateDigitalCertificationResponse" type="tns:generateDigitalCertificationResponse"/>
+
+<xs:element name="getEnterpriseInfo" type="tns:getEnterpriseInfo"/>
+
+<xs:element name="getEnterpriseInfoResponse" type="tns:getEnterpriseInfoResponse"/>
+
+<xs:element name="notifyForgottenPasswordToUser" type="tns:notifyForgottenPasswordToUser"/>
+
+<xs:element name="notifyForgottenPasswordToUserResponse" type="tns:notifyForgottenPasswordToUserResponse"/>
+
+<xs:element name="notifyPasswordToNewUser" type="tns:notifyPasswordToNewUser"/>
+
+<xs:element name="notifyPasswordToNewUserResponse" type="tns:notifyPasswordToNewUserResponse"/>
+
+<xs:element name="reloadSystemConfiguarion" type="tns:reloadSystemConfiguarion"/>
+
+<xs:element name="reloadSystemConfiguarionResponse" type="tns:reloadSystemConfiguarionResponse"/>
+
+<xs:element name="revoke" type="tns:revoke"/>
+
+<xs:element name="revokeResponse" type="tns:revokeResponse"/>
+
+<xs:element name="sendAuthenticationCode" type="tns:sendAuthenticationCode"/>
+
+<xs:element name="sendAuthenticationCodeResponse" type="tns:sendAuthenticationCodeResponse"/>
+
+<xs:element name="uat" type="tns:uat"/>
+
+<xs:element name="uatResponse" type="tns:uatResponse"/>
+
+<xs:complexType name="reloadSystemConfiguarion">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="reloadSystemConfiguarionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrationAuthorityWSResponse">
+<xs:sequence>
+<xs:element name="enterpriseInfo" type="tns:enterpriseInfo" minOccurs="0"/>
+<xs:element name="responseCode" type="xs:int"/>
+<xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enterpriseInfo">
+<xs:sequence>
+<xs:element name="location" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="province" type="xs:string" minOccurs="0"/>
+<xs:element name="taxCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseInfo">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrationAuthorityWSRequest">
+<xs:sequence>
+<xs:element name="caName" type="xs:string" minOccurs="0"/>
+<xs:element name="certificationAttrId" type="xs:int" minOccurs="0"/>
+<xs:element name="certificationId" type="xs:int" minOccurs="0"/>
+<xs:element name="enterpriseInfo" type="tns:enterpriseInfo" minOccurs="0"/>
+<xs:element name="raPortalUser" type="tns:raPortalUser" minOccurs="0"/>
+<xs:element name="serialNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="tokenSn" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="raPortalUser">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fullName" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="remarkRoleEn" type="xs:string" minOccurs="0"/>
+<xs:element name="remarkRoleVn" type="xs:string" minOccurs="0"/>
+<xs:element name="roleName" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEnterpriseInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enrollCertificate">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enrollCertificateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateDigitalCertification">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generateDigitalCertificationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendAuthenticationCode">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sendAuthenticationCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revoke">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="revokeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uat">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="uatResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="notifyForgottenPasswordToUser">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="notifyForgottenPasswordToUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="notifyPasswordToNewUser">
+<xs:sequence>
+<xs:element name="registrationAuthorityWSRequest" type="tns:registrationAuthorityWSRequest" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="notifyPasswordToNewUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registrationAuthorityWSResponse" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

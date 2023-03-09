@@ -1,0 +1,813 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1 (UNKNOWN_BRANCH-false; 2015-01-15T16:53:43+0100) JAXWS-RI/2.2.10 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://management.esigncloud.mobileid.vn/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://management.esigncloud.mobileid.vn/">
+
+<xs:element name="approveCertificateForSignCloud" type="tns:approveCertificateForSignCloud"/>
+
+<xs:element name="approveCertificateForSignCloudResponse" type="tns:approveCertificateForSignCloudResponse"/>
+
+<xs:element name="blockSigningCertificate" type="tns:blockSigningCertificate"/>
+
+<xs:element name="blockSigningCertificateResponse" type="tns:blockSigningCertificateResponse"/>
+
+<xs:element name="changePasscodeForSignCloud" type="tns:changePasscodeForSignCloud"/>
+
+<xs:element name="changePasscodeForSignCloudResponse" type="tns:changePasscodeForSignCloudResponse"/>
+
+<xs:element name="changeSigningProfile" type="tns:changeSigningProfile"/>
+
+<xs:element name="changeSigningProfileResponse" type="tns:changeSigningProfileResponse"/>
+
+<xs:element name="createOwnerInfo" type="tns:createOwnerInfo"/>
+
+<xs:element name="createOwnerInfoResponse" type="tns:createOwnerInfoResponse"/>
+
+<xs:element name="declineCertificateForSignCloud" type="tns:declineCertificateForSignCloud"/>
+
+<xs:element name="declineCertificateForSignCloudResponse" type="tns:declineCertificateForSignCloudResponse"/>
+
+<xs:element name="deleteSigningKey" type="tns:deleteSigningKey"/>
+
+<xs:element name="deleteSigningKeyResponse" type="tns:deleteSigningKeyResponse"/>
+
+<xs:element name="disableCertificateForSignCloud" type="tns:disableCertificateForSignCloud"/>
+
+<xs:element name="disableCertificateForSignCloudResponse" type="tns:disableCertificateForSignCloudResponse"/>
+
+<xs:element name="downloadFileForSignCloud" type="tns:downloadFileForSignCloud"/>
+
+<xs:element name="downloadFileForSignCloudResponse" type="tns:downloadFileForSignCloudResponse"/>
+
+<xs:element name="enableCertificateForSignCloud" type="tns:enableCertificateForSignCloud"/>
+
+<xs:element name="enableCertificateForSignCloudResponse" type="tns:enableCertificateForSignCloudResponse"/>
+
+<xs:element name="forgetPasscodeForSignCloud" type="tns:forgetPasscodeForSignCloud"/>
+
+<xs:element name="forgetPasscodeForSignCloudResponse" type="tns:forgetPasscodeForSignCloudResponse"/>
+
+<xs:element name="getAuthModes" type="tns:getAuthModes"/>
+
+<xs:element name="getAuthModesResponse" type="tns:getAuthModesResponse"/>
+
+<xs:element name="getCertificateDetailForSignCloud" type="tns:getCertificateDetailForSignCloud"/>
+
+<xs:element name="getCertificateDetailForSignCloudResponse" type="tns:getCertificateDetailForSignCloudResponse"/>
+
+<xs:element name="getNTPConfig" type="tns:getNTPConfig"/>
+
+<xs:element name="getNTPConfigResponse" type="tns:getNTPConfigResponse"/>
+
+<xs:element name="getNTPStatus" type="tns:getNTPStatus"/>
+
+<xs:element name="getNTPStatusResponse" type="tns:getNTPStatusResponse"/>
+
+<xs:element name="getNetworkInterfaces" type="tns:getNetworkInterfaces"/>
+
+<xs:element name="getNetworkInterfacesResponse" type="tns:getNetworkInterfacesResponse"/>
+
+<xs:element name="getOwnerCertificate" type="tns:getOwnerCertificate"/>
+
+<xs:element name="getOwnerCertificateResponse" type="tns:getOwnerCertificateResponse"/>
+
+<xs:element name="getOwnerInfo" type="tns:getOwnerInfo"/>
+
+<xs:element name="getOwnerInfoResponse" type="tns:getOwnerInfoResponse"/>
+
+<xs:element name="getRelyingParties" type="tns:getRelyingParties"/>
+
+<xs:element name="getRelyingPartiesResponse" type="tns:getRelyingPartiesResponse"/>
+
+<xs:element name="getServerLog" type="tns:getServerLog"/>
+
+<xs:element name="getServerLogResponse" type="tns:getServerLogResponse"/>
+
+<xs:element name="getServerLogTypes" type="tns:getServerLogTypes"/>
+
+<xs:element name="getServerLogTypesResponse" type="tns:getServerLogTypesResponse"/>
+
+<xs:element name="getSigningProfiles" type="tns:getSigningProfiles"/>
+
+<xs:element name="getSigningProfilesResponse" type="tns:getSigningProfilesResponse"/>
+
+<xs:element name="monitorServer" type="tns:monitorServer"/>
+
+<xs:element name="monitorServerResponse" type="tns:monitorServerResponse"/>
+
+<xs:element name="prepareCertificateForSignCloud" type="tns:prepareCertificateForSignCloud"/>
+
+<xs:element name="prepareCertificateForSignCloudResponse" type="tns:prepareCertificateForSignCloudResponse"/>
+
+<xs:element name="prepareChangeCertificateForSignCloud" type="tns:prepareChangeCertificateForSignCloud"/>
+
+<xs:element name="prepareChangeCertificateForSignCloudResponse" type="tns:prepareChangeCertificateForSignCloudResponse"/>
+
+<xs:element name="prepareRenewCertificateForSignCloud" type="tns:prepareRenewCertificateForSignCloud"/>
+
+<xs:element name="prepareRenewCertificateForSignCloudResponse" type="tns:prepareRenewCertificateForSignCloudResponse"/>
+
+<xs:element name="prepareRevokeCertificateForSignCloud" type="tns:prepareRevokeCertificateForSignCloud"/>
+
+<xs:element name="prepareRevokeCertificateForSignCloudResponse" type="tns:prepareRevokeCertificateForSignCloudResponse"/>
+
+<xs:element name="reloadParams" type="tns:reloadParams"/>
+
+<xs:element name="reloadParamsResponse" type="tns:reloadParamsResponse"/>
+
+<xs:element name="restartNTPStatus" type="tns:restartNTPStatus"/>
+
+<xs:element name="restartNTPStatusResponse" type="tns:restartNTPStatusResponse"/>
+
+<xs:element name="resynchFailedFileUpload" type="tns:resynchFailedFileUpload"/>
+
+<xs:element name="resynchFailedFileUploadResponse" type="tns:resynchFailedFileUploadResponse"/>
+
+<xs:element name="setNTPConfig" type="tns:setNTPConfig"/>
+
+<xs:element name="setNTPConfigResponse" type="tns:setNTPConfigResponse"/>
+
+<xs:element name="setNetworkInterface" type="tns:setNetworkInterface"/>
+
+<xs:element name="setNetworkInterfaceResponse" type="tns:setNetworkInterfaceResponse"/>
+
+<xs:element name="unblockSigningCertificate" type="tns:unblockSigningCertificate"/>
+
+<xs:element name="unblockSigningCertificateResponse" type="tns:unblockSigningCertificateResponse"/>
+
+<xs:complexType name="approveCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="managementReq">
+<xs:sequence>
+<xs:element name="agreementDetails" type="tns:agreementDetails" minOccurs="0"/>
+<xs:element name="agreementUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="authMode" type="xs:string" minOccurs="0"/>
+<xs:element name="authorizeCode" type="xs:string" minOccurs="0"/>
+<xs:element name="beneficiaryBranch" type="xs:string" minOccurs="0"/>
+<xs:element name="beneficiaryUser" type="xs:string" minOccurs="0"/>
+<xs:element name="billCode" type="xs:string" minOccurs="0"/>
+<xs:element name="blockReason" type="xs:string" minOccurs="0"/>
+<xs:element name="budgetID" type="xs:string" minOccurs="0"/>
+<xs:element name="certificate" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateProfile" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateSerialNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="citizenID" type="xs:string" minOccurs="0"/>
+<xs:element name="cloudCertificateID" type="xs:int"/>
+<xs:element name="cloudFileManagerID" type="xs:long"/>
+<xs:element name="compromiseDate" type="xs:string" minOccurs="0"/>
+<xs:element name="csrRequired" type="xs:boolean"/>
+<xs:element name="currentPasscode" type="xs:string" minOccurs="0"/>
+<xs:element name="declineReason" type="xs:string" minOccurs="0"/>
+<xs:element name="downloadingFileUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="entityBillCode" type="xs:string" minOccurs="0"/>
+<xs:element name="entityName" type="xs:string" minOccurs="0"/>
+<xs:element name="keepCertificateSerialNumberEnabled" type="xs:boolean"/>
+<xs:element name="keepKeysInHSMEnabled" type="xs:boolean"/>
+<xs:element name="keepOldKeysEnabled" type="xs:boolean"/>
+<xs:element name="language" type="xs:string" minOccurs="0"/>
+<xs:element name="logDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="logLevel" type="xs:string" minOccurs="0"/>
+<xs:element name="logType" type="xs:string" minOccurs="0"/>
+<xs:element name="mobileNo" type="xs:string" minOccurs="0"/>
+<xs:element name="multipleSignature" type="xs:int"/>
+<xs:element name="networkInterface" type="tns:networkInterface" minOccurs="0"/>
+<xs:element name="newPasscode" type="xs:string" minOccurs="0"/>
+<xs:element name="noSendPassCodeToEndUserEnabled" type="xs:boolean"/>
+<xs:element name="notificationSubject" type="xs:string" minOccurs="0"/>
+<xs:element name="notificationTemplate" type="xs:string" minOccurs="0"/>
+<xs:element name="ntpConfig" type="xs:string" minOccurs="0"/>
+<xs:element name="ownerEmail" type="xs:string" minOccurs="0"/>
+<xs:element name="ownerMobileNo" type="xs:string" minOccurs="0"/>
+<xs:element name="ownerPassword" type="xs:string" minOccurs="0"/>
+<xs:element name="ownerUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="ownerUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="p2pEnabled" type="xs:boolean"/>
+<xs:element name="passCodeNotificationMethod" type="xs:string" minOccurs="0"/>
+<xs:element name="passportID" type="xs:string" minOccurs="0"/>
+<xs:element name="personalID" type="xs:string" minOccurs="0"/>
+<xs:element name="raCertificationID" type="xs:int"/>
+<xs:element name="relyingParty" type="xs:string" minOccurs="0"/>
+<xs:element name="relyingPartyBillCode" type="xs:string" minOccurs="0"/>
+<xs:element name="requestType" type="xs:string" minOccurs="0"/>
+<xs:element name="revokeOldCertificateEnabled" type="xs:boolean"/>
+<xs:element name="revokeReason" type="xs:string" minOccurs="0"/>
+<xs:element name="revokeReasonDetail" type="xs:string" minOccurs="0"/>
+<xs:element name="scal" type="xs:int"/>
+<xs:element name="sharedAgreementUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="sharedMode" type="xs:int"/>
+<xs:element name="sharedModeType" type="xs:string" minOccurs="0"/>
+<xs:element name="sharedRelyingParty" type="xs:string" minOccurs="0"/>
+<xs:element name="signDocument" type="xs:boolean"/>
+<xs:element name="signingProfile" type="xs:string" minOccurs="0"/>
+<xs:element name="taxID" type="xs:string" minOccurs="0"/>
+<xs:element name="templateID" type="xs:int"/>
+<xs:element name="twoFactorMethod" type="xs:string" minOccurs="0"/>
+<xs:element name="unblockReason" type="xs:string" minOccurs="0"/>
+<xs:element name="userID" type="xs:int"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+<xs:element name="waitForApproval" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="agreementDetails">
+<xs:sequence>
+<xs:element name="applicationForm" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="authorizeLetter" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="budgetID" type="xs:string" minOccurs="0"/>
+<xs:element name="businessLicense" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="citizenID" type="xs:string" minOccurs="0"/>
+<xs:element name="country" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="location" type="xs:string" minOccurs="0"/>
+<xs:element name="organization" type="xs:string" minOccurs="0"/>
+<xs:element name="organizationUnit" type="xs:string" minOccurs="0"/>
+<xs:element name="passportID" type="xs:string" minOccurs="0"/>
+<xs:element name="personalID" type="xs:string" minOccurs="0"/>
+<xs:element name="personalName" type="xs:string" minOccurs="0"/>
+<xs:element name="photoActivityDeclaration" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="photoAuthorizeDelegate" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="photoBackSideIDCard" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="photoFrontSideIDCard" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="photoIDCard" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="requestForm" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="stateOrProvince" type="xs:string" minOccurs="0"/>
+<xs:element name="taxID" type="xs:string" minOccurs="0"/>
+<xs:element name="telephoneNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="networkInterface">
+<xs:sequence>
+<xs:element name="bootprotocol" type="xs:string" minOccurs="0"/>
+<xs:element name="device" type="xs:string" minOccurs="0"/>
+<xs:element name="dns" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="gateway" type="xs:string" minOccurs="0"/>
+<xs:element name="ipaddr" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="netmask" type="xs:string" minOccurs="0"/>
+<xs:element name="onboot" type="xs:string" minOccurs="0"/>
+<xs:element name="prefix" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="approveCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="managementResp">
+<xs:sequence>
+<xs:element name="agreementUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="authModeSupported" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="authModes" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="authorizationMethodsEnabled" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="authorizeCredential" type="xs:string" minOccurs="0"/>
+<xs:element name="billCode" type="xs:string" minOccurs="0"/>
+<xs:element name="certificate" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateDN" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateInfo" type="tns:certificateInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="certificateSerialNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateStateID" type="xs:int"/>
+<xs:element name="certificateThumbprint" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="clusterInfo" type="tns:clusterInfo" minOccurs="0"/>
+<xs:element name="contractExpiration" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="cpuInfo" type="tns:cpuInfo" minOccurs="0"/>
+<xs:element name="csr" type="xs:string" minOccurs="0"/>
+<xs:element name="databaseClusterInfo" type="tns:databaseClusterInfo" minOccurs="0"/>
+<xs:element name="diskUsage" type="tns:diskUsage" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="fileInfo" type="tns:fileInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="issuerDN" type="xs:string" minOccurs="0"/>
+<xs:element name="logFile" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="logInstance" type="xs:int"/>
+<xs:element name="logInstance2" type="xs:long"/>
+<xs:element name="logLevels" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="logTypes" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="memoryUsages" type="tns:memoryUsage" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="networkInterfaces" type="tns:networkInterface" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="ntpConfig" type="xs:string" minOccurs="0"/>
+<xs:element name="ntpStatus" type="xs:string" minOccurs="0"/>
+<xs:element name="ownerInfo" type="tns:ownerInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="ownerUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="raCertificationID" type="xs:int"/>
+<xs:element name="relyingParties" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="remainingCounter" type="xs:int"/>
+<xs:element name="remainingSigningCounter" type="xs:int"/>
+<xs:element name="responseCode" type="xs:int"/>
+<xs:element name="responseMessage" type="xs:string" minOccurs="0"/>
+<xs:element name="signingCounter" type="xs:int"/>
+<xs:element name="signingProfiles" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="systemInfo" type="tns:systemInfo" minOccurs="0"/>
+<xs:element name="timestamp" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="validFrom" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="certificateInfo">
+<xs:sequence>
+<xs:element name="agreementUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="certificate" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateDN" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateSerialNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="certificateStateID" type="xs:int"/>
+<xs:element name="certificateThumbprint" type="xs:string" minOccurs="0"/>
+<xs:element name="cloudCertificateID" type="xs:long"/>
+<xs:element name="contractExpiration" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="issuerDN" type="xs:string" minOccurs="0"/>
+<xs:element name="remainingSigningCounter" type="xs:int"/>
+<xs:element name="validFrom" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clusterInfo">
+<xs:sequence>
+<xs:element name="allHosts" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="currentHost" type="xs:string" minOccurs="0"/>
+<xs:element name="lastChange" type="xs:string" minOccurs="0"/>
+<xs:element name="lastUpdated" type="xs:string" minOccurs="0"/>
+<xs:element name="offlineHosts" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="onlineHosts" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cpuInfo">
+<xs:sequence>
+<xs:element name="bogomips" type="xs:string" minOccurs="0"/>
+<xs:element name="cache" type="xs:string" minOccurs="0"/>
+<xs:element name="model" type="xs:string" minOccurs="0"/>
+<xs:element name="numOfCore" type="xs:int"/>
+<xs:element name="processListInDetail" type="xs:string" minOccurs="0"/>
+<xs:element name="speed" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="databaseClusterInfo">
+<xs:sequence>
+<xs:element name="wsrepClusterInfo">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="key" minOccurs="0" type="xs:string"/>
+<xs:element name="value" minOccurs="0" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="diskUsage">
+<xs:sequence>
+<xs:element name="available" type="xs:string" minOccurs="0"/>
+<xs:element name="fileSystem" type="xs:string" minOccurs="0"/>
+<xs:element name="mountOn" type="xs:string" minOccurs="0"/>
+<xs:element name="size" type="xs:string" minOccurs="0"/>
+<xs:element name="used" type="xs:string" minOccurs="0"/>
+<xs:element name="usedPercent" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fileInfo">
+<xs:sequence>
+<xs:element name="data" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="fileName" type="xs:string" minOccurs="0"/>
+<xs:element name="fileProfileID" type="xs:int"/>
+<xs:element name="fileUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="mimeType" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="memoryUsage">
+<xs:sequence>
+<xs:element name="free" type="xs:string" minOccurs="0"/>
+<xs:element name="memoryType" type="xs:string" minOccurs="0"/>
+<xs:element name="total" type="xs:string" minOccurs="0"/>
+<xs:element name="used" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ownerInfo">
+<xs:sequence>
+<xs:element name="budgetID" type="xs:string" minOccurs="0"/>
+<xs:element name="citizenID" type="xs:string" minOccurs="0"/>
+<xs:element name="companyName" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="oath2Credentials" type="xs:string" minOccurs="0"/>
+<xs:element name="passportID" type="xs:string" minOccurs="0"/>
+<xs:element name="personalID" type="xs:string" minOccurs="0"/>
+<xs:element name="personalName" type="xs:string" minOccurs="0"/>
+<xs:element name="phone" type="xs:string" minOccurs="0"/>
+<xs:element name="taxID" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="uuid" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="systemInfo">
+<xs:sequence>
+<xs:element name="hostname" type="xs:string" minOccurs="0"/>
+<xs:element name="kernelVersion" type="xs:string" minOccurs="0"/>
+<xs:element name="lastboot" type="xs:string" minOccurs="0"/>
+<xs:element name="os" type="xs:string" minOccurs="0"/>
+<xs:element name="serverDateTime" type="xs:string" minOccurs="0"/>
+<xs:element name="uptime" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerLogTypes">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerLogTypesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blockSigningCertificate">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blockSigningCertificateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="declineCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="declineCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCertificateDetailForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCertificateDetailForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disableCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="disableCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareRevokeCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareRevokeCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="forgetPasscodeForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="forgetPasscodeForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="downloadFileForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="downloadFileForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createOwnerInfo">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createOwnerInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelyingParties">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRelyingPartiesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePasscodeForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePasscodeForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNTPConfig">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNTPConfigResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNTPStatus">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNTPStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setNetworkInterface">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setNetworkInterfaceResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSigningProfiles">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSigningProfilesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOwnerCertificate">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOwnerCertificateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerLog">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getServerLogResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setNTPConfig">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setNTPConfigResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changeSigningProfile">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changeSigningProfileResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enableCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enableCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="reloadParams">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+<xs:element name="paramID" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="reloadParamsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resynchFailedFileUpload">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resynchFailedFileUploadResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthModes">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthModesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unblockSigningCertificate">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unblockSigningCertificateResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareChangeCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareChangeCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareRenewCertificateForSignCloud">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prepareRenewCertificateForSignCloudResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="monitorServer">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="monitorServerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restartNTPStatus">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="restartNTPStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNetworkInterfaces">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getNetworkInterfacesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOwnerInfo">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOwnerInfoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSigningKey">
+<xs:sequence>
+<xs:element name="managementReq" type="tns:managementReq" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteSigningKeyResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:managementResp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

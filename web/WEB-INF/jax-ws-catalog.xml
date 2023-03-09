@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://192.168.2.203:8083/TokenService/RegistrationAuthorityWS?wsdl" uri="wsdl/192.168.2.203_8083/TokenService/RegistrationAuthorityWS.wsdl"/>
+    <system systemId="https://192.168.2.203:8083/TokenService/RegistrationAuthorityWS?xsd=1" uri="wsdl/192.168.2.203_8083/TokenService/RegistrationAuthorityWS.xsd_1.xsd"/>
+    <system systemId="https://192.168.2.214:8083/TokenService/RegistrationAuthorityWS?wsdl" uri="wsdl/192.168.2.214_8083/TokenService/RegistrationAuthorityWS.wsdl"/>
+    <system systemId="https://192.168.2.214:8083/TokenService/RegistrationAuthorityWS?xsd=1" uri="wsdl/192.168.2.214_8083/TokenService/RegistrationAuthorityWS.xsd_1.xsd"/>
+    <system systemId="http://192.168.2.214:8084/TokenService/RegistrationAuthorityWS?wsdl" uri="wsdl/192.168.2.214_8084/TokenService/RegistrationAuthorityWS.wsdl"/>
+    <system systemId="http://192.168.2.214:8084/TokenService/RegistrationAuthorityWS?xsd=1" uri="wsdl/192.168.2.214_8084/TokenService/RegistrationAuthorityWS.xsd_1.xsd"/>
+    <system systemId="http://192.168.2.249:10080/eSignCloud/Management?wsdl" uri="wsdl/192.168.2.249_10080/eSignCloud/Management.wsdl"/>
+    <system systemId="http://192.168.2.249:10080/eSignCloud/Management?xsd=1" uri="wsdl/192.168.2.249_10080/eSignCloud/Management.xsd_1.xsd"/>
+    <system systemId="http://192.168.2.249:10080/eSignCloud/Management?xsd=2" uri="wsdl/192.168.2.249_10080/eSignCloud/Management.xsd_2.xsd"/>
+    <system systemId="http://192.168.2.203:8084/TokenService/RegistrationAuthorityWS?wsdl" uri="wsdl/192.168.2.203_8084/TokenService/RegistrationAuthorityWS.wsdl"/>
+    <system systemId="http://192.168.2.203:8084/TokenService/RegistrationAuthorityWS?xsd=1" uri="wsdl/192.168.2.203_8084/TokenService/RegistrationAuthorityWS.xsd_1.xsd"/>
+    <system systemId="https://192.168.2.249:10443/eSignCloud/Management?wsdl" uri="wsdl/192.168.2.249_10443/eSignCloud/Management.wsdl"/>
+    <system systemId="https://192.168.2.249:10443/eSignCloud/Management?xsd=1" uri="wsdl/192.168.2.249_10443/eSignCloud/Management.xsd_1.xsd"/>
+    <system systemId="https://rssp.mobile-id.vn/eSignCloud/Management?wsdl" uri="wsdl/rssp.mobile-id.vn/eSignCloud/Management.wsdl"/>
+    <system systemId="https://rssp.mobile-id.vn:443/eSignCloud/Management?xsd=1" uri="wsdl/rssp.mobile-id.vn_443/eSignCloud/Management.xsd_1.xsd"/>
+    <system systemId="https://14.225.8.98:8443/TokenService/RegistrationAuthorityWS?wsdl" uri="wsdl/14.225.8.98_8443/TokenService/RegistrationAuthorityWS.wsdl"/>
+    <system systemId="https://14.225.8.98:8443/TokenService/RegistrationAuthorityWS?xsd=1" uri="wsdl/14.225.8.98_8443/TokenService/RegistrationAuthorityWS.xsd_1.xsd"/>
+</catalog>

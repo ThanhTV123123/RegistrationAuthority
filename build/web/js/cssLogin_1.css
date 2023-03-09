@@ -1,0 +1,548 @@
+
+::selection {
+    color: #fff;
+    background: #f676b2; /* Safari */
+}
+::-moz-selection {
+    color: #fff;
+    background: #f676b2; /* Firefox */
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    /*    background: url(../image/invoice1.png);*/
+    /*    background-repeat: no-repeat;
+        background-size: 100%;*/
+    background: #ffffff;
+    font-family: Tahoma, Verdana, Arial;
+    text-align: left;
+    text-decoration: none;
+}
+
+#wrapper1 {
+    width: 673px;
+    position: absolute;
+    left: 58%;
+    top: 40%;
+    margin-left: -150px;
+    margin-top: -200px;
+}
+#wrapperLogin {
+    min-height:100%;
+}
+#wrapper11 {
+    width: 70%;margin-bottom: 30px;
+    /*    position: absolute;
+        left: 58%;
+        top: 40%;
+        margin-left: -150px;
+        margin-top: -200px;*/
+}
+#header11{
+    margin-bottom: 40px;margin-top: 10px;border-bottom: 2px solid #73879C;height: 80px; 
+}
+.header-left{width: 30%; float: left;}
+.header-right{width: 70%; float: right; text-align: right; padding-top: 15px;}
+.button, .register {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+#content11{
+    width: 100%;margin-top: 30px;float: left; border: 1px solid #73879C;margin-bottom: 10px;clear: both;
+}
+.content11-left{
+    width: 70%; padding: 30px 0 30px 0; text-align: left;float: left;
+}
+/*.content11-left .register {
+    margin-right: 20px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 17px;
+    color: #3f9db8;
+
+    padding: 10px;
+    cursor: pointer;
+}
+.content11-left .register:focus {
+    position: relative;
+    bottom: -1px;
+}
+.content11-left .register:hover {
+    color: #56C2E1;
+}*/
+/*.content11-left .button {
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 17px;
+    color: #fff;
+    background: #56c2e1;
+    border: 1px solid #46b3d3;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.content11-left .button:hover {
+    background: #3f9db8;
+    border: 1px solid rgba(256,256,256,0.75);
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.content11-left .button:focus {
+    position: relative;
+    bottom: -1px;
+    background: #56c2e1;
+    box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}*/
+
+.content11-right{
+    width: 30%;float: right;text-align: left;
+}
+.content11-right .aOpen {
+    cursor: pointer;border: 1px solid #fff;padding: 7px 4px 10px 4px;
+}
+.content11-right .aOpen:hover {
+    border: 1px solid #ccc;
+    cursor: pointer;padding: 7px 4px 10px 4px;
+}
+
+.content11-no .button {
+    /*    float:right;*/
+    text-align: right;
+    padding: 5px 15px;
+    /*    font-family: 'Bree Serif', serif;*/
+    /*    font-weight: 300;*/
+    font-size: 17px;
+    color: #fff;
+    /*    text-shadow: 0px 1px 0 rgba(0,0,0,0.25);	*/
+    background: #56c2e1;
+    border: 1px solid #46b3d3;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.content11-no .button:hover {
+    background: #3f9db8;
+    border: 1px solid rgba(256,256,256,0.75);
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.content11-no .button:focus {
+    position: relative;
+    bottom: -1px;
+    background: #56c2e1;
+    box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+
+.loginform {
+/*    width: 100%;
+    position: relative;
+    z-index:5;
+    height: 430px;
+    background: #f3f3f3;
+    float: left;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);*/
+}
+.loginform .loginform11 {
+    width: 335px; float: left;background: #f3f3f3;border-right: 1px solid #1F9EBF;position: relative;
+}
+.loginform .loginform22 {
+    width: 335px;float: right;background: #f3f3f3;position: relative;
+}
+.loginform .header {
+    padding: 15px 20px 20px 20px;
+}
+
+.loginform .header h1 {
+    font-family: Tahoma, Verdana, Arial;
+    font-weight: bold;
+    font-size: 17px;
+    line-height:34px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.loginform .header span {
+    line-height: 16px;
+    color: #000000;font-family: Tahoma, Verdana, Arial;
+}
+.loginform .content {
+    padding: 0 20px 25px 20px;
+}
+
+/* Input field */
+.loginform .content .input {
+    width: 295px;
+    padding: 13px 25px 13px 10px;
+    color: #475B5F;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+
+.loginform .content .password, .loginform .content .pass-icon, .email-icon {
+    margin-top: 25px;
+}
+
+.loginform .content .input:hover {
+    background: #dfe9ec;
+    color: #414848;
+}
+
+.loginform .content .input:focus {
+    background: #dfe9ec;
+    color: #414848;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.user-icon, .pass-icon {
+    width: 46px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    padding-right: 2px;
+    z-index: 3;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+.user-icon, .email-icon {
+    width: 46px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    padding-right: 2px;
+    z-index: 3;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+.user-icon {
+    top:147px;
+    background: rgba(65,72,72,0.75) url(../image/user-icon.png) no-repeat center;	
+}
+
+.pass-icon {
+    top:221px;
+    background: rgba(65,72,72,0.75) url(../image/pass-icon.png) no-repeat center;
+}
+
+.email-icon {
+    top:221px;
+    background: rgba(65,72,72,0.75) url(../image/email1.png) no-repeat center;
+}
+
+/* Animation */
+.input, .user-icon, .pass-icon, .email-icon, .button, .register {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+
+/*******************
+FOOTER
+*******************/
+
+.loginform .footer {
+    padding: 25px 25px 40px 25px;
+    overflow: auto;
+    background: #d4dedf;
+    border-top: 1px solid #fff;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
+}
+
+/* Login button */
+.loginform .footer .button {
+    /*    float:right;*/
+    text-align: right;
+    padding: 5px 15px;
+    /*    font-family: 'Bree Serif', serif;*/
+    /*    font-weight: 300;*/
+    font-size: 17px;
+    color: #fff;
+    /*    text-shadow: 0px 1px 0 rgba(0,0,0,0.25);	*/
+    background: #56c2e1;
+    border: 1px solid #46b3d3;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.loginform .footer .button:hover {
+    background: #3f9db8;
+    border: 1px solid rgba(256,256,256,0.75);
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.loginform .footer .button:focus {
+    position: relative;
+    bottom: -1px;
+    background: #56c2e1;
+    box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+
+/* Register button */
+.loginform .footer .register {
+    /*
+    display: block;
+    float: right;*/
+    margin-right: 20px;
+    background: none;
+    border: none;
+    /*font-weight: 300;
+    text-shadow: 0px 1px 0 rgba(256,256,256,0.5);*/
+    font-size: 17px;
+    color: #414848;
+
+    padding: 10px;
+    cursor: pointer;
+
+    /*font-family: 'Bree Serif', serif;*/
+}
+
+.loginform .footer .register:hover {
+    color: #3f9db8;
+}
+
+.loginform .footer .register:focus {
+    position: relative;
+    bottom: -1px;
+}
+/*#footer111 {
+    
+}*/
+
+#footer11{
+    border-top: 3px solid #56C2E1;
+    font-family: Tahoma, Verdana, Arial;
+    background: #ffffff;
+    width:100%;
+    height:100px;
+/*    position:absolute;*/
+    bottom:0;
+    left:0;
+    padding: 10px 0 10px 10px;
+    /*    font-size: 14px;*/
+    font-weight: bold;
+}
+
+#footer1 {
+    border-top: 3px solid #56C2E1;
+    background: #2A3F54;
+    width:100%;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+}
+.footer1123{
+    padding: 10px 10px 15px 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#header-two {
+    border-bottom: 2px solid #56C2E1;
+    background: #ffffff;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    width:100%;
+    margin-bottom: 45px;
+}
+.header-two-123{
+    padding: 10px 10px 15px 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#over {
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+.buttonlog {
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 17px;
+    color: #fff;
+    background: #56c2e1;
+    border: 1px solid #46b3d3;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
+.buttonlog:hover {
+    background: #3f9db8;
+    border: 1px solid rgba(256,256,256,0.75);
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.buttonlog:focus {
+    position: relative;
+    bottom: -1px;
+    background: #56c2e1;
+    box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+    -webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+}
+.registerlog {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 17px;
+    color: #3f9db8;
+
+    padding: 10px;
+    cursor: pointer;
+}
+.registerlog:focus {
+    position: relative;
+    bottom: -1px;
+}
+.registerlog:hover {
+    color: #56C2E1;
+}
+
+.aOpen {
+    border: 1px solid #fff;
+}
+.aOpen:hover {
+    border: 1px solid #56C2E1;
+}
+
+.loginIconCss
+{
+    text-align: right; width: 100%;margin-left: 40px;
+}
+@media(max-width:468px){
+    .loginIconCss
+    {
+        text-align: right; width: 100%;margin-left: 0px;
+    }
+    #footer1{position: relative;}
+}
+@media(max-width:668px){
+    #footer1{position: relative;}
+}
+@media(max-width:868px){
+    #footer1{position: relative;}
+}
+@media(max-width:1068px){
+    #footer1{position: relative;}
+}
+/*.carousel-inner>.item>a>img,.carousel-inner>.item>img,.img-responsive,.thumbnail a>img,.thumbnail>img{max-width: 210px;}*/
+
+/*.login-form {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	z-index:5;
+	
+	background: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+#wrapper2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+}
+.user-icon, .pass-icon {
+	width: 46px;
+	height: 47px;
+	display: block;
+	position: absolute;
+	left: 0px;
+	padding-right: 2px;
+	z-index: 3;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+.user-icon {
+	top:220px;  Positioning fix for slide-in, got lazy to think up of simpler method. 
+	background: rgba(65,72,72,0.75) url(../Images/user-icon.png) no-repeat center;
+}
+
+.pass-icon {
+	top:295px;
+	background: rgba(65,72,72,0.75) url(../Images/pass-icon.png) no-repeat center;
+}
+
+ Animation 
+.user-icon, .pass-icon {
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+}*/

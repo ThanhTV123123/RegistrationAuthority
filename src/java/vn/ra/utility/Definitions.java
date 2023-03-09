@@ -1,0 +1,1651 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vn.ra.utility;
+
+/**
+ *
+ * @author THANH-PC
+ */
+public class Definitions {
+//    Config conf = new Config();
+    //DB
+    public static String CONFIG_DBCONNECTION_SQL = "DBConnectionSQL";
+    public static String CONFIG_DBCONNECTION_ORACLE = "DBConnectionOracle";
+    public static String CONFIG_DBDRIVER_SQL = "DBDriverSQL";
+    public static String CONFIG_DBDRIVER_ORACLE = "DBDriverOracle";
+    public static String CONFIG_DBUSER_SQL = "DBUser";
+    public static String CONFIG_DBUSER_ORACLE = "DBUser";
+    public static String CONFIG_DBPASS_SQL = "DBPass";
+    public static String CONFIG_DBPASS_ORACLE = "DBPass";
+    public static String CONFIG_CHOISEDB = "ChoiseDB";
+    public static String CONFIG_DEFAULT_PASSWORD_USER = "DefaultPassUser";
+    public static String CONFIG_DATABASE_CONNECT_TIMEOUT_SECOND = "DBConnectTimeoutSecond";
+    public static String CONFIG_FILE_FILE_UP_OLD_TO_NEW_AUTO_ENABLED = "FILE_UP_OLD_TO_NEW_AUTO_ENABLED";
+//    public static String CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX = "LANGUAGE_TEMPLATE_UID_PREFIX";
+    //PageSize
+    public static String CONFIG_PAGING_ISWRWS = "Paging_iSwRws";
+    public static String CONFIG_PAGING_ITOTSRHRCRDS = "Paging_iTotSrhRcrds";
+    public static String CONFIG_NUMBER_DATEEXPIRED_AGREEMENT = "DateExpired_Number_Agreement";
+    public static String CONFIG_COUNT_SEARCH_MAX = "Count_Search_Max";
+    public static String CONFIG_SAMPLEFILE_TOKEN = "SampleToken_File";
+    public static String CONFIG_SAMPLECONTROL_PROFILE = "SampleControlProfile_File";
+    public static String CONFIG_SAMPLEFILE_PUSH = "SamplePush_File";
+    public static String CONFIG_SAMPLEFILE_DISALLOWANCE_LIST = "SampleDisallowance_File";
+    public static String CONFIG_NAMEFILE_TOKENACTION_LIST = "NameTokenAction_File";
+    public static String CONFIG_SAMPLEFILE_TOKENACTION_LIST = "SampleTokenAction_File";
+    public static String CONFIG_NAMEFILE_TOKEN = "NameToken_File";
+    public static String CONFIG_NAMEFILE_PUSH = "NamePush_File";
+    public static String CONFIG_NAMECONTROL_PROFILE = "NameControlProfile_File";
+    public static String CONFIG_NAMEFILE_DISALLOWANCE_LIST = "NameDisallowance_File";
+    public static String CONFIG_NAMEFILE_LOGO = "NameLogo_File";
+    public static String CONFIG_SAMPLEFILE_CONTACT_PROFILE = "SampleContactProfile_File";
+    public static String CONFIG_NAMEFILE_CONTACT_PROFILE = "NameContactProfile_File";
+    public static String CONFIG_IS_FRONTEND_BACKEND = "IS_BACKEND";
+    public static String CONFIG_REPORT_NEAC_PREQUENCY_API = "REPORT_NEAC_PREQUENCY_API";
+    public static String CONFIG_REPORT_NEAC_THUMBPRINT_ALGORITHM_API = "REPORT_NEAC_THUMBPRINT_ALGORITHM_API";
+    public static String CONFIG_FORM_REISSUE_CHANGE_REVOKE_CERT_PRINT = "FORM_REISSUE_CHANGE_REVOKE_CERT_PRINT";
+    public static String CONFIG_FORM_REGISTRATION_CERT_PRINT = "FORM_REGISTRATION_CERT_PRINT";
+    public static String CONFIG_FORM_CHANGEINFO_REISSUE_CERT_PRINT_ENABLED = "FORM_CHANGEINFO_REISSUE_CERT_PRINT_ENABLED";
+    public static String CONFIG_FORM_DELIVERY_CERT_PRINT = "FORM_DELIVERY_CERT_PRINT";
+    public static String CONFIG_PROFILE_MANAGER_LEVEL_APPROVE_OFCA = "PROFILE_MANAGER_LEVEL_APPROVE_OFCA";
+    public static String CONFIG_RACONNECTOR_SCAN_ENABLED = "RACONNECTOR_SCAN_ENABLED";
+    public static String CONFIG_IMPORT_TOKEN_SOPIN_CLEAR_ENABLED = "IMPORT_TOKEN_SOPIN_CLEAR_ENABLED";
+    public static String CONFIG_EXPORT_CERTLIST_AGENCY_ENABLED = "EXPORT_CERTLIST_AGENCY_ENABLED";
+    public static String CONFIG_EXPORT_TOKENLIST_AGENCY_ENABLED = "EXPORT_TOKENLIST_AGENCY_ENABLED";
+    public static String CONFIG_SIGNED_OF_TOKEN_ENABLED = "SIGNED_OF_TOKEN_ENABLED";
+    public static String CONFIG_API_ACCESS_ENABLED = "API_ACCESS_ENABLED";
+    public static String CONFIG_CERT_MODULES_ACCESS_ENABLED = "CERT_MODULES_ACCESS_ENABLED";
+    public static String CONFIG_JS_REFRESH_STRING_RANDOM = "JS_REFRESH_STRING_RANDOM";
+    public static String CONFIG_DEVICE_DOMAIN_GRID_SHOW_ENABLED = "DEVICE_DOMAIN_GRID_SHOW_ENABLED";
+    public static String CONFIG_UID_CHANGE_INFO_API_ENABLED = "UID_CHANGE_INFO_API_ENABLED";
+    public static String CONFIG_UID_CHANGE_INFO_BO_ENABLED = "UID_CHANGE_INFO_BO_ENABLED";
+    
+    public static String CONFIG_NAMEFILE_REGISTERCERT_ENTERPRISE = "NameRegisterCertEnterprise_File";
+    public static String CONFIG_SAMPLEFILE_REGISTERCERT_ENTERPRISE = "SampleRegisterCertEnterprise_File";
+    public static String CONFIG_NAMEFILE_REGISTERCERT_PERSONAL = "NameRegisterCertPersonal_File";
+    public static String CONFIG_SAMPLEFILE_REGISTERCERT_PERSONAL = "SampleRegisterCertPersonal_File";
+    public static String CONFIG_NAMEFILE_REGISTERCERT_STAFF = "NameRegisterCertStaff_File";
+    public static String CONFIG_SAMPLEFILE_REGISTERCERT_STAFF = "SampleRegisterCertStaff_File";
+    public static String CONFIG_NAMEFILE_REGISTERCERT_ALL = "NameRegisterCertAll_File";
+    public static String CONFIG_SAMPLEFILE_REGISTERCERT_ALL = "SampleRegisterCertAll_File";
+    public static String CONFIG_NAMEFILE_RENEWCERT_ALL = "NameRenewCertAll_File";
+    public static String CONFIG_SAMPLEFILE_RENEWCERT_ALL = "SampleRenewCertAll_File";
+    public static String CONFIG_NAMEFILE_CHANGECERT_ALL = "NameChangeCertAll_File";
+    public static String CONFIG_SAMPLEFILE_CHANGECERT_ALL = "SampleChangeCertAll_File";
+    public static String CONFIG_NAMEFILE_SUSPENDCERT_ALL = "NameSuspendCertAll_File";
+    public static String CONFIG_SAMPLEFILE_SUSPENDCERT_ALL = "SampleSuspendCertAll_File";
+    public static String CONFIG_CREATE_P12_USER_AGENCY_ENABLED = "CREATE_P12_USER_AGENCY_ENABLED";
+    
+    public static String CONFIG_DENIED_WHEN_EXISTS_TAXCODE_REGISTER_CERT = "DENIED_WHEN_EXISTS_TAXCODE_REGISTER_CERT";
+    public static String CONFIG_ALLOW_OU_COMPONENT_TWO_TOUP = "ALLOW_OU_COMPONENT_TWO_TOUP";
+    public static String CONFIG_PAGING_NUMBER_REPORT_CERT = "Paging_Num_Report_Cert";
+    public static String CONFIG_KEY_AUTHEN_CHANNEL_GETCERT = "KEY_AUTHEN_CHANNEL_GETCERT";
+    public static String CONFIG_DOMAIN_CALL_CHANNEL_GETCERT = "DOMAIN_CALL_CHANNEL_GETCERT";
+//    public static String CONFIG_FILE_SAVE_FOLDER = "FileSave_Folder";
+    public static String CONFIG_FILE_EXPORT_REQUEST_FOLDER = "Folder_Export_Request";
+    public static String CONFIG_FILE_REPORT_PERIODIC_NUMBER_HEADER = "REPORT_PERIODIC_NUMBER_HEADER";
+    public static int CONFIG_PAGE_SIZE_IPAGNO = 0;
+    public static int CONFIG_PAGE_SIZE_ISWRWS = 10000;
+    // WS
+    public static String CONFIG_WS_URL_RACONNECTOR = "URL_RA_WS";
+    public static String CONFIG_WS_FUNCTION_REVOKE = "revoke";
+    public static String CONFIG_RSSP_ACCESS_ENABLED = "RSSP_ACCESS_ENABLED";
+    public static String CONFIG_RSSP_WS_URL = "RSSP_WS_URL";
+    public static String CONFIG_RSSP_CORE_CLOUD_ENTITY = "RSSP_CORE_CLOUD_ENTITY";
+    public static String CONFIG_RSSP_UUID = "RSSP_UUID";
+    public static String CONFIG_RSSP_FEC = "RSSP_RP";
+    public static String CONFIG_RSSP_USERID = "RSSP_USERID";
+    //REST RSSP
+    public static String CONFIG_RSSP_REST_SIM_ENABLED = "RSSP_REST_SIM_ENABLED";
+    public static String CONFIG_RSSP_REST_URL = "RSSP_REST_URL";
+    public static String CONFIG_RSSP_REST_PROFILE = "RSSP_REST_PROFILE";
+    public static String CONFIG_RSSP_REST_RP_NAME = "RSSP_REST_RP_NAME";
+    public static String CONFIG_RSSP_REST_RP_USER = "RSSP_REST_RP_USER";
+    public static String CONFIG_RSSP_REST_RP_PWD = "RSSP_REST_RP_PWD";
+    public static String CONFIG_RSSP_REST_RP_SIGNATURE = "RSSP_REST_RP_SIGNATURE";
+    public static String CONFIG_RSSP_REST_P12_NAME = "RSSP_REST_P12_NAME";
+    public static String CONFIG_RSSP_REST_P12_PWD = "RSSP_REST_P12_PWD";
+    public static String CONFIG_RSSP_REST_USER_TYPE = "RSSP_REST_USER_TYPE";
+    public static String CONFIG_RSSP_REST_IDENTIFICATION_TYPE_TAXCODE = "TAX-CODE";
+    public static String CONFIG_RSSP_REST_IDENTIFICATION_TYPE_BUDGETCODE = "BUDGET-CODE";
+    public static String CONFIG_RSSP_REST_IDENTIFICATION_TYPE_CMND = "PERSONAL-ID";
+    public static String CONFIG_RSSP_REST_IDENTIFICATION_TYPE_PASSPORT = "PASSPORT-ID";
+    public static String CONFIG_RSSP_REST_IDENTIFICATION_TYPE_CITIZEN_ID = "CITIZEN-IDENTITY-CARD";
+    public static String CONFIG_RSSP_CERTIFICATE_TYPE_PREPARE_CERT = "PREPARE_CERTIFICATE";
+    public static String CONFIG_RSSP_CERTIFICATE_TYPE_RENEW_CERT = "RENEW_CERTIFICATE";
+    public static String CONFIG_RSSP_CERTIFICATE_TYPE_CHANGE_CERT = "CHANGE_CERTIFICATE";
+    public static String CONFIG_RSSP_CERTIFICATE_TYPE_REVOKE_CERT = "REVOKE_CERTIFICATE";
+    // column excel
+    public static String CONFIG_COLUMN_EXCEL_TOKEN_SN = "COLUMN_EXCEL_TOKEN_SN";
+    public static String CONFIG_COLUMN_EXCEL_TOKEN_SOPIN = "COLUMN_EXCEL_TOKEN_SOPIN";
+    public static String CONFIG_ERROR_EXCEL_TOKEN_SN = "CSV_NO_TOKENID";
+    public static String CONFIG_ERROR_EXCEL_TOKEN_SOPIN = "CSV_NO_SOPIN";
+    public static String CONFIG_COLUMN_EXCEL_PUSH_STT = "COLUMN_EXCEL_PUSH_STT";
+    public static String CONFIG_COLUMN_EXCEL_PUSH_MST = "COLUMN_EXCEL_PUSH_MST";
+    public static String CONFIG_COLUMN_EXCEL_PUSH_MNS = "COLUMN_EXCEL_PUSH_MNS";
+    public static String CONFIG_COLUMN_EXCEL_PUSH_CMND = "COLUMN_EXCEL_PUSH_CMND";
+    public static String CONFIG_COLUMN_EXCEL_PUSH_HC = "COLUMN_EXCEL_PUSH_HC";
+    public static String CONFIG_COLUMN_EXCEL_DISALLOWANCE_PHONE = "COLUMN_EXCEL_DISALLOWANCE_PHONE";
+    public static String CONFIG_COLUMN_EXCEL_DISALLOWANCE_EMAIL = "COLUMN_EXCEL_DISALLOWANCE_EMAIL";
+    public static String CONFIG_ERROR_EXCEL_PUSH_STT = "CSV_NO_STT";
+    public static String CONFIG_ERROR_EXCEL_PUSH_MST = "CSV_NO_MST";
+    public static String CONFIG_ERROR_EXCEL_PUSH_MNS = "CSV_NO_MNS";
+    public static String CONFIG_ERROR_EXCEL_PUSH_CMND = "CSV_NO_CMND";
+    public static String CONFIG_ERROR_EXCEL_PUSH_HC= "CSV_NO_HC";
+    public static String CONFIG_ERROR_EXCEL_PUSH_CERTSN ="CSV_NO_CERTSN";
+    public static String CONFIG_ERROR_EXCEL_PUSH_CCCD= "CSV_NO_CCCD";
+    public static String CONFIG_ERROR_EXCEL_FORMAT_COLUMN_INVALID= "CSV_NO_COLUMN";
+    public static String CONFIG_ERROR_EXCEL_DISALLOWANCE_PHONE = "CSV_NO_PHONE";
+    public static String CONFIG_ERROR_EXCEL_DISALLOWANCE_EMAIL = "CSV_NO_EMAIL";
+    public static String CONFIG_FILE_EXTENDTION_TEXT = ".txt";
+    // EMAIL PARAMS BACKOFFICE
+    public static String CONFIG_MAIL_FORGOT_USER = "SendMailForgotUser";
+    public static String CONFIG_MAIL_REQUET_FORGOT = "RequestChangePassword";
+    public static String CONFIG_MAIL_FORGOT_SUBJECT = "sendMailSubject=";
+    public static String CONFIG_MAIL_FORGOT_CONTENT = "sendMailContent=";
+    public static String CONFIG_MAIL_TAG_PASSWORD = "{PASSWORD}";
+    public static String CONFIG_MAIL_TAG_USERNAME = "{USERNAME}";
+    public static String CONFIG_MAIL_TAG_BR = "{BR}";
+    public static String[] CONFIG_MAIL_EXTENTION_ARRAY = {"@gmail.com", "@Gmail.com", "@gmx.com", "@mobile-id.vn"};
+    // worker signserver ws
+    public static String CONFIG_WORKER_KEYTYPE_DEFAULT = "Default key";
+    public static String CONFIG_WORKER_KEYTYPE_NEXT = "Next Key";
+    public static String CONFIG_WORKER_KEYTYPE_NEXTCERTSIGNKEY = "NEXTCERTSIGNKEY";
+    public static String CONFIG_WORKER_TAG_AUTHEN_CODE = "WORKERGENID1.pin";
+    public static String CONFIG_WORKER_RELOAD_WORKER = "all";
+    public static String CONFIG_WORKER_TAG_CSR_BEGIN_NEW = "-----BEGIN NEW CERTIFICATE REQUEST-----";
+    public static String CONFIG_WORKER_TAG_CSR_END_NEW = "-----END NEW CERTIFICATE REQUEST-----";
+    public static String CONFIG_WORKER_TAG_CSR_BEGIN_RENEW = "-----BEGIN RENEW CERTIFICATE REQUEST-----";
+    public static String CONFIG_WORKER_TAG_CSR_END_RENEW = "-----END RENEW CERTIFICATE REQUEST-----";
+    public static String CONFIG_WORKER_TAG_CSR_BEGIN = "-----BEGIN CERTIFICATE REQUEST-----";
+    public static String CONFIG_WORKER_TAG_CSR_BEGIN_CONTAINS = "BEGIN CERTIFICATE REQUEST";
+    public static String CONFIG_WORKER_TAG_CSR_BEGIN_NEW_CONTAINS = "BEGIN NEW CERTIFICATE REQUEST";
+    public static String CONFIG_WORKER_TAG_CSR_BEGIN_RENEW_CONTAINS = "BEGIN RENEW CERTIFICATE REQUEST";
+    public static String CONFIG_WORKER_TAG_CSR_END = "-----END CERTIFICATE REQUEST-----";
+    public static String CONFIG_WORKER_TAG_CSR_END_CONTAINS = "END CERTIFICATE REQUEST";
+    public static String CONFIG_WORKER_TAG_CSR_END_NEW_CONTAINS = "END NEW CERTIFICATE REQUEST";
+    public static String CONFIG_WORKER_TAG_CSR_END_RENEW_CONTAINS = "END RENEW CERTIFICATE REQUEST";
+    public static String CONFIG_WORKER_TAG_CERTIFICATE_BEGIN = "-----BEGIN CERTIFICATE-----";
+    public static String CONFIG_WORKER_TAG_CERTIFICATE_BEGIN_CONTAINS = "BEGIN CERTIFICATE";
+    public static String CONFIG_WORKER_TAG_CERTIFICATE_END = "-----END CERTIFICATE-----";
+    public static String CONFIG_WORKER_TAG_CERTIFICATE_END_CONTAINS = "END CERTIFICATE";
+    public static String CONFIG_WORKER_TAG_CERTIFICATE_TRUSTED_BEGIN = "-----BEGIN TRUSTED CERTIFICATE-----";
+    public static String CONFIG_WORKER_TAG_CERTIFICATE_TRUSTED_END = "-----END TRUSTED CERTIFICATE-----";
+    public static int CONFIG_WORKER_SLEEP_RELOAD = 5000;
+    public static String CONFIG_WORKER_SUBSTRING_NEW_WOKERID = "for worker ";
+    // user, role
+    public static String CONFIG_SYSTEM_TIMEOUT = "3600";
+    public static String CONFIG_ROLESET_CHECK_NULL = "a";
+    public static String CONFIG_ROLE_ID_CA_ADMIN = "1";
+    public static String CONFIG_ROLE_ID_CA_SURVEYOR = "2";
+    public static String CONFIG_ROLE_ID_CA_USER = "3";
+    public static String CONFIG_ROLE_ID_CA_ACCOUNTANT = "4";
+    public static String CONFIG_ROLE_ID_AGENT_ADMIN = "5";
+    public static String CONFIG_ROLE_ID_AGENT_SURVEYOR = "6";
+    public static String CONFIG_ROLE_ID_AGENT_USER = "7";
+    public static String CONFIG_ROLE_ID_AGENT_ACCOUNTANT = "8";
+    public static String CONFIG_ROLE_ID_CA_ADMIN_CHILD = "9";
+    public static String CONFIG_ROLE_CODE_AGENT_ADMIN = "AGENT_ADMIN";
+    public static String CONFIG_AGENCY_EDIT_CONTACT_ENABLED = "AGENCY_EDIT_CONTACT_ENABLED";
+    public static String CONFIG_AGENCY_UPLOADFILE_APPROVE_ENABLED= "AGENCY_UPLOADFILE_APPROVE_ENABLED";
+    //
+    public static String CONFIG_USER_ACCESS_URL_SETUPCERT_YES = "1";
+    public static String CONFIG_USER_ACCESS_URL_SETUPCERT_NO = "0";
+    public static int CONFIG_USER_STATE_ACTIVE_ID = 1;
+    public static int CONFIG_USER_STATE_LOCK_ID = 2;
+    public static int CONFIG_USER_STATE_TEMP_LOCK_ID = 3;
+    public static int CONFIG_USER_STATE_CANCEL_ID = 4;
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_TRANSFER_TOKEN = "TRANSFER_TOKEN";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_APPROVED_TOKEN = "APPROVED";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_DECLINED = "DECLINED";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_INITIALIZE = "INITIALIZE";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_CHANGE_SOPIN = "CHANGE_SOPIN";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_RESET_ACTIVATION_REMAINING_COUNTER = "RESET_ACTIVATION_REMAINING_COUNTER";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_LOCK = "LOCK";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_UNLOCK = "UNLOCK";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_LOST = "LOST";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_RE_OPERATION = "RE_OPERATION";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_DELETE = "DELETE";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_PUSH_NOTFICATION = "PUSH_NOTFICATION";
+    public static String CONFIG_ROLE_PROPERTIES_TOKEN_MENU_LINK = "MENU_LINK";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_DECLINED = "DECLINED";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_PRE_APPROVED = "PRE_APPROVED";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_IN_AGENCY_APPROVED = "IN_AGENCY_APPROVED";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_APPROVED_CERT = "APPROVED";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_ISSUE = "ISSUE";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_BUY_MORE = "BUY_MORE";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_RENEWAL = "RENEWAL";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_CHANGE_INFO = "CHANGE_INFO";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_COMPENSATION = "COMPENSATION";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_REISSUE = "REISSUE";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_REVOKE = "REVOKE";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_PERMANENT_DISABLE = "PERMANENT_DISABLE";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_TEMPORARY_DISABLE = "TEMPORARY_DISABLE";
+    public static String CONFIG_ROLE_PROPERTIES_CERT_RECOVERED = "RECOVERED";
+    
+    public static String CONFIG_ROLE_PROPERTIES_ALL = "ALL";
+    public static String CONFIG_ROLE_PROPERTIES_ANOTHER_APPROVE_SET_CREATE = "APPROVE_SET_CREATE";
+    // MENULINK
+    public static int CONFIG_MENULINK_GROUP_ID_COMMON = 2;
+    public static String CONFIG_MENULINK_MENU_URL_MENULINK = "../User/MenuLink.jsp";
+    public static String CONFIG_MENULINK_MENU_URL_ROLE = "../User/UserRole.jsp";
+    public static String CONFIG_MENULINK_MENU_URL_MENUSCREEN = "../User/MenuScreenList.jsp";
+    // transaction
+    public static String CONFIG_TRANSACTION_TAG_BACKOFFICE = "BackOffice";
+    public static String CONFIG_TRANSACTION_TAG_FRONTOFFICE = "FrontOffice";
+    public static String CONFIG_TRANSACTION_RESPONSE_CODE_EXCEPTION = "-1";
+    public static String CONFIG_EPLOG_RESPONSE_CODE_EXCEPTION = "-1";
+    // GridView, update, insert
+    public static String CONFIG_GRID_ACTIVE_TRUE = "True";
+    public static String CONFIG_GRID_ACTIVE_FALSE = "False";
+    public static String CONFIG_GRID_STRING_TRUE = "True";
+    public static String CONFIG_GRID_STRING_FALSE = "False";
+    public static String CONFIG_GRID_METHOD_STRING_TRUE = "True";
+    public static String CONFIG_GRID_METHOD_STRING_FALSE = "False";
+    public static String CONFIG_GRID_COMBOBOX_VALUE_ALL = "All";
+    public static String CONFIG_GRID_STRING_NA = "N/A";
+    public static String CONFIG_GRID_TAG_VALUE_CHECKBOX = "c";
+    public static int CONFIG_GRID_INT_PAGNO = 0;
+    public static int CONFIG_GRID_INT_PAGESUME = 10000;
+    public static String CONFIG_GRID_SEARCH_RESET = "new";
+    public static String CONFIG_GRID_SEACH_NODATE_FROM = "01-01-1900";
+    public static String CONFIG_GRID_SEACH_NODATE_TO = "01-01-2900";
+    public static String CONFIG_GRID_SPLIT_NAME_DESC = " - ";
+    public static String CONFIG_GRID_VALUE_LESS_ZERO = "-1";
+    public static String CONFIG_OPERATION_TYPE_APPROVED = "APPROVED";
+    public static String CONFIG_OPERATION_TYPE_DECLINED = "DECLINED";
+
+    // Process system java and javascript
+    public static String CONFIG_EXCEPTION_STRING_ERROR = "ERROR";
+    public static String CONFIG_EXCEPTION_STRING_DB_ERROR = "ERROR_DB";
+    public static String CONFIG_EXCEPTION_STRING_CSRF = "CSRF";
+    public static String CONFIG_EXCEPTION_STRING_LOGIN = "LOGIN";
+    public static String CONFIG_EXCEPTION_STRING_ANOTHERLOGIN = "ANOTHERLOGIN";
+    public static String CONFIG_EXCEPTION_STRING_GREAT_SIZE = "GREAT_SIZE";
+    public static String CONFIG_EXCEPTION_STRING_NO_CERTCHAN = "NO_CERTCHAN";
+    public static String CONFIG_EXCEPTION_STRING_ERRORCTS = "ERRORCTS";
+    public static String CONFIG_EXCEPTION_STRING_ERRORCSR = "ERRORCSR";
+    public static String CONFIG_EXCEPTION_STRING_HAS_CANC = "HAS_CANC";
+    public static String CONFIG_EXCEPTION_STRING_HAS_BLOC = "HAS_BLOC";
+    public static String CONFIG_EXCEPTION_STRING_NO_LOCK = "NO_LOCK";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_KEY = "error_key";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_CSR = "error_csr";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_WORKER = "error_worker";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NOWORKER = "error_noworker";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_LESS = "LESS";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NULL = "NULL";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_HAS_STATUS = "HAS_STATUS";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_DENIED_FUNCTION = "DENIED_FUNCTION";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NO_APPROVE_AGENCY = "NO_APPROVE_AGENCY";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_HAS_STATUS_TOKEN = "HAS_STATUS_TOKEN";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NO_DATA = "NO_DATA";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NO_DATA_WRITE = "NO_DATA_WRITE";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_CERT1 = "ERRORCERT";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_CERT1_EXPIRE = "ERROREXPIRECERT";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_CERT2 = "ERRORCERT2";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_CERT2_EXPIRE = "ERROREXPIRECERT2";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NO_UTF8 = "NOUTF-8";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_SPECIAL = "SPECIAL";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_NO_FORMAT = "NO_FORMAT";
+    public static String CONFIG_EXCEPTION_STRING_ERROR_FORMAT = "NOFORMAT";
+    public static String CONFIG_EXCEPTION_METHOD_OTP_EMPTY = "OTP_EMPTY";
+    public static String CONFIG_EXCEPTION_METHOD_BILLCODE_EMPTY = "BILLCODE_EMPTY";
+    public static String CONFIG_EXCEPTION_WRONG_AGENCY = "WRONG_AGENCY";
+    public static String CONFIG_EXCEPTION_WRONG_ROLE = "WRONG_ROLE";
+    public static String CONFIG_EXCEPTION_NOEXISTS_TOKEN = "NOEXISTS_TOKEN";
+    public static String CONFIG_EXCEPTION_CSR_KEYSIZE = "CSR_KEYSIZE";
+    public static String CONFIG_EXCEPTION_CSR_EXISTS = "CSR_EXISTS";
+    public static String CONFIG_EXCEPTION_ERROR_CORECA_CALL = "ERROR_CORECA_CALL";
+    public static String CONFIG_EXCEPTION_CSR_NULL = "CSR_NULL";
+    public static String CONFIG_EXCEPTION_DNS_SSL_NULL = "DNS_SSL_NULL";
+    public static String CONFIG_EXCEPTION_TAXCODE_EXISTS_REGISTER = "TAXCODE_EXISTS_REGISTER";
+    public static String CONFIG_EXCEPTION_STRING_INVALID_EXTERNAL_SYSTEM = "INVALID_EXTERNAL_SYSTEM";
+    public static String CONFIG_EXCEPTION_RSSP_USERNAME_EXISTS = "RSSP_USERNAME_EXISTS";
+    // IMPORT, EXPORT
+    public static String CONFIG_IMPORT_STRING_NULL = "";
+    public static String CONFIG_EXPORT_FILENAME_TAG_CSR = "_CSR_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_AGREEMENT = "_AgreementList_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_TRANSACTION = "_Transaction_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_CERTLIST = "_CertificateList_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_CERTEXPIRE = "_CertificateExpired_";
+    public static String CONFIG_EXPORT_TYPE_CSR = "CSR";
+    public static int CONFIG_EXPORT_STATUS_N_A = 1;
+    public static int CONFIG_EXPORT_STATUS_SUCCESS = 2;
+    public static int CONFIG_EXPORT_STATUS_EXPORTING = 3;
+    public static int CONFIG_EXPORT_STATUS_DELETED = 4;
+    public static int CONFIG_EXPORT_STATUS_FAILED = 5;
+    // CERTIFICATE ATTR TYPE
+    public static String CONFIG_CERT_DATELIMIT_PREFIX = ":0:0";
+    public static String CONFIG_CERTIFICATE_PAST_CERTIFICATE_ID = "1";
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_REGISTRATION = 1;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_RENEWAL = 2;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_CHANGEINFO = 3;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_REVOKE = 4;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_COMPENSATION = 5;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_REISSUE = 6;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_PERMANENT_DISABLE = 9;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_TEMPORARY_DISABLE = 10;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_RECOVERED = 8;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_SUPPLEMENT_FILE = 12;
+    public static int CONFIG_CERTIFICATION_ATTR_TYPE_ID_BUY_MORE = 13;
+    // SERVICE TYPE
+    public static int CONFIG_SERVICE_TYPE_ID_REGISTRATION = 2;
+    public static int CONFIG_SERVICE_TYPE_ID_RENEWAL = 3;
+    public static int CONFIG_SERVICE_TYPE_ID_CHANGEINFO = 4;
+    public static int CONFIG_SERVICE_TYPE_ID_SUSPEND = 5;
+    // REASON CORE-CA
+    public static String CONFIG_CERTIFICATION_REVOCATION_REASON_CODE_SUPERSEDED = "SUPERSEDED";
+    public static String CONFIG_CERTIFICATION_REVOCATION_REASON_CODE_CERTIFICATEHOLD = "CERTIFICATEHOLD";
+
+    public static int CONFIG_CERTIFICATION_STATE_NEW = 1;
+    public static int CONFIG_CERTIFICATION_STATE_OPERATED = 2;
+    public static int CONFIG_CERTIFICATION_STATE_RENEWED = 3;
+    public static int CONFIG_CERTIFICATION_STATE_REVOKED = 4;
+    public static int CONFIG_CERTIFICATION_STATE_DECLINED = 5;
+    public static int CONFIG_CERTIFICATION_STATE_EXPIRED = 6;
+    public static int CONFIG_CERTIFICATION_STATE_RENEWED_EXPIRED = 7;
+    public static int CONFIG_CERTIFICATION_STATE_APPROVE_AGENCY = 2;
+    public static int CONFIG_CERTIFICATION_STATE_OPERATED_PERMANENT_DISABLE = 8;
+    public static int CONFIG_CERTIFICATION_STATE_OPERATED_TEMPORARY_DISABLE = 9;
+    public static int CONFIG_CERTIFICATION_STATE_RENEWAL_PERMANENT_DISABLE = 10;
+    public static int CONFIG_CERTIFICATION_STATE_RENEWAL_TEMPORARY_DISABLE = 11;
+    public static int CONFIG_CERTIFICATION_STATE_REVISED_KEEP_SN = 14;
+    public static int CONFIG_CERTIFICATION_STATE_RENEWED_KEEP_SN = 15;
+    public static int CONFIG_CERTIFICATION_STATE_STOPPED_OPERATION = 12;
+    public static int CONFIG_CERTIFICATION_STATE_AUTO_REVOKED = 13;
+    public static int CONFIG_CERTIFICATION_STATE_REVISED = 16;
+    public static int CONFIG_CERTIFICATION_STATE_REISSUED = 17;
+    public static String CONFIG_CERTIFICATION_STATE_CODE_OPERATED = "OPERATED";
+    public static String CONFIG_CERTIFICATION_STATE_CODE_NEW = "INITIALIZED";
+    public static String CONFIG_CERTIFICATION_STATE_CODE_RENEWED = "RENEWED";
+    public static String CONFIG_CERTIFICATION_STATE_CODE_REVISED = "REVISED";
+    public static String CONFIG_CERTIFICATION_STATE_CODE_REISSUED = "REISSUED";
+    public static String CONFIG_CERTIFICATION_STATE_CODE_REVOKED = "REVOKED";
+    public static String CONFIG_CERTIFICATION_STATE_CODE_DECLINED = "DECLINED";
+    public static String CONFIG_BRIEF_TYPE_CODE_SCAN = "SCAN";
+    public static String CONFIG_BRIEF_TYPE_CODE_DIGITAL_SIGNATURE = "DIGITAL_SIGNATURE";
+    public static String CONFIG_BRIEF_TYPE_CODE_PAPER = "PAPER";
+    public static int CONFIG_BRIEF_TYPE_ID_SCAN = 2;
+    public static int CONFIG_BRIEF_TYPE_ID_DIGITAL_SIGNATURE = 3;
+    public static int CONFIG_BRIEF_TYPE_ID_PAPER = 4;
+    
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_REGISTRATION = "ISSUE";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_RENEWAL = "RENEWAL";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_CHANGEINFO = "CHANGE_INFO";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_REISSUE = "REISSUE";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_COMPENSATION = "COMPENSATION";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_REVOKE = "REVOKE";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_PERMANENT_DISABLE = "PERMANENT_DISABLE";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_TEMPORARY_DISABLE = "TEMPORARY_DISABLE";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_RECOVERED = "RECOVERED";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_SUPPLEMENT_FILE = "SUPPLEMENT_FILE";
+    public static String CONFIG_CERTIFICATION_ATTR_TYPE_CODE_BUY_MORE = "BUY_MORE";
+    // CERTIFICATE ATTR Date 190618
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_PENDING = 1;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_PRE_APPROVED = 2;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_APPROVED = 3;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_GENERATED = 4;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_ISSUED = 5;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_COMMITED = 6;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_DECLINED = 7;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_INIT = 8;
+    public static int CONFIG_CERTIFICATION_ATTR_STATE_ID_ERROR_ISSUED = 9;
+
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_PENDING = "PENDING";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_IN_AGENCY_APPROVED = "IN_AGENCY_APPROVED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_PRE_APPROVED = "PRE_APPROVED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_APPROVED = "APPROVED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_GENERATED = "GENERATED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_ISSUED = "ISSUED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_COMMITED = "COMMITED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_DECLINED = "DECLINED";
+    public static String CONFIG_CERTIFICATION_ATTR_STATE_CODE_ERROR_ISSUED = "ERROR_ISSUED";
+
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_TOKEN = "TOKEN";
+    // DATABASE RESULTSET
+    public static int CONFIG_RESULTSET_VALUE_INT_NULL = -1;
+    public static boolean CONFIG_POLICY_PINCODE_SEND_SMS = false;
+    public static boolean CONFIG_POLICY_PINCODE_SEND_MAIL = true;
+    public static String CONFIG_UPDATE_DEFAULT_VALUE_NULL = "null";
+    // N/A
+    public static int CONFIG_EMPTY_N_A_GLOBAL = 1;
+    public static int CONFIG_EMPTY_N_A_OTPTOKEN_AGREEMENT = 1;
+    // LOG4J
+    public static String CONFIG_LOG_WRITE_DOWNLINE = ".\n-----------------------------------";
+    // format date
+    public static String CONFIG_DATE_PATTERN_DATE_DDMMYYYY = "dd/MM/yyyy";
+    public static String CONFIG_DATE_PATTERN_DATE_YYYYMMDD = "yyyy/MM/dd";
+    public static String CONFIG_DATE_PATTERN_DATE_TIME_DDMMYYYY = "dd/MM/yyyy HH:mm:ss";
+    // SignServer
+    public static int CONFIG_CERT_STATUS_N_A = 1;
+    public static int CONFIG_CERT_STATUS_NEW = 2;
+    public static int CONFIG_CERT_STATUS_RENEW = 3;
+    public static int CONFIG_CERT_STATUS_DECLINE = 4;
+    public static int CONFIG_CERTTYPE_CODE_STAFF = 4;
+    public static String CONFIG_CERTTYPE_DESC_STAFF = "STAFF";
+    public static String CONFIG_CERTTYPE_DESC_ENTERPRISE = "ENTERPRISE";
+    public static String CONFIG_CERTTYPE_DESC_PERSONAL = "PERSONAL";
+    public static int CONFIG_CERTTYPE_CODE_ENTERPRISE = 5;
+    public static int CONFIG_CERTTYPE_CODE_PERSONAL = 6;
+    public static int CONFIG_CERTTYPE_CODE_ENTERPRISE_SIGNSERVER = 7;
+    public static String CONFIG_CERTTYPE_DESC_ENTERPRISE_SIGNSERVER = "SIGNSERVER_ENTERPRISE";
+    public static int CONFIG_CERTTYPE_CODE_STAFF_SIGNSERVER = 8;
+    public static String CONFIG_CERTTYPE_DESC_STAFF_SIGNSERVER = "SIGNSERVER_STAFF";
+    public static int CONFIG_CERTTYPE_CODE_PERSONAL_SIGNSERVER = 9;
+    public static String CONFIG_CERTTYPE_DESC_PERSONAL_SIGNSERVER = "SIGNSERVER_PERSONAL";
+    public static int CONFIG_CERTTYPE_CODE_ENTERPRISE_SSL = 2;
+    public static int CONFIG_CERTTYPE_CODE_STAFF_SSL = 10;
+    public static int CONFIG_CERTTYPE_CODE_PERSONAL_SSL = 11;
+    public static int CONFIG_CERTTYPE_CODE_ENTERPRISE_CODESIGNING = 3;
+    public static int CONFIG_CERTTYPE_CODE_STAFF_CODESIGNING = 12;
+    public static int CONFIG_CERTTYPE_CODE_PERSONAL_CODESIGNING = 13;
+    //
+    public static int CONFIG_CERTTYPE_ID_SSL = 2;
+    public static int CONFIG_CERTTYPE_ID_CODE_SIGNING = 3;
+    public static int CONFIG_CERTTYPE_ID_DEVICE = 7;
+    public static int CONFIG_CERTTYPE_ID_PERSONAL_GOV = 8;
+    public static int CONFIG_CERTTYPE_ID_ENTERPRISE_GOV = 9;
+    public static int CONFIG_CERTTYPE_ID_WEB_SERVER = 10;
+    public static int CONFIG_CERTTYPE_ID_X_ROAD_AUTH = 11;
+    public static int CONFIG_CERTTYPE_ID_WEB_CLIENT = 12;
+    public static int CONFIG_CERTTYPE_ID_X_ROAD_SIGN = 13;
+    public static int CONFIG_CERTTYPE_ID_CODE_SIGNING_GOV = 14;
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_SSL = "SSL";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_CODE_SIGNING = "CODE_SIGNING";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_DEVICE = "DEVICE";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_PERSONAL_GOV = "PERSONAL_GOV";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_ENTERPRISE_GOV = "ENTERPRISE_GOV";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_WEB_CLIENT = "WEB_CLIENT";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_WEB_SERVER = "WEB_SERVER";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_X_ROAD_AUTH = "X_ROAD_AUTH";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_X_ROAD_SIGN = "X_ROAD_SIGN";
+    public static String CONFIG_CERTIFICATION_PURPOSE_CODE_CODE_SIGNING_GOV = "CODE_SIGNING_GOV";
+    //-- FORM FACTOR
+    public static int CONFIG_PKI_FORMFACTOR_ID_HARD_TOKEN = 2;
+    public static int CONFIG_PKI_FORMFACTOR_ID_HARD_TOKEN_SAFENET = 7;
+    public static int CONFIG_PKI_FORMFACTOR_ID_HARD_TOKEN_SMARTCARD = 8;
+    public static int CONFIG_PKI_FORMFACTOR_ID_HARD_TOKEN_EPASS3003 = 9;
+    public static int CONFIG_PKI_FORMFACTOR_ID_SOFT_TOKEN = 3;
+    public static int CONFIG_PKI_FORMFACTOR_ID_ESIGNCLOUD = 4;
+    public static int CONFIG_PKI_FORMFACTOR_ID_PKI_USIM = 10;
+    public static int CONFIG_PKI_FORMFACTOR_ID_PARTNER_HARD_TOKEN = 11;
+    public static int CONFIG_PKI_FORMFACTOR_ID_REMOTE_SIGNING = 5;
+    public static int CONFIG_PKI_FORMFACTOR_ID_MOBILE_ID = 6;
+
+    // COMPONENT
+    public static String CONFIG_COMPONENT_DN_TAG_UID = "0.9.2342.19200300.100.1.1";
+    public static String CONFIG_COMPONENT_DN_TAG_UID_BEFORE = "UID";
+    public static String CONFIG_COMPONENT_DN_SUBSTRING_CN_KEY = "CN=\"";
+    public static String CONFIG_COMPONENT_DN_SUBSTRING_CN_VALUE = "\",";
+    public static String CONFIG_COMPONENT_DN_TAG_CN = "CN";
+    public static String CONFIG_COMPONENT_DN_TAG_Domain = "Domain";
+    public static String CONFIG_COMPONENT_DN_TAG_O = "O";
+    public static String CONFIG_COMPONENT_DN_TAG_OU = "OU";
+    public static String CONFIG_COMPONENT_DN_TAG_T = "T";
+    public static String CONFIG_COMPONENT_DN_TAG_E = "E";
+    public static String CONFIG_COMPONENT_DN_TAG_telephoneNumber = "telephoneNumber";
+    public static String CONFIG_COMPONENT_DN_TAG_L = "L";
+    public static String CONFIG_COMPONENT_DN_TAG_ST = "ST";
+    public static String CONFIG_COMPONENT_DN_TAG_C = "C";
+    public static String CONFIG_COMPONENT_SAN_TAG_rfc822Name = "rfc822Name";
+    public static String CONFIG_COMPONENT_SAN_TAG_E_SAN = "E_SAN";
+    public static String CONFIG_COMPONENT_SAN_TAG_IP_SAN = "IPAddress_1";
+    public static String CONFIG_COMPONENT_SAN_TAG_IP_SAN2 = "IPAddress_2";
+    public static String CONFIG_COMPONENT_SAN_TAG_IP_SAN3 = "IPAddress_3";
+    public static String CONFIG_COMPONENT_SAN_TAG_DNS = "dNSName_1";
+    public static String CONFIG_COMPONENT_SAN_TAG_DNS2 = "dNSName_2";
+    public static String CONFIG_COMPONENT_SAN_TAG_DNS3 = "dNSName_3";
+    public static String CONFIG_COMPONENT_SAN_TAG_DNS4 = "dNSName_4";
+    public static String CONFIG_COMPONENT_DN_COMMONNAME_COMPANY = "COMPANY";
+    public static String CONFIG_COMPONENT_DN_COMMONNAME_PERSON = "PERSON";
+    public static String CONFIG_COMPONENT_DN_COMMONNAME_DOMAIN_NAME = "DOMAIN_NAME";
+    // EXTENDTION FILE
+    public static String CONFIG_FILE_EXTENDTION_CSR = ".csr";
+    public static String CONFIG_FILE_EXTENDTION_CRL = ".crl";
+    public static String CONFIG_FILE_EXTENDTION_CERT = ".cer";
+    public static String CONFIG_FILE_EXTENDTION_PEM = ".pem";
+    public static String CONFIG_FILE_EXTENDTION_P12 = ".p12";
+    public static String CONFIG_FILE_EXTENDTION_PDF = ".pdf";
+    public static String CONFIG_FILE_EXTENDTION_P7P = ".p7b";
+    public static String CONFIG_UNICODE_UTF_8 = "UTF-8";
+    // general policy
+    public static String CONFIG_POLICY_MIN_LENGTH_PASSWORD = "BO_MIN_LENGTH_PASSWORD";
+    public static String CONFIG_POLICY_SYS_DEFAULT_CERTIFICATION_PUSH_NOTICE_ENABLED = "SYS_DEFAULT_CERTIFICATION_PUSH_NOTICE_ENABLED";
+    public static String CONFIG_POLICY_DELETE_CERT_WHEN_REVOKE = "FO_DELETE_CERT_WHEN_REVOKE";
+    public static String CONFIG_POLICY_FO_DELETE_OLD_CERTIFICATE = "FO_DELETE_OLD_CERTIFICATE";
+    public static String CONFIG_POLICY_MAX_LENGTH_PASSWORD = "BO_MAX_LENGTH_PASSWORD";
+    public static String CONFIG_POLICY_TIMEOUT = "BO_TIMEOUT";
+    public static String CONFIG_POLICY_NUMERIC_PASSWORD = "BO_NUMERIC_PASSWORD";
+    public static String CONFIG_POLICY_ALPHA_PASSWORD = "BO_ALPHA_PASSWORD";
+    public static String CONFIG_POLICY_SPECIAL_PASSWORD = "BO_SPECIAL_PASSWORD";
+    public static String CONFIG_POLICY_ALERT_CHECK_CERT_FOR_CA = "BO_ALARM_CHECK_CERT_FOR_CA";
+    public static String CONFIG_POLICY_ALERT_CHECK_CERT_FOR_USER = "BO_ALARM_CHECK_CERT_FOR_USER";
+    public static String CONFIG_POLICY_UPERCASE_PASSWORD = "BO_UPERCASE_PASSWORD";
+    public static String CONFIG_POLICY_CYCLE_PASSWORD = "BO_CYCLE_PASSWORD";
+    public static String CONFIG_POLICY_BO_FORGOT_PASSWORD_USER = "BO_FORGOT_PASSWORD_USER";
+    public static String CONFIG_POLICY_BO_REQUEST_CHANGE_PASSWORD = "BO_REQUEST_CHANGE_PASSWORD";
+    public static String CONFIG_POLICY_BO_CERTIFICATE_ATTRIBUTE_COUNTRY = "BO_CERTIFICATE_ATTRIBUTE_COUNTRY";
+    public static String CONFIG_POLICY_FO_DEFAULT_ACTIVATION_CODE_LENGTH = "FO_DEFAULT_ACTIVATION_CODE_LENGTH";
+    public static String CONFIG_POLICY_FO_DEFAULT_ACTIVATION_MAX_COUNTER = "FO_DEFAULT_ACTIVATION_MAX_COUNTER";
+    public static String CONFIG_POLICY_BO_MAX_RETRY_NEAC_SYNCHRONIZATION = "BO_MAX_RETRY_NEAC_SYNCHRONIZATION";
+    public static String CONFIG_POLICY_BO_AUTO_REVOKE_AFTER_REVISION_OPTION = "BO_AUTO_REVOKE_AFTER_REVISION_OPTION";
+    public static String CONFIG_POLICY_BO_DAYS_AUTO_REVOKE_AFTER_REVISION = "BO_DAYS_AUTO_REVOKE_AFTER_REVISION";
+    public static String CONFIG_POLICY_BO_DAYS_AUTO_REVOKE_AFTER_RENEWAL = "BO_DAYS_AUTO_REVOKE_AFTER_RENEWAL";
+    public static String CONFIG_POLICY_BO_AUTO_REVOKE_AFTER_RENEWAL_OPTION = "BO_AUTO_REVOKE_AFTER_RENEWAL_OPTION";
+    public static String CONFIG_POLICY_BO_AUTO_ASYNC_ALL_CERTIFICATE_WITH_NEAC = "BO_AUTO_ASYNC_ALL_CERTIFICATE_WITH_NEAC";
+    public static String CONFIG_POLICY_FO_GENERATE_NEW_KEY = "FO_GENERATE_NEW_KEY";
+    public static String CONFIG_POLICY_FO_DEFAULT_PRIVATE_KEY_ENABLED = "FO_DEFAULT_PRIVATE_KEY_ENABLED";
+    public static String CONFIG_POLICY_BO_REVOKE_CERTIFICATE_AFTER_REISSUE_CHANGINFO = "SYS_REVOKE_CERTIFICATE_AFTER_REISSUE_CHANGINFO";
+    public static String CONFIG_POLICY_FO_REVOKE_CERTIFICATE_AFTER_CHANGEINFO = "FO_REVOKE_CERTIFICATE_AFTER_CHANGEINFO";
+    public static String CONFIG_POLICY_FO_REVOKE_CERTIFICATE_AFTER_REISSUE = "FO_REVOKE_CERTIFICATE_AFTER_REISSUE";
+    public static String CONFIG_POLICY_BO_RECORD_EXCEL_IMPORT_CERTIFICATION = "BO_MAX_CERTIFICATE_IMPORT_FROM_FILE_EXCEL";
+    public static String CONFIG_POLICY_BO_DEFAULT_DISCOUNT_RATE_PROFILE = "BO_DEFAULT_DISCOUNT_RATE_PROFILE";
+    public static String CONFIG_POLICY_SYS_DISCOUNT_RATE_PROFILE_OPTION = "SYS_DISCOUNT_RATE_PROFILE_OPTION";
+    public static String CONFIG_POLICY_BO_NEAC_ASYNC_NEED_APPROVE_BY_USER = "BO_NEAC_ASYNC_NEED_APPROVE_BY_USER";
+    public static String CONFIG_POLICY_BO_DEFAULT_CERTIFICATION_POLICY_PROPERTIES_FOR_BRANCH = "BO_DEFAULT_CERTIFICATION_POLICY_PROPERTIES_FOR_BRANCH";
+    public static String CONFIG_POLICY_SYS_DEFAULT_SHARE_CERTIFICATE_MODE_FOR_BRANCH = "SYS_DEFAULT_SHARE_CERTIFICATE_MODE_FOR_BRANCH";
+    public static String CONFIG_POLICY_SYS_DEFAULT_OPTION_KEEPING_SN_FOR_REQUEST = "SYS_DEFAULT_OPTION_KEEPING_SN_FOR_REQUEST";
+    public static String CONFIG_POLICY_SYS_INVISIBLE_OPTION_KEEPING_SN_FOR_REQUEST = "SYS_OPTION_DISPLAY_KEEP_SN_FOR_CERTIFICATE";
+    public static String CONFIG_POLICY_BO_DISALLOW_REVOKING_AFTER_ENABLED_CROSS_CHECK_STATE = "BO_DISALLOW_REVOKING_AFTER_ENABLED_CROSS_CHECK_STATE";
+    public static String CONFIG_POLICY_BO_TOKEN_AMOUNT_ENTERPRISE = "BO_TOKEN_AMOUNT_ENTERPRISE";
+    public static String CONFIG_POLICY_BO_FINE_FOR_LACK_OF_BRIEF = "BO_FINE_FOR_LACK_OF_BRIEF";
+    public static String CONFIG_POLICY_BO_OPTION_FOR_CHANGING_EFFECTIVE_DT = "BO_OPTION_FOR_CHANGING_EFFECTIVE_DT";
+    public static String CONFIG_POLICY_BO_MAX_NUMBERS_DAY_ISSUE_CERTIFICATE_FUTURE = "BO_MAX_NUMBERS_DAY_ISSUE_CERTIFICATE_FUTURE";
+    public static String CONFIG_POLICY_BO_DELETE_CERT_IN_TOKEN_FOR_AUTO_REVOKE_AFTER_RENEWAL = "BO_DELETE_CERT_IN_TOKEN_FOR_AUTO_REVOKE_AFTER_RENEWAL";
+    public static String CONFIG_POLICY_BO_DELETE_CERT_IN_TOKEN_FOR_AUTO_REVOKE_AFTER_REVISION = "BO_DELETE_CERT_IN_TOKEN_FOR_AUTO_REVOKE_AFTER_REVISION";
+    public static String CONFIG_POLICY_VALUE_CONTAIN_CERT_ATTR_KEEP_SN = "keepCertificateSNEnabled";
+    // POLICY PUSH
+    public static String CONFIG_POLICY_FO_DEFAULT_PUSH_NOTICE_JSON = "FO_DEFAULT_PUSH_NOTICE_JSON";
+    public static String CONFIG_POLICY_FO_PUSH_NOTIFICATION_RECORD_COLLECTION = "FO_PUSH_NOTIFICATION_RECORD_COLLECTION";
+    public static String CONFIG_POLICY_FO_PUSH_NOTICE_TEXT_COLOR = "textColor";
+    public static String CONFIG_POLICY_FO_PUSH_NOTICE_BGR_COLOR = "bgrColor";
+    public static String CONFIG_POLICY_FO_PUSH_NOTICE_CONTENT = "content";
+    public static String CONFIG_POLICY_FO_PUSH_NOTICE_URL = "url";
+    public static String CONFIG_CA_TEMPLATE_PERSONAL_REGISTRATION_PAPER = "TEMPLATE_PERSONAL_REGISTRATION_PAPER";
+    public static String CONFIG_CA_TEMPLATE_CONFIRMATION_PAPER = "TEMPLATE_CONFIRMATION_PAPER";
+    public static String CONFIG_CA_TEMPLATE_ENTERPRISE_REGISTRATION_PAPER = "TEMPLATE_ENTERPRISE_REGISTRATION_PAPER";
+    public static String CONFIG_CA_TEMPLATE_DELIVERY_PAPER = "TEMPLATE_DELIVERY_PAPER";
+    public static String CONFIG_CA_TEMPLATE_LICENSE_CERTIFICATION = "TEMPLATE_LICENSE_CERTIFICATION";
+    public static String CONFIG_CA_TEMPLATE_LICENSE_CERTIFICATION_DIGITAL = "TEMPLATE_LICENSE_CERTIFICATION_DIGITAL";
+    public static String CONFIG_CA_TEMPLATE_REPORT_DEBT_CONTROL = "TEMPLATE_REPORT_DEBT_CONTROL";
+    public static String CONFIG_CA_TEMPLATE_REPORT_CERTIFICATE_LIST = "TEMPLATE_REPORT_CERTIFICATE_LIST";
+    public static String CONFIG_CA_TEMPLATE_REPORT_NEAC = "TEMPLATE_REPORT_NEAC";
+    public static String CONFIG_CA_TEMPLATE_REPORT_PERIODIC = "TEMPLATE_REPORT_PERIODIC";
+    public static String CONFIG_CA_TEMPLATE_REPORT_PERIODIC_IV = "TEMPLATE_REPORT_PERIODIC_IV";
+    public static String CONFIG_POLICY_CA_DEFAULT_FOR_EXPORT = "FO_DEFAULT_CA_NAME_FOR_CERT_REQUEST";
+    public static String CONFIG_POLICY_BO_DEFAULT_CERTIFICATION_PROFILE_PROPERTIES_FOR_BRANCH_ROLE = "BO_DEFAULT_CERTIFICATION_PROFILE_PROPERTIES_FOR_BRANCH_ROLE";
+    public static String CONFIG_POLICY_SYS_AUTO_APPROVED_FOR_EACH_CERTIFICATION_PROFILE_OPTION = "SYS_AUTO_APPROVED_FOR_EACH_CERTIFICATION_PROFILE_OPTION";
+    public static String CONFIG_POLICY_BO_DMS_PROPERTIES_CURRENT = "SYS_DMS_PROPERTIES_CURRENT";
+    public static String CONFIG_POLICY_FO_ALLOW_MULTIPLE_CERTIFICATES_PER_TOKEN = "FO_ALLOW_MULTIPLE_CERTIFICATES_PER_TOKEN";
+    public static String CONFIG_POLICY_SYS_REGEX_FOR_PHONE_EMAIL = "SYS_REGEX_FOR_PHONE_EMAIL";
+    public static String CONFIG_POLICY_BO_DEFAULT_PASSWORD_ACCOUNT = "BO_DEFAULT_PASSWORD_ACCOUNT";
+    public static String CONFIG_POLICY_SYS_RENEWAL_AND_REVISION_AUTO_ISSUE_CERT_FOR_PARTICULAR_REQUEST = "SYS_RENEWAL_AND_REVISION_AUTO_ISSUE_CERT_FOR_PARTICULAR_REQUEST";
+    public static String CONFIG_POLICY_API_DEFAULT_BENEFICIARY_BRANCH = "API_DEFAULT_BENEFICIARY_BRANCH";
+    public static String CONFIG_POLICY_API_AUTOCREATE_BENEFICIARY_BRANCH = "API_AUTOCREATE_BENEFICIARY_BRANCH";
+    public static String CONFIG_POLICY_API_AUTOCREATE_BENEFICIARY_USER = "API_AUTOCREATE_BENEFICIARY_USER";
+    public static String CONFIG_POLICY_API_DEFAULT_INFO_BENEFICIARY_USER = "API_DEFAULT_INFO_BENEFICIARY_USER";
+    public static String CONFIG_POLICY_SYS_NO_AUTO_MOVE_TOKEN_FOR_RENEWAL_REVISION_CERTIFICATE_REQUEST = "SYS_NO_AUTO_MOVE_TOKEN_FOR_RENEWAL_REVISION_CERTIFICATE_REQUEST";
+    public static String CONFIG_POLICY_BO_ALLOWED_FILE_EXTENSION_LIST= "BO_ALLOWED_FILE_EXTENSION_LIST";
+    public static String CONFIG_POLICY_BO_WEBSITE_PRIVACY_POLICY = "BO_WEBSITE_PRIVACY_POLICY";
+    public static String CONFIG_POLICY_BO_WEBSITE_TERMS_CONDITIONS = "BO_WEBSITE_TERMS_CONDITIONS";
+    public static String CONFIG_POLICY_API_MAX_AMOUNT_TOKEN_THROUGH_BUNDLE_API = "API_MAX_AMOUNT_TOKEN_THROUGH_BUNDLE_API";
+    public static String CONFIG_POLICY_FO_PUSH_NOTIFICATION_CALLBACK_URL_ENABLED = "FO_PUSH_NOTIFICATION_CALLBACK_URL_ENABLED";
+    public static String CONFIG_POLICY_ACTIVATED_SIGNSERVER_ENABLED = "ACTIVATED_SIGNSERVER_ENABLED";
+    public static String CONFIG_POLICY_FO_EMAIL_TEMPLATE_CERTIFICATION_SIGNSERVER_CONFIRM = "FO_EMAIL_TEMPLATE_CERTIFICATION_SIGNSERVER_CONFIRM";
+    public static String CONFIG_POLICY_BO_EXPIRATION_DATE_SIGNSERVER_CONFIRM = "BO_EXPIRATION_DATE_SIGNSERVER_CONFIRM";
+    public static String CONFIG_POLICY_BO_URL_CERTIFICATION_SIGNSERVER_CONFIRM = "BO_URL_CERTIFICATION_SIGNSERVER_CONFIRM";
+    public static String CONFIG_EMAIL_FO_EMAIL_TEMPLATE_AUTHENTICATION_CODE_SUBJECT = "FO_EMAIL_TEMPLATE_AUTHENTICATION_CODE_SUBJECT";
+    public static String CONFIG_EMAIL_FO_EMAIL_TEMPLATE_AUTHENTICATION_CODE_CONTENT = "FO_EMAIL_TEMPLATE_AUTHENTICATION_CODE_CONTENT";
+    public static String CONFIG_POLICY_BO_OPTION_ALLOW_ISSUING_P12 = "BO_OPTION_ALLOW_ISSUING_P12";
+    public static String CONFIG_POLICY_CALLBACK_URL_APPROVED_ENABLED = "CALLBACK_URL_APPROVED_ENABLED";
+    public static String CONFIG_POLICY_CALLBACK_URL_APPROVED_VALUE = "CALLBACK_URL_APPROVED_VALUE";
+    public static String CONFIG_EMAIL_TEMPLATE_TAG_EXPIRATION_DURATION = "{EXPIRATION_DURATION}";
+    public static String CONFIG_EMAIL_TEMPLATE_TAG_SUBJECT_DN = "{SUBJECT_DN}";
+    public static String CONFIG_EMAIL_TEMPLATE_TAG_ACTIVE_URL = "{ACTIVE_URL}";
+    public static String CONFIG_EMAIL_URL_TAG_KEY_VALUE = "{KEY_VALUE}";
+
+    public static String[] CONFIG_POLICY_BOOLEAN_ARRAY = {"@gmail.com", "@Gmail.com", "@gmx.com", "@mobile-id.vn"};
+    // MINETYPE POLICY
+    public static String CONFIG_POLICY_MIMETYPE_NUMERIC = "text/numeric";
+    public static String CONFIG_POLICY_MIMETYPE_BOOLEAN = "text/boolean";
+    public static String CONFIG_POLICY_MIMETYPE_TEXT = "text/alphanumeric";
+    public static String CONFIG_POLICY_MINETYPE_FO_DEFAULT_PUSH_NOTICE_JSON = "text/json/pushnotification";
+    public static String CONFIG_POLICY_MINETYPE_SYS_DISALLOWANCE_LIST = "text/json/disallowancelist";
+    public static String CONFIG_POLICY_MINETYPE_FO_PUSH_NOTIFICATION_RECORD_COLLECTION = "text/json/collectionnotice";
+    public static String CONFIG_POLICY_MINETYPE_DATETIME = "text/datetime";
+    public static String CONFIG_MIMETYPE_PDF = "application/pdf";
+    public static String CONFIG_POLICY_ATTR_BO_DMS_PROPERTIES_CURRENT_ID = "53";
+    // LENGTH INPUT
+    public static int CONFIG_LENGTH_INPUT_DATESEARCH = 20;
+    public static int CONFIG_LENGTH_INPUT_NAME = 50;
+    public static int CONFIG_LENGTH_INPUT_REMARK = 200;
+    public static int CONFIG_LENGTH_TOKEN_SN = 32;
+    public static int CONFIG_LENGTH_TOKEN_SOPIN = 32;
+    public static int CONFIG_LENGTH_INPUT_URL = 250;
+    public static int CONFIG_LENGTH_INPUT_VALUE = 3000;
+    public static int CONFIG_LENGTH_INPUT_PHONE = 20;
+    public static int CONFIG_LENGTH_INPUT_EMAIL = 150;
+    public static int CONFIG_LENGTH_INPUT_COMMON_NAME = 200;
+    public static int CONFIG_LENGTH_INPUT_ADDRESS = 200;
+    public static int CONFIG_LENGTH_INPUT_BILLCODE = 50;
+    public static int CONFIG_LENGTH_INPUT_IP = 30;
+    // Simple FORMAT DATETIME
+    public static String CONFIG_DATETIME_FORMAT_DDMMYYYY = "dd/MM/yyyy";
+    public static String CONFIG_DATETIME_FORMAT_DDMMYYYYHHMMSS = "dd/MM/yyyy HH:mm:ss";
+    public static String CONFIG_DATETIME_FORMAT_YYYYDDMMHHMMSS = "yyyy-MM-dd HH:mm:ss";
+    public static String CONFIG_DATETIME_FORMAT_MONEY_EXCEL = "#,##0";
+    public static String CONFIG_RELYING_VALUE_ALL = "ALL";
+    public static String CONFIG_TAG_ID_RECORD = "id_";
+    // 
+    public static String CONFIG_AGENT_ROOT = "1";
+    // ROLESET FUNCTION v2
+    public static String CONFIG_FUNROLE_LOCK = "1a1";
+    public static String CONFIG_FUNROLE_UNLOCK = "1a2";
+    public static String CONFIG_FUNROLE_SOPIN = "1a3";
+    public static String CONFIG_FUNROLE_PUSH = "1a4";
+    public static String CONFIG_FUNROLE_INITIALIZE = "1a5";
+    public static String CONFIG_FUNROLE_DYNAMIC = "1a6";
+    public static String CONFIG_FUNROLE_ACTIVE = "1a8";
+    public static String CONFIG_FUNROLE_EDIT_CERT = "1a10";
+    public static String CONFIG_FUNROLE_APPROVE_CERT = "1a11";
+    public static String CONFIG_FUNROLE_DELETE_REQUEST = "1a12";
+    public static String CONFIG_FUNROLE_ADD_RENEWAL = "1a13";
+    public static String CONFIG_FUNROLE_DELETE_RENEWAL = "1a14";
+    public static String CONFIG_FUNROLE_ACCESS_RENEWAL = "1a15";
+    public static String CONFIG_FUNROLE_IMPORT_RENEWAL = "1a16";
+    public static String CONFIG_FUNROLE_REVOKE_CERT = "1a17";
+    public static String CONFIG_FUNROLE_EXPORT_CERT = "1a18";
+    public static String CONFIG_FUNROLE_ALL = "1a1,1a2,1a3,1a4,1a5,1a6,1a7,1a8,1a9,1a10,1a11,1a12,1a13,1a14,1a15,1a16,1a17,1a18,";
+    // REQUEST
+    public static String CONFIG_REQUEST_VALUE_NULL = "NULL";
+    // PAGE ROLESET
+    public static String CONFIG_PAGE_HOME_USER = "/Home.jsp";
+    public static String CONFIG_PAGE_CHANGEPASS_USER = "/LoginChange.jsp";
+    public static String CONFIG_PAGE_USER_LIST = "/UserList.jsp";
+    public static String CONFIG_PAGE_USER_EDIT = "/UserEdit.jsp";
+    public static String CONFIG_PAGE_USER_ADD = "/UserNew.jsp";
+    public static String CONFIG_PAGE_AGENT_LIST = "/AgentList.jsp";
+    public static String CONFIG_PAGE_AGENT_EDIT = "/AgentEdit.jsp";
+    public static String CONFIG_PAGE_AGENT_ADD = "/AgentNew.jsp";
+    public static String CONFIG_PAGE_POLICY_LIST = "/ManagePolicy.jsp";
+    public static String CONFIG_PAGE_TOKEN_LIST = "/TokenList.jsp";
+    public static String CONFIG_PAGE_TOKEN_EDIT = "/TokenEdit.jsp";
+    public static String CONFIG_PAGE_INFO_LIST = "/InfoList.jsp";
+    public static String CONFIG_PAGE_INFO_EDIT = "/InfoApprove.jsp";
+    public static String CONFIG_PAGE_CERT_LIST = "/CertificateList.jsp";
+    public static String CONFIG_PAGE_CERT_EDIT = "/CertificateApprove.jsp";
+    public static String CONFIG_PAGE_RENEWAL_LIST = "/AutoRenewList.jsp";
+    public static String CONFIG_PAGE_RENEWAL_EDIT = "/AutoRenewEdit.jsp";
+    public static String CONFIG_PAGE_REQUEST_LIST = "/RequestList.jsp";
+    public static String CONFIG_PAGE_LOG_LIST = "/LogRequest.jsp";
+    public static String CONFIG_PAGE_EMAIL_LIST = "/ConfigEmail.jsp";
+    public static String CONFIG_PAGE_PARAMBACK_LIST = "/BackOfficeParams.jsp";
+    public static String CONFIG_PAGE_PARAMBACK_EDIT = "/BackOfficeParamsEdit.jsp";
+    public static String CONFIG_PAGE_BACKOFFICE_LIST = "/BackOfficeLog.jsp";
+    public static String CONFIG_PAGE_EXPORT_CERT_LIST = "/CertificateReport.jsp";
+    public static String CONFIG_PAGE_REVOKE_CERT_LIST = "/RevokeList.jsp";
+    public static String CONFIG_PAGE_REVOKE_CERT_VIEW = "/RevokeView.jsp";
+    public static String CONFIG_PAGE_REGISTER_CERT_LIST = "/RegisterCertList.jsp";
+    public static String CONFIG_PAGE_REGISTER_CERT_VIEW = "/RegisterCertView.jsp";
+    // ROLESET NAME
+    public static String CONFIG_ROLESET_FM_FUNCTION = "Function List";
+    public static String CONFIG_ROLESET_FM_TOKEN_LIST = "Token Management";
+    public static String CONFIG_ROLESET_FM_GROUP_REQUEST = "Certificate Enrollment";
+    public static String CONFIG_ROLESET_FM_IS_LOCK = "Set Lock";
+    public static String CONFIG_ROLESET_FM_IS_UNLOCK = "Set UnBlock";
+    public static String CONFIG_ROLESET_FM_IS_SOPIN = "Set Change SOPIN";
+    public static String CONFIG_ROLESET_FM_IS_PUSH = "Set Push Notification";
+    public static String CONFIG_ROLESET_FM_IS_INIT = "Set Initialization";
+    public static String CONFIG_ROLESET_FM_IS_DYNAMIC = "Set Dynamic Content";
+    public static String CONFIG_ROLESET_FM_IS_INFOR = "Set Information";
+    public static String CONFIG_ROLESET_FM_IS_ACTIVE = "Set Active";
+    public static String CONFIG_ROLESET_FM_APPROVE_FEE = "Approve Fee";
+    public static String CONFIG_ROLESET_FM_EDIT_CERT = "Configure Certificate";
+    public static String CONFIG_ROLESET_FM_APPROVE_CERT = "Approve Certificate";
+    public static String CONFIG_ROLESET_FM_DELETE_REQUEST = "Decline Manual Renewal Request";
+    public static String CONFIG_ROLESET_FM_ADD_RENEWAL = "Add Compensation";
+    public static String CONFIG_ROLESET_FM_DELETE_RENEWAL = "Decline Compensation";
+    public static String CONFIG_ROLESET_FM_ACCESS_RENEWAL = "Access to Compensatory Function";
+    public static String CONFIG_ROLESET_FM_IMPORT_RENEWAL = "Import Compensatory List";
+    public static String CONFIG_ROLESET_FM_REVOKE_CERT = "Access to Certificate Revoke";
+    public static String CONFIG_ROLESET_FM_EXPORT_CERT = "Access to Certificate Export";
+    // ROLESET NAME VN
+    public static String CONFIG_ROLESET_FM_FUNCTION_LAOS = "Danh sách quyền chức năng";
+    public static String CONFIG_ROLESET_FM_TOKEN_LIST_LAOS = "Quản lý Token";
+    public static String CONFIG_ROLESET_FM_IS_LOCK_LAOS = "Cấu hình khóa";
+    public static String CONFIG_ROLESET_FM_IS_UNLOCK_LAOS = "Cấu hình mở khóa";
+    public static String CONFIG_ROLESET_FM_IS_SOPIN_LAOS = "Cấu hình thay đổi SOPIN";
+    public static String CONFIG_ROLESET_FM_IS_PUSH_LAOS = "Cấu hình gửi thông báo";
+    public static String CONFIG_ROLESET_FM_IS_INIT_LAOS = "Cấu hình khởi tạo";
+    public static String CONFIG_ROLESET_FM_IS_DYNAMIC_LAOS = "Cấu hình nội dung động";
+    public static String CONFIG_ROLESET_FM_IS_INFOR_LAOS = "Cấu hình thông tin";
+    public static String CONFIG_ROLESET_FM_IS_ACTIVE_LAOS = "Cấu hình hiệu lực";
+    public static String CONFIG_ROLESET_FM_APPROVE_FEE_LAOS = "Duyệt phí";
+    public static String CONFIG_ROLESET_FM_EDIT_CERT_LAOS = "Cấu hình chứng thư số";
+    public static String CONFIG_ROLESET_FM_APPROVE_CERT_LAOS = "Duyệt chứng thư số";
+    public static String CONFIG_ROLESET_FM_DELETE_REQUEST_LAOS = "Từ chối yêu cầu";
+    public static String CONFIG_ROLESET_FM_ADD_RENEWAL_LAOS = "Thêm yêu cầu cấp bù";
+    public static String CONFIG_ROLESET_FM_DELETE_RENEWAL_LAOS = "Từ chối yêu cầu cấp bù";
+    public static String CONFIG_ROLESET_FM_ACCESS_RENEWAL_LAOS = "Truy cập chức năng yêu cầu cấp bù";
+    public static String CONFIG_ROLESET_FM_IMPORT_RENEWAL_LAOS = "Tải lên danh sách yêu cầu cấp bù";
+    public static String CONFIG_ROLESET_FM_REVOKE_CERT_LAOS = "Truy cập chức năng thu hồi chứng thư số";
+    public static String CONFIG_ROLESET_FM_EXPORT_CERT_LAOS = "Truy cập chức năng lưu file chứng thư số";
+    // TOKEN ATTR TYPE EDIT
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_INITIALIZE = 1;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_INITIALIZE = "INITIALIZE";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_LOCK = 2;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_LOCK = "LOCK";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_UNLOCK = 3;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_UNLOCK = "UNLOCK";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_CHANGE_SOPIN = 4;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_CHANGE_SOPIN = "CHANGE_SOPIN";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_PUSH_NOTFICATION = 5;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_PUSH_NOTFICATION = "PUSH_NOTFICATION";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_MENU_LINK = 6;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_MENU_LINK = "MENU_LINK";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_LOST = 7;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_LOST = "LOST";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_PERMANENT_INITIALZED = 8;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_PERMANENT_INITIALZED = "PERMANENT_INITIALZED";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_RESET_ACTIVATION_REMAINING_COUNTER = 9;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_RESET_ACTIVATION_REMAINING_COUNTER = "RESET_ACTIVATION_REMAINING_COUNTER";
+    public static int CONFIG_TOKEN_ATTR_TYPE_ID_RE_OPERATION = 10;
+    public static String CONFIG_TOKEN_ATTR_TYPE_CODE_RE_OPERATION = "RE_OPERATION";
+    public static int CONFIG_TOKEN_STATE_ID_PENDDING = 1;
+    public static int CONFIG_TOKEN_STATE_ID_APPROVED = 2;
+    public static int CONFIG_TOKEN_STATE_ID_LOCKED = 3;
+    public static int CONFIG_TOKEN_STATE_ID_LOST = 4;
+    public static int CONFIG_TOKEN_STATE_ID_FORMATTED = 5;
+    public static int CONFIG_TOKEN_STATE_ID_PERMANENT_INITIALZED = 6;
+    public static String CONFIG_TOKEN_ATTR_STATE_CODE_PENDING = "PENDING";
+    public static String CONFIG_TOKEN_ATTR_STATE_CODE_APPROVED = "APPROVED";
+    public static String CONFIG_TOKEN_ATTR_STATE_CODE_COMMITED = "COMMITED";
+    public static String CONFIG_TOKEN_ATTR_STATE_CODE_DECLINED = "DECLINED";
+    public static String CONFIG_TOKEN_ATTR_STATE_ID_PENDING = "1";
+    public static String CONFIG_TOKEN_ATTR_STATE_ID_APPROVED = "2";
+    public static String CONFIG_TOKEN_ATTR_STATE_ID_COMMITED = "3";
+    public static String CONFIG_TOKEN_ATTR_STATE_ID_DECLINED = "4";
+    // rssp state
+    public static String CONFIG_RSSP_AGREEMENT_STATE_ID_BLOCKED = "12";
+    public static String CONFIG_RSSP_AGREEMENT_STATE_ID_OPERATED = "4";
+    public static String CONFIG_RSSP_AGREEMENT_STATE_ID_RENEWED = "8";
+    public static String CONFIG_RSSP_AGREEMENT_STATE_ID_REVISED = "10";
+    public static String CONFIG_RSSP_AGREEMENT_STATE_ID_PRE_OPERATED = "14";
+
+    public static String CONFIG_TOKEN_CODE_UNKNOWN = "UNKNOWN";
+    public static String CONFIG_TOKEN_UNASSIGN_SN = "54100000001005";
+    public static String CONFIG_TOKEN_SN_54100000001000 = "54100000001000";
+    public static String CONFIG_TOKEN_SSL_SN = "54100000001001";
+    public static String CONFIG_TOKEN_CODESIGNNING_SN = "54100000001002";
+    public static String CONFIG_TOKEN_SIGNSERVER_SN = "54100000001003";
+    public static String CONFIG_TOKEN_SN_LOST = "54100000001004";
+    public static String CONFIG_TOKEN_SN_BULK_TOKEN = "54100000001006";
+    public static String CONFIG_TOKEN_SN_FORMFACTOR_ESIGNCLOUD = "54100000001007";//FORMFACTOR -> eSignCloud
+    public static String CONFIG_TOKEN_DEVICE_SN = "54100000001008";
+    public static String CONFIG_TOKEN_SN_INHOUSE = "54100000001009";
+    public static int CONFIG_TOKEN_SSL_ID = 2;
+    public static int CONFIG_TOKEN_CODESIGNNING_ID = 3;
+    public static int CONFIG_TOKEN_SIGNSERVER_ID = 4;
+    public static int CONFIG_TOKEN_UNASSIGN_ID = 6;
+    public static int CONFIG_TOKEN_BULK_TOKEN_ID = 7;
+    public static int CONFIG_TOKEN_ESIGNCLOUD_ID = 8;
+    public static int CONFIG_TOKEN_DEVICE_ID = 9;
+    public static int CONFIG_TOKEN_INHOUSE_ID = 10;
+    public static int CONFIG_TOKEN_ID_UNKNOWN = 1;
+    public static int CONFIG_TOKEN_ACTIVATION_CODE_LOCK = 0;
+
+    // LOG SYSTEM
+    public static String CONFIG_LOG_SOURCE_API_CLIENT = "API_CLIENT";
+    public static String CONFIG_LOG_SOURCE_API_RA = "API_RA";
+    public static String CONFIG_LOG_SOURCE_ENTITY_NAME = "REGISTRATION_AUTHORITY";
+    public static String CONFIG_LOG_DESTINATION_ENTITY_NAME = "TMS_CORE";
+    public static String CONFIG_LOG_FUNCTIONALITY_INITIALIZE = "BO_INITIALIZE";
+    public static String CONFIG_LOG_FUNCTIONALITY_RESET_ACTIVATION_CODE = "BO_RESET_ACTIVATION_REMAINING_COUNTER";
+    public static String CONFIG_LOG_FUNCTIONALITY_LOCK = "BO_LOCK";
+    public static String CONFIG_LOG_FUNCTIONALITY_LOST = "BO_LOST";
+    public static String CONFIG_LOG_FUNCTIONALITY_PERMANENT_INITIALZED = "BO_PERMANENT_INITIALZED";
+    public static String CONFIG_LOG_FUNCTIONALITY_RE_OPERATION = "BO_RE_OPERATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_UNLOCK = "BO_UNLOCK";
+    public static String CONFIG_LOG_FUNCTIONALITY_CHANGE_SOPIN = "BO_CHANGE_SOPIN";
+    public static String CONFIG_LOG_FUNCTIONALITY_CHANGE_TOKEN_INFO = "BO_CHANGE_TOKEN_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_BO_MENU_LINK = "BO_MENU_LINK";
+    public static String CONFIG_LOG_FUNCTIONALITY_PUSH_NOTIFICATION = "BO_PUSH_NOTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_REQUEST_ISSUE = "BO_CERTIFICATE_REQUEST_ISSUE";
+    public static String CONFIG_LOG_FUNCTIONALITY_REQUEST_BUY_MORE = "BO_CERTIFICATE_REQUEST_BUY_MORE";
+    public static String CONFIG_LOG_FUNCTIONALITY_REQUEST_RENEWAL = "BO_CERTIFICATE_REQUEST_RENEWAL";
+    public static String CONFIG_LOG_FUNCTIONALITY_REQUEST_REISSUE = "BO_CERTIFICATE_REQUEST_REISSUE";
+    public static String CONFIG_LOG_FUNCTIONALITY_REQUEST_CHANGE_INFO = "BO_CERTIFICATE_REQUEST_CHANGE_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_REQUEST_REVOKE = "BO_CERTIFICATE_REQUEST_REVOKE";
+    public static String CONFIG_LOG_FUNCTIONALITY_APPROVE_AGENCY = "BO_CERTIFICATE_APPROVE_AGENCY";
+    public static String CONFIG_LOG_FUNCTIONALITY_IN_AGENCY_APPROVED = "BO_CERTIFICATE_IN_AGENCY_APPROVED";
+    
+    public static String CONFIG_LOG_FUNCTIONALITY_PERMANENT_DISABLE = "BO_CERTIFICATE_REQUEST_PERMANENT_DISABLE";
+    public static String CONFIG_LOG_FUNCTIONALITY_TEMPORARY_DISABLE = "BO_CERTIFICATE_REQUEST_TEMPORARY_DISABLE";
+    public static String CONFIG_LOG_FUNCTIONALITY_RECOVERED = "BO_CERTIFICATE_REQUEST_RECOVERED";
+    public static String CONFIG_ERROR_EXCEL_DISALLOWANCE_TOKENSN = "CSV_NO_TOKENSN";
+    public static String CONFIG_ERROR_EXCEL_DISALLOWANCE_MST = "CSV_NO_MST";
+    
+    public static int CONFIG_LOG_FUNCTIONALITY_INT_ALL = 1;
+
+    // RESPONSE CODE
+    public static int CONFIG_RESPONSE_CODE_ID_SUCCESS = 1;
+    public static int CONFIG_RESPONSE_CODE_ID_EXCEPTION = 2;
+    // RESPONSE PROGRAMMER CODER
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_SUCCESS = "OK";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_ERROR_EXCEPTION = "ERROR_EXCEPTION";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_OWNER_EXISTS = "2051";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_OWNER_TYPE_INVALID = "2052";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_OWNER_REQUEST_EXISTS = "2053";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_COMPONENT_INVALID = "2054";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_FILE_INVALID = "FILE_INVALID";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_STATE_INVALID = "2055";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_NO_DATA = "2056";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_ROLE_DENIED = "2057";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_OWNER_INVALID = "2058";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_SUBJECT_DN_INVALID = "2061";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_FILE_SPECIAL = "FILE_SPECIAL";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_FILE_EXTENTION = "FILE_EXTENTION";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_FILE_SIZE = "FILE_SIZE";
+    public static String CONFIG_RESPONSE_CODE_PROGRAMMER_NO_FORMFACTOR = "NO_FORMFACTOR";
+
+    // JSON DN
+    public static final String CONFIG_DN_ATTRIBUTE_TYPE_TEXTFIELD = "TEXT_FIELD";
+    public static final String CONFIG_DN_ATTRIBUTE_TYPE_TEXTFIELD_SAN = "TEXT_FIELD_SAN";
+    public static final String CONFIG_DN_ATTRIBUTE_TYPE_RADIOBUTTON = "RADIO_BUTTON";
+    public static final String CONFIG_DN_ATTRIBUTE_TYPE_COMBOBOX_LIST_COMPANY = "UID_LIST/COMPANY";
+    public static final String CONFIG_DN_ATTRIBUTE_TYPE_COMBOBOX_LIST_PERSONAL = "UID_LIST/PERSONAL";
+    public static final String CONFIG_ROSE_ATTRIBUTE_TYPE_PROFILE_DISCOUNT_RATE_LIST = "PROFILE_DISCOUNT_RATE_LIST";
+    public static final String CONFIG_ROSE_ATTRIBUTE_TYPE_PROFILE_DISCOUNT_RATE_ITEM = "PROFILE_DISCOUNT_RATE/ITEM";
+    public static final String CONFIG_BRANCH_ATTRIBUTE_TYPE_BRANCH_DEFAULT_INFO_TAG = "BRANCH_DEFAULT_INFO";
+    public static final String CONFIG_BRANCH_ATTRIBUTE_TYPE_USER_DEFAULT_INFO_TAG = "USER_DEFAULT_INFO";
+    // JSON ROLE
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_TOKEN = "TOKEN_ROLE";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_TOKEN_REQUUEST = "TOKEN_ROLE/REQUEST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_TOKEN_SEARCH = "TOKEN_ROLE/SEARCH";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_CERT = "CERTIFICATE_ROLE";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_CERT_REQUUEST = "CERTIFICATE_ROLE/REQUEST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_CERT_SEARCH = "CERTIFICATE_ROLE/SEARCH";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_ANOTHER = "ANOTHER";
+    public static final String CONFIG_ROLE_ATTRIBUTE_TYPE_ANOTHER_APPROVED = "ANOTHER/APPROVED";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_PROFILE_LIST = "PROFILE_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_ITEM_PROFILE_LIST = "PROFILE_LIST/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_SERVICE_TYPE_LIST = "SERVICE_TYPE_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_ITEM_SERVICE_TYPE = "SERVICE_TYPE/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_MAJOR_TYPE_LIST = "MAJOR_TYPE_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_ITEM_MAJOR_TYPE = "MAJOR_TYPE/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_IP_LIST = "IP_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_ITEM_IP_LIST = "IP_LIST/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_FUNCTION_LIST = "FUNCTION_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_ITEM_FUNCTION_LIST = "FUNCTION_LIST/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_PKI_FORMFACTOR_LIST = "PKI_FORMFACTOR_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_ITEM_PKI_FORMFACTOR_LIST = "PKI_FORMFACTOR_LIST/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_APPROVED_ENABLED = "APPROVED_ENABLED";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_BENEFICIACY_USER = "BENEFICIACY_USER";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_CERTIFICATION_SHARE_MODE = "CERTIFICATION_SHARE_MODE";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_APPROVE_CA_USER = "APPROVE_CA_USER";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_PROFILE_ALL_ACCESS = "PROFILE_ALL_ACCESS";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_IP_ALL_ACCESS = "IP_ALL_ACCESS";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_FUNCTIONALITY_ALL_ACCESS = "FUNCTIONALITY_ALL_ACCESS";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_PUSH_NOTICE_ENABLED = "PUSH_NOTICE_ENABLED";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_POLICY_P12_EMAIL_ENABLED = "P12_EMAIL_ENABLED";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_FILE_TYPE_LIST = "FILE_TYPE_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_FILE_SCAN_LIST = "FILE_SCAN_LIST";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_ITEM_FILE_TYPE = "FILE_TYPE/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_ITEM_FILE_SCAN = "FILE_SCAN/ITEM";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_COLLECT_COMMENT = "COLLECT_COMMENT";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_COLLECT_DATE = "COLLECT_DATE";
+    public static final String CONFIG_ROLE_ATTRIBUTE_CERT_COLLECTED_COLLECT_SOFTCOPY = "COLLECT_SOFTCOPY";
+    // JSON FORMFACTOR PROPERTIES
+    public static final String CONFIG_FORMFACTOR_ATTRIBUTE_TYPE_MODE = "TYPE/MODE";
+    public static final String CONFIG_FORMFACTOR_ATTRIBUTE_CREDENTIAL_DIRECT = "CREDENTIAL/DIRECT";
+    // MAXLENGTH
+    public static final int CONFIG_MAXLENGTH_FORM_PERCENT = 3;
+    public static final int CONFIG_MAXLENGTH_FORM_AMOUNT = 15;
+    public static final int CONFIG_MAXLENGTH_FORM_EMAIL = 150;
+    public static final int CONFIG_MAXLENGTH_FORM_PHONE = 20;
+    public static final int CONFIG_MAXLENGTH_FORM_COMPANYNAME = 220;
+    // CA
+    public static final String CONFIG_PROPERTIES_CA_SUBJECTDN = "CORECA_PARAM_CA_SUBJECTDN";
+    // ERROR EXCEPTION MYSQL
+    public static final String CONFIG_MYSQL_UNIQUE_ACTIVATION_CODE = "UQ_ACTIVATION_CODE";
+    public static final int CONFIG_BRANCH_LOGO_SIZE = 500;
+
+    public static String CONFIG_PROCESS_EXPORT_QUICK_COLUMN_STT = "EXPORT_QUICK_COLUMN_STT";
+    public static String CONFIG_PROCESS_EXPORT_QUICK_COLUMN_AGENCY = "EXPORT_QUICK_COLUMN_AGENCY";
+    public static String CONFIG_PROCESS_EXPORT_QUICK_COLUMN_REVOKE = "EXPORT_QUICK_COLUMN_REVOKE";
+    public static String CONFIG_PROCESS_EXPORT_QUICK_COLUMN_INIT = "EXPORT_QUICK_COLUMN_INIT";
+    public static String CONFIG_PROCESS_EXPORT_QUICK_COLUMN_ACTIVATION = "EXPORT_QUICK_COLUMN_ACTIVATION";
+    public static String CONFIG_PROCESS_EXPORT_QUICK_COLUMN_SUM = "EXPORT_QUICK_COLUMN_SUM";
+    // REPORT CERT LIST
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_AGENCY = "EXPORT_CERTLIST_COLUMN_AGENCY";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_USER_CREATE = "EXPORT_CERTLIST_COLUMN_USER_CREATE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_MST = "EXPORT_CERTLIST_COLUMN_MST";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_STATE = "EXPORT_CERTLIST_COLUMN_STATE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_COMPANY = "EXPORT_CERTLIST_COLUMN_COMPANY";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_CMND = "EXPORT_CERTLIST_COLUMN_CMND";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_PESONAL = "EXPORT_CERTLIST_COLUMN_PESONAL";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_PROVINCE = "EXPORT_CERTLIST_COLUMN_PROVINCE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_PROFILE = "EXPORT_CERTLIST_COLUMN_PROFILE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_REQUEST_TYPE = "EXPORT_CERTLIST_COLUMN_REQUEST_TYPE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_FORMFACTOR = "EXPORT_CERTLIST_COLUMN_FORMFACTOR";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_DATE_CREATE = "EXPORT_CERTLIST_COLUMN_DATE_CREATE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_DATE_COLLATION = "EXPORT_CERTLIST_COLUMN_DATE_COLLATION";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_DATE_CANCEL = "EXPORT_CERTLIST_COLUMN_DATE_CANCEL";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_NUM_DATE_CANCEL = "EXPORT_CERTLIST_COLUMN_NUM_DATE_CANCEL";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_DATE_GEN = "EXPORT_CERTLIST_COLUMN_DATE_GEN";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_CERT_TYPE = "EXPORT_CERTLIST_COLUMN_CERT_TYPE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_REQUEST_STATE = "EXPORT_CERTLIST_COLUMN_REQUEST_STATE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_COLLATION_YES = "EXPORT_CERTLIST_COLUMN_COLLATION_YES";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_COLLATION_NO = "EXPORT_CERTLIST_COLUMN_COLLATION_NO";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_CROSS_CHECK_ENOUGH = "EXPORT_CERTLIST_COLUMN_CROSS_CHECK_ENOUGH";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_CROSS_CHECK_NOTENOUGH = "EXPORT_CERTLIST_COLUMN_CROSS_CHECK_NOTENOUGH";
+    
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_PHONE_CONTACT = "EXPORT_CERTLIST_COLUMN_PHONE_CONTACT";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_EMAIL_CONTACT = "EXPORT_CERTLIST_COLUMN_EMAIL_CONTACT";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_DATE_EFFECTIVE = "EXPORT_CERTLIST_COLUMN_DATE_EFFECTIVE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_DATE_EXPIRATION = "EXPORT_CERTLIST_COLUMN_DATE_EXPIRATION";
+    // REPORT DEBT CONTROL
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_CONTENT = "EXPORT_CERTLIST_COLUMN_CONTENT";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_AMOUNT = "EXPORT_CERTLIST_COLUMN_AMOUNT";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_NOTE = "EXPORT_CERTLIST_COLUMN_NOTE";
+    public static String CONFIG_PROCESS_EXPORT_CERTLIST_COLUMN_TOKEN_CODE = "EXPORT_CERTLIST_COLUMN_TOKEN_CODE";
+    public static String CONFIG_PROCESS_REPORT_CONTROL_COMPANY_NAME = "REPORT_CONTROL_COMPANY_NAME";
+    public static String CONFIG_PROCESS_REPORT_CONTROL_CA_NAME = "REPORT_CONTROL_CA_NAME";
+    public static String CONFIG_PROCESS_REPORT_CONTROL_WITH_AGENT = "REPORT_CONTROL_WITH_AGENT";
+    // 
+    public static final String CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX = loadConfigLanguage();
+    public static final String CONFIG_PREFIX_PERSONAL_CODE = loadPrefixCMND();//"CMND";
+    public static final String CONFIG_PARAM_PREFIX_PERSONAL_CODE = "PARAM_PREFIX_PERSONAL_CODE";
+    public static final String CONFIG_PREFIX_PERSONAL_PASSPORT_CODE = loadPrefixPassport();// "HC";
+    public static final String CONFIG_PARAM_PREFIX_PERSONAL_PASSPORT_CODE = "PARAM_PREFIX_PERSONAL_PASSPORT_CODE";
+    public static final String CONFIG_PREFIX_PERSONAL_CITIZEN_CODE = loadPrefixCCCD();// "CCCD";
+    public static final String CONFIG_PARAM_PREFIX_PERSONAL_CITIZEN_CODE = "PARAM_PREFIX_PERSONAL_CITIZEN_CODE";
+    public static final String CONFIG_PREFIX_ENTERPRISE_TAX_CODE = loadPrefixMST();// "MST";
+    public static final String CONFIG_PARAM_PREFIX_ENTERPRISE_TAX_CODE = "PARAM_PREFIX_ENTERPRISE_TAX_CODE";
+    public static final String CONFIG_PREFIX_ENTERPRISE_BUDGET_CODE = loadPrefixMNS();// "MNS";
+    public static final String CONFIG_PARAM_PREFIX_ENTERPRISE_BUDGET_CODE = "PARAM_PREFIX_ENTERPRISE_BUDGET_CODE";
+    public static final String CONFIG_PREFIX_ENTERPRISE_DECISION = loadPrefixQD();// "QĐ";
+    public static final String CONFIG_PREFIX_ENTERPRISE_SOCIAL_INSURANCE_CODE = loadPrefixBHXH();// "QĐ";
+    public static final String CONFIG_PREFIX_ENTERPRISE_UNIT_CODE = loadPrefixMDV();// "QĐ";
+    public static final String CONFIG_PARAM_PREFIX_ENTERPRISE_DECISION = "PARAM_PREFIX_ENTERPRISE_DECISION";
+    public static String CONFIG_EN_PREFIX_ENTERPRISE_TAX_CODE = "TIN";
+    public static String CONFIG_EN_PREFIX_ENTERPRISE_BUDGET_CODE = "BGC";
+    public static String CONFIG_EN_PREFIX_ENTERPRISE_DECISION = "DEC";//loadENPrefixDEC();//"DEC";
+//    public static String loadENPrefixDEC() {
+//        if("2".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+//            return "UNT";
+//        } else {
+//            return "DEC";
+//        }
+//    }
+    public static String CONFIG_EN_PREFIX_PERSONAL_CODE = "PID";
+    public static String CONFIG_EN_PREFIX_PERSONAL_PASSPORT_CODE = "PPID";
+    public static String CONFIG_EN_PREFIX_PERSONAL_CITIZEN_CODE = "PEID";
+    
+    public static final String CONFIG_DEFAULT_KEYSTORE_PASSWORD = "changeit";
+    public static final String CONFIG_TEMPLATE_PROCESS_LOGO_FROM_BASE64 = "[LOGO_FROM_TEMP]";
+    public static final String CONFIG_TEMPLATE_PROCESS_LOGO_END_BASE64 = "[LOGO_END_TEMP]";
+    public static final String CONFIG_TEMPLATE_PROCESS_BACKGROUND_FROM_BASE64 = "[BACKGROUND_FROM_TEMP]";
+    public static final String CONFIG_TEMPLATE_PROCESS_BACKGROUND_END_BASE64 = "[BACKGROUND_END_TEMP]";
+
+    public static int CONFIG_EXPORT_QUICK_WIDTH_STT = 8 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_AGENCY = 32 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_TOKEN_SN = 32 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_TOKEN_VERSION = 32 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_AGENCY_CODE = 12 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_INIT = 32 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_ACTIVATION = 32 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_REVOKE = 32 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_SUM = 18 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_USER_CREATE = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_STATE = 18 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_MST = 26 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_COMPANY = 20 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_CMND = 14 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_PESONAL = 20 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_PROVINCE = 14 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_PROFILE = 14 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_CERT_TYPE = 18 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_REQUEST_TYPE = 18 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_FORMFACTOR = 18 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_REQUEST_STATE = 14 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_DATE_CREATE = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_DATE_CANCEL = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_NUM_DATE_CANCEL = 14 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_DATE_GEN = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_CONTENT = 36 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_AMOUNT = 18 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_NOTE = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_PHONE_CONTACT = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_EMAIL_CONTACT = 24 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_DATE_EFFECTIVE = 22 * 255;
+    public static int CONFIG_EXPORT_QUICK_WIDTH_DATE_EXPIRATION = 22 * 255;
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_QUICK = "_REPORT_QUICK_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_EXPIRE = "_REPORT_EXPIRE_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_PDF_CONTROL = "_REPORT_CONTROL_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_COMFIRMATION = "_COMFIRMATION_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REGISTRATION_TEMPLATE = "_REGISTRATION_TEMPLATE_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_CONFIRMATION_TEMPLATE = "_CONFIRMATION_TEMPLATE_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_PDF_PERIODIC = "_REPORT_PERIODIC_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_CERTIFICATE_LIST = "_REPORT_CERTIFICATE_LIST_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_PROFILE_LIST = "_PROFILE_LIST_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_AGENCY_LIST = "_AGENCY_LIST_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_CERTIFICATE_LIST = "_CERTIFICATE_LIST_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_TOKEN_EXPORT = "_TOKEN_EXPORT_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_RSSP_REMAINING_SIGNING_EXPORT = "_REMAINING_SIGNING_EXPORT_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_DEBT_CONTROL = "_REPORT_DEBT_CONTROL_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_BLACKLIST = "_REPORT_BLACKLIST_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_EMAIL_CONTACT = "_REPORT_EMAIL_CONTACT_";
+    public static String CONFIG_EXPORT_FILENAME_TAG_REPORT_PHONE_CONTACT = "_REPORT_PHONE_CONTACT_";
+    public static String CONFIG_EXPORT_FILENAME_EXTENTION_CSR = ".csv";
+    public static String CONFIG_EXPORT_FILENAME_EXTENTION_HTML = ".html";
+    public static String CONFIG_EXPORT_FILENAME_EXTENTION_PDF = ".pdf";
+    public static String CONFIG_EXPORT_FILENAME_EXTENTION_WORD = ".docx";
+    public static String CONFIG_EXPORT_FILENAME_EXTENTION_ZIP = ".zip";
+    public static String CONFIG_EXPORT_FILENAME_EXTENTION_RAR = ".rar";
+    public static String CONFIG_EXPORT_TYPE_REPORT_CERT_TOKEN = "REPORT_CERT_TOKEN";
+    public static String CONFIG_EXPORT_TYPE_REPORT_CERT_SIGNSERVER = "REPORT_CERT_SIGNSERVER";
+    //
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_DEBIT_AMOUNT = 1;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_TOTAL_AMOUNT = 2;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_DEPOSIT_DEVICE = 3;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_DEPOSIT_DEVICE_MINUS = 4;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_FILE_AMOUNT = 5;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_RETURN_FILE_AMOUNT = 6;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_PAID = 7;
+    public static int CONFIG_PROCESS_PAYMENT_TYPE_TOTAL = 8;
+    // REVOKE REASON
+    public static int CONFIG_CERTIFICATION_REVOKE_REASON_CERTIFICATEHOLD_ID = 4;
+    public static int CONFIG_CERTIFICATION_REVOKE_REASON_REMOVEFROMCRL_ID = 8;
+    public static int CONFIG_CERTIFICATION_REVOKE_REASON_UNSPECIFIED_ID = 10;
+    public static int CONFIG_CERTIFICATION_REVOKE_REASON_CACOMPROMISE_ID = 3;
+    public static String CONFIG_CERTIFICATION_REVOKE_REASON_CACOMPROMISE_CODE = "CACOMPROMISE";
+    // Tag Config jackrabbit
+    public static String CONFIG_JACK_RABBIT_HOST = "jackrabbit.config.host";
+    public static String CONFIG_JACK_RABBIT_ADMINID = "jackrabbit.config.adminid";
+    public static String CONFIG_JACK_RABBIT_ADMIN_PASSWORD = "jackrabbit.config.adminpassword";
+    public static String CONFIG_JACK_RABBIT_USERID = "jackrabbit.config.userid";
+    public static String CONFIG_JACK_RABBIT_USER_PASSWORD = "jackrabbit.config.userpassword";
+    public static String CONFIG_JACK_RABBIT_MAX_SESSION = "jackrabbit.config.maxSession";
+    public static String CONFIG_JACK_RABBIT_MAXFILE_INFOLDER = "jackrabbit.config.maxFileInFolder";
+    public static String CONFIG_JACK_RABBIT_PREFIX_FOLDER = "jackrabbit.config.prefixFolder";
+    public static String CONFIG_JACK_RABBIT_WORKSPACE = "jackrabbit.config.workspace";
+//    public static String CONFIG_JACK_RABBIT_WORKSPACE = "TRUONGNNT";
+    public static String CONFIG_FILE_PROFILE_CODE_E_CONTRACT = "DIGITAL-CERTIFICATE";
+    public static String CONFIG_FILE_PROFILE_CODE_AGREEMENT_PAPER = "AGREEMENT_PAPER";
+    // JackRabbit of Parner
+    public static String CONFIG_JACK_RABBIT_SOURCE = "jackrabbit.config.source";
+    public static String CONFIG_JACK_RABBIT_IP = "jackrabbit.config.ip";
+    public static String CONFIG_JACK_RABBIT_PROTOCOL = "jackrabbit.config.protocol";
+    public static String CONFIG_JACK_RABBIT_CONTEXT = "jackrabbit.config.context";
+    public static String CONFIG_JACK_RABBIT_PORT = "jackrabbit.config.port";
+    public static String CONFIG_JACK_RABBIT_USERNAME = "jackrabbit.config.username";
+    public static String CONFIG_JACK_RABBIT_PASSWORD = "jackrabbit.config.password";
+    public static String CONFIG_JACK_RABBIT_OWNERCODE = "jackrabbit.config.ownercode";
+    public static String CONFIG_JACK_RABBIT_APPCODE = "jackrabbit.config.appcode";
+    public static String CONFIG_JACK_RABBIT_FUNCTION_DOWN = "jackrabbit.config.function.down";
+    public static String CONFIG_JACK_RABBIT_FUNCTION_UP = "jackrabbit.config.function.up";
+    public static String CONFIG_JACK_RABBIT_SOURCE_EFY = "EFY";
+    public static String CONFIG_JACK_RABBIT_SOURCE_TRUSTCA = "TRUSTCA";
+    public static String CONFIG_JACK_RABBIT_SOURCE_JRB = "JRB";
+    public static String CONFIG_JACK_RABBIT_SOURCE_MID = "MID";
+    public static String CONFIG_JACK_RABBIT_UUID_SAMPLE = "4D4B4901-BF4C-4236-A9BA-AF2E0D4F5F33";
+    public static String CONFIG_JACK_RABBIT_MAX_LENGTH_FILE = "jackrabbit.config.max.size";
+    public static String CONFIG_CHANNEL_GETCERT_TYPE_ENTERPRISE = "ENTERPRISE";
+    public static String CONFIG_CHANNEL_GETCERT_TYPE_PERSONAL = "PERSONAL";
+    public static int CONFIG_LANGUAGE_ENGLISH = 0;
+    public static int CONFIG_LANGUAGE_VIETNAMESE = 1;
+    // REGEX PHONE, EMAIL
+    public static String CONFIG_REGEX_PHONE = "REGEX_PHONE";
+    public static String CONFIG_REGEX_EMAIL = "REGEX_EMAIL";
+    public static String CONFIG_DEFAULT_VALUE_REGEX_PHONE = "^(0|1|84)[0-9]{4,20}";
+    public static String CONFIG_DEFAULT_VALUE_REGEX_EMAIL = "^[A-Za-z0-9._]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
+    // ### BEGIN WS API
+    public static int CONFIG_WS_RESPONSE_CODE_SUCCESS = 0;
+    public static int CONFIG_WS_RESPONSE_CODE_FAIL_CREDENTIAL = 1008;
+    public static int CONFIG_WS_RESPONSE_CODE_SERVER_NO_CREDENTIAL = 1009;
+    public static int CONFIG_WS_RESPONSE_CODE_SERVER_NO_POLICY_PROPERTIES = 1010;
+    public static int CONFIG_WS_RESPONSE_CODE_NO_DATA = 1011;
+    public static int CONFIG_WS_RESPONSE_CODE_CA_PROFILE_INVALID = 1012;
+    public static int CONFIG_WS_RESPONSE_CODE_SERVER_TEMPLATE_CERT_EMPTY = 1013;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_COMPONENT_CERT_INVALID = 1014;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_COMPONENT_CERT_EMPTY = 1015;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_TEMPLATE_CERT_EMPTY = 1016;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_TEMPLATE_FILE_EMPTY = 1017;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_COMPONENT_FILE_EMPTY = 1018;
+    public static int CONFIG_WS_RESPONSE_CODE_SERVER_TEMPLATE_FILE_EMPTY = 1019;
+    public static int CONFIG_WS_RESPONSE_CODE_SERVER_FILE_NOSUPPORT = 1020;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_CSR_KEYSIZE = 1021;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_NO_TOKEN = 1022;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_NO_DN = 1023;
+    public static int CONFIG_WS_RESPONSE_CODE_CERT_STATE_INVALID = 1024;
+    public static int CONFIG_WS_RESPONSE_CODE_CERT_ERROR_ISSUE = 1025;
+    public static int CONFIG_WS_RESPONSE_CODE_CERT_ERROR_APPROVE = 1026;
+    public static int CONFIG_WS_RESPONSE_CODE_AUTHEN_SIGNATURE_INVALID = 1027;
+    public static int CONFIG_WS_RESPONSE_CODE_AUTHEN_PASSWORD_INVALID = 1028;
+    public static int CONFIG_WS_RESPONSE_CODE_EXCEPTION = 1029;
+    public static int CONFIG_WS_RESPONSE_CODE_CERT_ERROR_REVOKE = 1030;
+    public static int CONFIG_WS_RESPONSE_CODE_CERT_PROFILE_INVALID = 1031;
+    public static int CONFIG_WS_RESPONSE_CODE_CUSTOMER_PHONE_INVALID = 1032;
+    public static int CONFIG_WS_RESPONSE_CODE_CUSTOMER_EMAIL_INVALID = 1033;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_CSR_EMPTY = 1034;
+    public static int CONFIG_WS_RESPONSE_CODE_USERNAME_BY_INVALID = 1035;
+    public static int CONFIG_WS_RESPONSE_CODE_STATUS_DECLINE_INVALID = 1036;
+    public static int CONFIG_WS_RESPONSE_CODE_REASON_REVOKE_INVALID = 1037;
+    public static int CONFIG_WS_RESPONSE_CODE_COMPROMISE_DATE_INVALID = 1038;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_REQUEST_INVALID = 1039;
+    public static int CONFIG_WS_RESPONSE_CODE_REQUEST_NOT_SUPPORT = 1040;
+    public static int CONFIG_WS_RESPONSE_CODE_STATUS_REQUEST_APPROVE_INVALID = 1041;
+    public static int CONFIG_WS_RESPONSE_CODE_ACCESS_FUNCTION_INVALID = 1042;
+    public static int CONFIG_WS_RESPONSE_CODE_ACCESS_IP_INVALID = 1043;
+    public static int CONFIG_WS_RESPONSE_CODE_SEARCH_TIME_INVALID = 1044;
+    public static int CONFIG_WS_RESPONSE_CODE_SSL_DNS_INVALID = 1045;
+    public static int CONFIG_WS_RESPONSE_CODE_USERNAME_BY_INVALID_OLD = 99;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_OWNER_REQUEST_INVALID = 1049;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_OWNER_STATE_INVALID = 1050;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_OWNER_EXISTS = 1051;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_OWNER_TYPE_INVALID = 1052;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_OWNER_QUEUE_INVALID = 1053;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_OWNER_INVALID = 1054;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATION_BENEFICIARY_BRANCH_INVALID = 1055;
+    public static int CONFIG_WS_RESPONSE_CODE_TOKEN_REQUEST_INVALID = 1057;
+    public static int CONFIG_WS_RESPONSE_CODE_TOKEN_STATUS_INVALID = 1058;
+    public static int CONFIG_WS_RESPONSE_CODE_TOKEN_TYPE_INVALID = 1059;
+    public static int CONFIG_WS_RESPONSE_CODE_BENEFICIARY_USER_INFO_EMPTY = 1062;
+    public static int CONFIG_WS_RESPONSE_CODE_RSSP_RP_AUUID_EMPTY = 1068;
+    public static int CONFIG_WS_RESPONSE_CODE_EMAIL_INCERT_INVALID = 1069;
+    public static int CONFIG_WS_RESPONSE_CODE_PROFILE_STATUS_INVALID = 1070;
+    public static int CONFIG_WS_RESPONSE_CODE_SERVER_CREDENTIAL_EXPIRE = 1071;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATE_EFFECTIVE_INVALID = 1072;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATE_EXPIRATION_INVALID = 1073;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATE_CA_CHANGE_INVALID = 1074;
+    public static int CONFIG_WS_RESPONSE_CODE_CERTIFICATE_SUBJECT_DN_INVALID = 1075;
+    public static int CONFIG_WS_RESPONSE_CODE_COMPONENT_CHARACTER_SPECIAL = 1076;
+    public static int CONFIG_WS_RESPONSE_CODE_NUMBER_TOKEN_BUNDLE_INVALID = 1077;
+    public static int CONFIG_WS_RESPONSE_CODE_COMPENSATE_TIME_INVALID = 1078;
+    public static int CONFIG_WS_RESPONSE_CODE_ACTIVATION_CODE_INVALID = 1079;
+    public static int CONFIG_WS_RESPONSE_CODE_ICCID_INVALID = 1080;
+    public static int CONFIG_WS_RESPONSE_CODE_ACTIVATION_CODE_EXPIRE = 1081;
+    public static int CONFIG_WS_RESPONSE_CODE_RSSP_REST_USERNAME_INVALID = 1082;
+    public static int CONFIG_WS_RESPONSE_CODE_RSSP_REST_RETURN_ERROR = 1083;
+    public static int CONFIG_WS_RESPONSE_CODE_CLIENT_CSR_EXISTS = 1084;
+    public static int CONFIG_WS_RESPONSE_CODE_LEGAL_REPRESENTATIVE_DATA_INVALID = 1085;
+    public static int CONFIG_WS_RESPONSE_CODE_LEGAL_REPRESENTATIVE_TIME_INVALID = 1086;
+    public static int CONFIG_WS_RESPONSE_CODE_RSSP_REST_RETURN_USERNAME_EXISTS = 1032;
+    public static int CONFIG_WS_RESPONSE_CODE_RSSP_REST_RETURN_TOKEN_EXPIRED = 3006;
+    //-- FORM FACTOR
+    public static String CONFIG_PKI_FORMFACTOR_CODE_HARD_TOKEN = "HARD_TOKEN";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_HARD_TOKEN_EPASS3003 = "HARD_TOKEN_EPASS3003";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_HARD_TOKEN_SAFENET = "HARD_TOKEN_SAFENET";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_HARD_TOKEN_SMARTCARD = "HARD_TOKEN_SMARTCARD";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_SOFT_TOKEN = "SOFT_TOKEN";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_ESIGNCLOUD = "ESIGNCLOUD";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_SMART_ID = "SMART_ID";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_MOBILE_ID = "MOBILE_ID";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_PKI_USIM = "PKI_USIM";
+    public static String CONFIG_PKI_FORMFACTOR_CODE_PARTNER_HARD_TOKEN = "PARTNER_HARD_TOKEN";
+    //-- FUNCTIONALITY API
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REGISTRATION_CERTIFICATION = "API_REGISTRATION_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REGISTRATION_CERTIFICATION2 = "API_REGISTRATION_CERTIFICATION2";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_RENEWAL_CERTIFICATION = "API_RENEWAL_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_RENEWAL_CERTIFICATION2 = "API_RENEWAL_CERTIFICATION2";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_CHANGE_CERTIFICATION_INFO = "API_CHANGE_CERTIFICATION_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_CHANGE_CERTIFICATION_INFO2 = "API_CHANGE_CERTIFICATION_INFO2";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REVOCATION_CERTIFICATION = "API_REVOCATION_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REISSUE_CERTIFICATION = "API_REISSUE_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_BUYMORE_CERTIFICATION = "API_BUYMORE_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_CERTIFICATION = "API_APPROVAL_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_ACTIVATION_CERTIFICATION = "API_ACTIVATION_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GENERATE_CERTIFICATION = "API_GENERATE_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_COMPENSATION_CERTIFICATION = "API_COMPENSATION_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_CERTIFICATION_ATTACHMENT = "API_APPROVAL_CERTIFICATION_ATTACHMENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_DECLINE_CERTIFICATION = "API_DECLINE_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_SET_CERTIFICATION_ATTACHMENT = "API_SET_CERTIFICATION_ATTACHMENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REPORT_CERTIFICATION_NEAC = "API_REPORT_CERTIFICATION_NEAC";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REPORT_CERTIFICATION = "API_REPORT_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_USER_ROLE = "API_GET_USER_ROLE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_BRANCH = "API_GET_BRANCH";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_USER = "API_GET_USER";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CITY_PROVINCE = "API_GET_CITY_PROVINCE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_AUTHORITY = "API_GET_CERTIFICATION_AUTHORITY";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_PURPOSE = "API_GET_CERTIFICATION_PURPOSE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_PROFILE = "API_GET_CERTIFICATION_PROFILE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_COMPONENT = "API_GET_CERTIFICATION_COMPONENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_COMPONENT2 = "API_GET_CERTIFICATION_COMPONENT2";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_FILE_LIST = "API_GET_CERTIFICATION_FILE_LIST";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_FORMFACTOR = "API_GET_FORMFACTOR";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_STATE = "API_GET_CERTIFICATION_STATE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_REQUEST_STATE = "API_GET_REQUEST_STATE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_REVOCATION_REASON = "API_GET_CERTIFICATION_REVOCATION_REASON";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTICATION_INFO = "API_GET_CERTICATION_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_FILE_TYPE = "API_GET_FILE_TYPE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_ATTACHMENT = "API_GET_CERTIFICATION_ATTACHMENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REPORT_CERTIFICATION_LIST_NEAC = "API_REPORT_CERTIFICATION_LIST_NEAC";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_TOKEN_ACCESS = "API_GET_TOKEN_ACCESS";
+    
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REGISTRATION_CERTIFICATION_OWNER = "API_REGISTRATION_CERTIFICATION_OWNER";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_CHANGE_CERTIFICATION_OWNER_INFO = "API_CHANGE_CERTIFICATION_OWNER_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_DISPOSE_CERTIFICATION_OWNER = "API_DISPOSE_CERTIFICATION_OWNER";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_DECLINE_CERTIFICATION_OWNER = "API_DECLINE_CERTIFICATION_OWNER";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_CERTIFICATION_OWNER = "API_APPROVAL_CERTIFICATION_OWNER";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_SET_CERTIFICATION_OWNER_ATTACHMENT = "API_SET_CERTIFICATION_OWNER_ATTACHMENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_CERTIFICATION_OWNER_ATTACHMENT = "API_APPROVAL_CERTIFICATION_OWNER_ATTACHMENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_OWNER_TYPE = "API_GET_CERTIFICATION_OWNER_TYPE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_OWNER_STATE = "API_GET_CERTIFICATION_OWNER_STATE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTICATION_OWNER_INFO = "API_GET_CERTICATION_OWNER_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_OWNER_ATTACHMENT = "API_GET_CERTIFICATION_OWNER_ATTACHMENT";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_BRIEF_INFO = "API_GET_CERTIFICATION_BRIEF_INFO";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_CERTIFICATION_EXPIRE_SOON_INFO = "API_GET_CERTIFICATION_EXPIRE_SOON_INFO";
+    
+    public static String CONFIG_LOG_FUNCTIONALITY_API_SUSPEND_CERTIFICATION = "API_SUSPEND_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_RECOVERY_CERTIFICATION = "API_RECOVERY_CERTIFICATION";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_SET_FORMFACTOR_TOKEN = "API_SET_FORMFACTOR_TOKEN";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_FORMFACTOR_TOKEN = "API_APPROVAL_FORMFACTOR_TOKEN";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_DECLINE_FORMFACTOR_TOKEN = "API_DECLINE_FORMFACTOR_TOKEN";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_FORMFACTOR_TOKEN = "API_GET_FORMFACTOR_TOKEN";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_SET_FORMFACTOR_UNBLOCK = "API_SET_FORMFACTOR_UNBLOCK";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_FORMFACTOR_UNBLOCK = "API_APPROVAL_FORMFACTOR_UNBLOCK";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_DECLINE_FORMFACTOR_UNBLOCK = "API_DECLINE_FORMFACTOR_UNBLOCK";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_FORMFACTOR_UNBLOCK = "API_GET_FORMFACTOR_UNBLOCK";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_QUEUE_STATE = "API_GET_QUEUE_STATE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_QUEUE_TYPE = "API_GET_QUEUE_TYPE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_REGISTRATION_BENEFICIARY_USER = "API_REGISTRATION_BENEFICIARY_USER";
+    
+    public static String CONFIG_LOG_FUNCTIONALITY_API_SET_FORMFACTOR_TOKEN_BUNDLE = "API_SET_FORMFACTOR_TOKEN_BUNDLE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_APPROVAL_FORMFACTOR_TOKEN_BUNDLE = "API_APPROVAL_FORMFACTOR_TOKEN_BUNDLE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_DECLINE_FORMFACTOR_TOKEN_BUNDLE = "API_DECLINE_FORMFACTOR_TOKEN_BUNDLE";
+    public static String CONFIG_LOG_FUNCTIONALITY_API_GET_FORMFACTOR_TOKEN_BUNDLE = "API_GET_FORMFACTOR_TOKEN_BUNDLE";
+    // ### END WS API
+    
+    // ### OWNER
+    public static int CONFIG_MESSAGING_QUEUE_FUNCTION_ID_REGISTRATION_OWNER = 2;
+    public static int CONFIG_MESSAGING_QUEUE_FUNCTION_ID_CHANGE_OWNER_INFO = 3;
+    public static int CONFIG_MESSAGING_QUEUE_FUNCTION_ID_SUPPLEMENT_FILE = 4;
+    public static int CONFIG_MESSAGING_QUEUE_FUNCTION_ID_DISPOSE_OWNER = 5;
+    
+    public static String CONFIG_MESSAGING_QUEUE_FUNCTION_CODE_REGISTRATION_OWNER = "REGISTRATION_OWNER";
+    public static String CONFIG_MESSAGING_QUEUE_FUNCTION_CHANGE_OWNER_INFO = "CHANGE_OWNER_INFO";
+    public static String CONFIG_MESSAGING_QUEUE_FUNCTION_CODE_SUPPLEMENT_FILE = "SUPPLEMENT_FILE";
+    public static String CONFIG_MESSAGING_QUEUE_FUNCTION_CODE_DISPOSE_OWNER = "DISPOSE_OWNER";
+    // CERTIFICATION OWNER STATE
+    public static int CONFIG_CERTIFICATION_OWNER_STATE_ID_INITIALIZED = 1;
+    public static int CONFIG_CERTIFICATION_OWNER_STATE_ID_OPERATED = 2;
+    public static int CONFIG_CERTIFICATION_OWNER_STATE_ID_DISPOSED = 3;
+    public static int CONFIG_CERTIFICATION_OWNER_STATE_ID_DECLINED = 4;
+    public static String CONFIG_CERTIFICATION_OWNER_STATE_CODE_INITIALIZED = "INITIALIZED";
+    public static String CONFIG_CERTIFICATION_OWNER_STATE_CODE_OPERATED = "OPERATED";
+    public static String CONFIG_CERTIFICATION_OWNER_STATE_CODE_DISPOSED = "DISPOSED";
+    public static String CONFIG_CERTIFICATION_OWNER_STATE_CODE_DECLINED = "DECLINED";
+    // CERTIFICATION OWNER TYPE
+    public static String CONFIG_CERTIFICATION_OWNER_TYPE_CODE_ENTERPRISE = "ENTERPRISE";
+    public static String CONFIG_CERTIFICATION_OWNER_TYPE_CODE_STAFF = "STAFF";
+    public static String CONFIG_CERTIFICATION_OWNER_TYPE_CODE_PERSONAL = "PERSONAL";
+    public static String CONFIG_CERTIFICATION_OWNER_TYPE_CODE_ENTERPRISE_GOV = "ENTERPRISE_GOV";
+    public static String CONFIG_CERTIFICATION_OWNER_TYPE_CODE_PERSONAL_GOV = "PERSONAL_GOV";
+    // CERTIFICATION OWNER TYPE
+    public static int CONFIG_CERTIFICATION_OWNER_TYPE_ID_ENTERPRISE = 2;
+    public static int CONFIG_CERTIFICATION_OWNER_TYPE_ID_STAFF = 3;
+    public static int CONFIG_CERTIFICATION_OWNER_TYPE_ID_PERSONAL = 4;
+    public static int CONFIG_CERTIFICATION_OWNER_TYPE_ID_ENTERPRISE_GOV = 5;
+    public static int CONFIG_CERTIFICATION_OWNER_TYPE_ID_PERSONAL_GOV = 6;
+    // MESSAGING QUEUE STATE
+    public static int CONFIG_MESSAGING_QUEUE_STATE_ID_INITIALIZED = 1;
+    public static int CONFIG_MESSAGING_QUEUE_STATE_ID_PENDING = 2;
+    public static int CONFIG_MESSAGING_QUEUE_STATE_ID_PRE_APPROVED = 3;
+    public static int CONFIG_MESSAGING_QUEUE_STATE_ID_APPROVED = 4;
+    public static int CONFIG_MESSAGING_QUEUE_STATE_ID_COMMITED = 5;
+    public static int CONFIG_MESSAGING_QUEUE_STATE_ID_DECLINED = 6;
+    public static String CONFIG_MESSAGING_QUEUE_STATE_CODE_INITIALIZED = "INITIALIZED";
+    public static String CONFIG_MESSAGING_QUEUE_STATE_CODE_PENDING = "PENDING";
+    public static String CONFIG_MESSAGING_QUEUE_STATE_CODE_PRE_APPROVED = "PRE_APPROVED";
+    public static String CONFIG_MESSAGING_QUEUE_STATE_CODE_APPROVED = "APPROVED";
+    public static String CONFIG_MESSAGING_QUEUE_STATE_CODE_COMMITED = "COMMITED";
+    public static String CONFIG_MESSAGING_QUEUE_STATE_CODE_DECLINED = "DECLINED";
+    // OWNER PREFIX
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_TAXCODE = "TIN:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_BUDGETCODE = "BGC:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_DECISION = "DEC:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_UNIT_CODE = "UNC:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_SOCIAL_INSURANCE_CODE = "SIC:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_CMND = "PID:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_PASSPORT = "PPID:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_CITIZEN_ID = "PEID:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_WEBSERVER = "WEBSERVER:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_WEBCLIENT = "WEBCLIENT:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_X_ROAD_AUTH = "X-ROAD-AUTH:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_X_ROAD_SIGN = "X-ROAD-SIGN:";
+    public static String CONFIG_CERTIFICATION_OWNER_PREFIX_CODE_SIGNING = "CODE_SIGNING:";
+    // CERT PREFIX
+    public static String CONFIG_CERTIFICATION_PREFIX_TAXCODE = "TIN";
+    public static String CONFIG_CERTIFICATION_PREFIX_BUDGET_CODE = "BGC";
+    public static String CONFIG_CERTIFICATION_PREFIX_DECISION = "DEC";
+    public static String CONFIG_CERTIFICATION_PREFIX_PERSONAL_CODE = "PID";
+    public static String CONFIG_CERTIFICATION_PREFIX_PASSPORT = "PPID";
+    public static String CONFIG_CERTIFICATION_PREFIX_CITIZEN_CODE = "PEID";
+    public static String CONFIG_CERTIFICATION_PREFIX_SOCIAL_INSURANCE_CODE = "SIC";
+    public static String CONFIG_CERTIFICATION_PREFIX_UNIT_CODE = "UNC";
+    // access action in agency
+    public static String CONFIG_MAJOR_TYPE_CHANGE_KEY_ACTION = "changeKeyAction";
+    public static String CONFIG_MAJOR_TYPE_BACKUP_KEY_ACTION = "backUpKeyAction";
+    public static String CONFIG_MAJOR_TYPE_KEEP_CERTSN_ACTION = "keepCertificateSNAction";
+    public static String CONFIG_MAJOR_TYPE_REVOKE_OLD_CERT_ACTION = "revokeOldCertificateAction";
+    public static String CONFIG_MAJOR_TYPE_DELETE_OLD_CERT_REVOKE_ACTION = "deleteOldCertificateWhenRevoke";
+    public static String CONFIG_MAJOR_TYPE_DELETE_OLD_CERT_ISSUE_ACTION = "deleteOldCertificateWhenIssue";
+    // FILE PROFILE
+    public static String CONFIG_FILE_PROFILE_PHOTO_ACTIVITY_DECLARATION = "PHOTO_ACTIVITY_DECLARATION";
+    public static String CONFIG_FILE_PROFILE_PHOTO_ID_CARD = "PHOTO_ID_CARD";
+    public static String CONFIG_FILE_PROFILE_SERVICE_REGISTRATION_DOCUMENT = "SERVICE_REGISTRATION_DOCUMENT";
+    public static String CONFIG_FILE_PROFILE_MINUTES_OF_HANDOVER = "MINUTES_OF_HANDOVER";
+    public static String CONFIG_FILE_PROFILE_CERTIFICATION_OWNER_FILE = "CERTIFICATION_OWNER_FILE";
+    public static String CONFIG_PROCESS_RELOADLOG_TIMESECOND = "RELOADLOG_SECONDTIME";
+    public static String CONFIG_PROCESS_MONITOR_LOGTYPE_LIST = "MONITOR_LOGTYPE_LIST";
+    public static String CONFIG_AGENCY_MENU_ID_LIST_ALLOW = "AGENCY_MENU_ID_LIST_ALLOW";
+    public static String CONFIG_WEBSITE_POLICY_TERMS_ENABLED = "WEBSITE_POLICY_TERMS_ENABLED";
+    public static String CONFIG_USER_PERMISSION_EDIT_ENABLED = "USER_PERMISSION_EDIT_ENABLED";
+    public static String CONFIG_TEMPLATE_PRINT_CA_NAME = "TEMPLATE_PRINT_CA_NAME";
+    public static String CONFIG_TEMPLATE_PRINT_LOGO_NAME = "TEMPLATE_PRINT_LOGO_NAME";
+    public static String CONFIG_TEMPLATE_PRINT_COMPANY_NAME = "TEMPLATE_PRINT_COMPANY_NAME";
+    public static String CONFIG_TEMPLATE_PRINT_LOCALTION_SERVER_PRIMARY = "TEMPLATE_PRINT_LOCALTION_SERVER_PRIMARY";
+    public static String CONFIG_TEMPLATE_PRINT_LOCALTION_SERVER_BACKUP = "TEMPLATE_PRINT_LOCALTION_SERVER_BACKUP";
+    public static String CONFIG_TEMPLATE_PRINT_ADDRESS_COMPANY = "TEMPLATE_PRINT_ADDRESS_COMPANY";
+    public static String CONFIG_TEMPLATE_PRINT_PHONE_FAX_COMPANY = "TEMPLATE_PRINT_PHONE_FAX_COMPANY";
+    public static String CONFIG_TEMPLATE_PRINT_EMAIL_COMPANY = "TEMPLATE_PRINT_EMAIL_COMPANY";
+    public static String CONFIG_TEMPLATE_PRINT_WEBSITE_COMPANY = "TEMPLATE_PRINT_WEBSITE_COMPANY";
+    public static String CONFIG_TEMPLATE_PRINT_SIGNED_SEALED_LEFT = "TEMPLATE_PRINT_SIGNED_SEALED_LEFT";
+    public static String CONFIG_TEMPLATE_PRINT_SIGNED_ROLE_RIGHT = "TEMPLATE_PRINT_SIGNED_ROLE_RIGHT";
+    public static String CONFIG_TEMPLATE_PRINT_SIGNED_COMPANY_REPRESEN_RIGHT = "TEMPLATE_PRINT_SIGNED_COMPANY_REPRESEN_RIGHT";
+    public static String CONFIG_TEMPLATE_PRINT_SIGNED_FULLNAME_RIGHT = "TEMPLATE_PRINT_SIGNED_FULLNAME_RIGHT";
+    // branch tree
+    public static String CONFIG_BRANCH_LEVEL_CA = "1";
+    public static String CONFIG_BRANCH_LEVEL_CHILREN_ONE = "2";
+    public static String CONFIG_BRANCH_LEVEL_CHILREN_TWO = "3";
+    public static String CONFIG_BRANCH_TREE_ENABLED = "BRANCH_TREE_ENABLED";
+    // rssp
+    public static String CONFIG_RSSP_CONNECT_MODE_REST = "REST";
+    public static String CONFIG_RSSP_CONNECT_MODE_SOAP = "SOAP";
+    public static String CONFIG_RSSP_CONNECT_MODE_AC = "AC";
+    public static String CONFIG_RSSP_CONNECT_MODE_DIRECT = "DIRECT";
+    public static String CONFIG_RSSP_CONNECT_MODE_INHOUSE = "INHOUSE";
+    public static String CONFIG_API_RESULT_PROCESS_PENDDING = "PENDDING";
+    public static String CONFIG_API_RESULT_PROCESS_COMPLETE = "COMPLETE";
+    // print tag insert
+    public static String CONFIG_TAG_PRINT_FLOATING_LOGO = "{FLOATING_LOGO}";
+    public static String CONFIG_TAG_PRINT_BACKGROUD_LOGO = "{BACKGROUD_LOGO}";
+    public static String CONFIG_TAG_PRINT_CA_NAME = "{CA_NAME}";
+    public static String CONFIG_TAG_PRINT_UPPERCASE_COMPANY_NAME = "{UPPERCASE_COMPANY_NAME}";
+    public static String CONFIG_TAG_PRINT_COMPANY_NAME = "{COMPANY_NAME}";
+    public static String CONFIG_TAG_PRINT_SERVER_PRIMARY = "{SERVER_PRIMARY}";
+    public static String CONFIG_TAG_PRINT_SERVER_BACKUP = "{SERVER_BACKUP}";
+    public static String CONFIG_TAG_PRINT_ADDRESS_COMPANY = "{ADDRESS_COMPANY}";
+    public static String CONFIG_TAG_PRINT_PHONE_FAX_COMPANY = "{PHONE_FAX_COMPANY}";
+    public static String CONFIG_TAG_PRINT_EMAIL_COMPANY = "{EMAIL_COMPANY}";
+    public static String CONFIG_TAG_PRINT_WEBSITE_COMPANY = "{WEBSITE_COMPANY}";
+    public static String CONFIG_TAG_PRINT_SIGNED_SEALED_LEFT = "{SIGNED_SEALED_LEFT}";
+    public static String CONFIG_TAG_PRINT_SIGNED_ROLE_RIGHT = "{SIGNED_ROLE_RIGHT}";
+    public static String CONFIG_TAG_PRINT_SIGNED_COMPANY_REPRESEN_RIGHT = "{SIGNED_COMPANY_REPRESEN_RIGHT}";
+    public static String CONFIG_TAG_PRINT_SIGNED_FULLNAME_RIGHT = "{SIGNED_FULLNAME_RIGHT}";
+    // config language for java
+    public static String CONFIG_LANGUAGE_TAG_VN="language.tag.vn";
+    public static String CONFIG_LANGUAGE_TAG_EN="language.tag.en";
+    public static String CONFIG_LANGUAGE_EXPORT_AGENT_CODE="export.agent.code";
+    public static String CONFIG_LANGUAGE_EXPORT_OLD_AGENT_CODE="export.old.agent.code";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_SN="export.token.sn";
+    public static String CONFIG_LANGUAGE_EXPORT_USER_CREATE="export.user.create";
+    public static String CONFIG_LANGUAGE_EXPORT_UID_ENTERPRISE="export.uid.enterprise";
+    public static String CONFIG_LANGUAGE_EXPORT_UID_ENTERPRISE_SPLIT="export.uid.enterprise.split";
+    public static String CONFIG_LANGUAGE_EXPORT_PERSONAL_NAME="export.personal.name";
+    public static String CONFIG_LANGUAGE_EXPORT_UID_PERSONAL="export.uid.personal";
+    public static String CONFIG_LANGUAGE_EXPORT_UID_PERSONAL_SPLIT="export.uid.personal.split";
+    public static String CONFIG_LANGUAGE_EXPORT_COMPANY_NAME="export.company.name";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_STATUS="export.cert.status";
+    public static String CONFIG_LANGUAGE_EXPORT_AGENCY_LEVEL_ONE="export.agency.level.one";
+    public static String CONFIG_LANGUAGE_EXPORT_PROVINCE_NAME="export.province.name";
+    public static String CONFIG_LANGUAGE_EXPORT_SERVICEPACK_NAME="export.servicepack.name";
+    public static String CONFIG_LANGUAGE_EXPORT_REQUEST_TYPE="export.request.type";
+    public static String CONFIG_LANGUAGE_EXPORT_OLD_REQUEST_TYPE="export.old.request.type";
+    public static String CONFIG_LANGUAGE_EXPORT_METHOD_NAME="export.method.name";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_CREATE="export.date.create";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_CONTROL="export.date.control";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_CANCEL="export.date.cancel";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_CANCEL_NUMBER="export.date.cancel.number";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_GEN="export.date.gen";
+    public static String CONFIG_LANGUAGE_EXPORT_PHONE_CONTACT="export.phone.contact";
+    public static String CONFIG_LANGUAGE_EXPORT_EMAIL_CONTACT="export.email.contact";
+    public static String CONFIG_LANGUAGE_EXPORT_PHONE_REAL="export.phone.real";
+    public static String CONFIG_LANGUAGE_EXPORT_EMAIL_REAL="export.email.real";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_EFFECTIVE="export.cert.effective";
+    public static String CONFIG_LANGUAGE_EXPORT_OLD_CERT_EFFECTIVE="export.cert.old.effective";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_EXPIRATION="export.cert.expiration";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_EXPIRATION_ONLY_MMYY="export.cert.expiration.only.mmyy";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_EXPIRATION_CONTRACT="export.cert.expiration.contract";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_TYPE="export.cert.type";
+    public static String CONFIG_LANGUAGE_EXPORT_REQUEST_STATUS="export.request.status";
+    public static String CONFIG_LANGUAGE_EXPORT_CHECKED_YES="export.checked.yes";
+    public static String CONFIG_LANGUAGE_EXPORT_CHECKED_NO="export.checked.no";
+    public static String CONFIG_LANGUAGE_EXPORT_ENOUGH_YES="export.enough.yes";
+    public static String CONFIG_LANGUAGE_EXPORT_ENOUGH_NO="export.enough.no";
+    public static String CONFIG_LANGUAGE_EXPORT_STT="export.stt";
+    public static String CONFIG_LANGUAGE_EXPORT_UID_DEVICE="export.uid.device";
+    public static String CONFIG_LANGUAGE_EXPORT_TOTAL="export.total";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_INIT="export.cert.init";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_OPERATION="export.cert.operation";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_REVOKE="export.cert.revoke";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_SN="export.cert.sn";
+    public static String CONFIG_LANGUAGE_EXPORT_ESIGNCLOUD_REMAIN_SIGNING="export.esigncloud.remaining.signing";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_CONTENT="export.cert.content";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_AMOUNT="export.cert.amount";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_NOTE="export.cert.note";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_REVOKE="export.date.revoke";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_STATUS="export.token.status";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_WAIT_LOCK="export.token.wait.lock";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_WAIT_UNLOCK="export.token.wait.unlock";
+    
+    
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_DATE_LOCK="export.token.date.lock";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_LIST="export.sheet.cert.list";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_TOKENLOCKED_LIST="export.sheet.cert.tokenlocked.list";
+    public static String CONFIG_LANGUAGE_EXPORT_CERT_TOKENLOCKWAIT_LIST="export.sheet.cert.tokenlockwait.list";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_VERSION="export.token.version";
+    public static String CONFIG_LANGUAGE_EXPORT_STATUS="export.status";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_RELEASE_AGENT="export.date.release.agent";
+    public static String CONFIG_LANGUAGE_EXPORT_MONTH_CONTROL="export.month.control";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_CHANGE_CONTROLSTATUS="export.date.change.controlstatus";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_STATUS="export.profile.status";
+    public static String CONFIG_LANGUAGE_EXPORT_OLD_PROFILE_STATUS="export.profile.old.status";
+    public static String CONFIG_LANGUAGE_EXPORT_SERVICE_FEE="export.service.fee";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_NUMBER="export.token.number";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_FEE="export.token.fee";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_APPROVAL="export.date.approval";
+    
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_FINE_AMOUNT="export.profile.fine.amount";
+    public static String CONFIG_LANGUAGE_EXPORT_CUSTOMER_DETAIL="export.customer.detail";
+    public static String CONFIG_LANGUAGE_EXPORT_NATIONAL_REGIME="export.national.regime";
+    public static String CONFIG_LANGUAGE_EXPORT_NATIONAL_BANNER="export.national.banner";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_SIGN="export.date.sign";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_PLACE_SIGN="export.date.place.sign";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_MONTH="export.date.month";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_ROSE="export.amount.rose";
+    public static String CONFIG_LANGUAGE_EXPORT_MONEY_CHARGES_CA="export.money.charges.ca";
+    public static String CONFIG_LANGUAGE_EXPORT_ROSE_RATE="export.rose.rate";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_PRICE="export.token.price";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_INVENTORY_BEGIN="export.token.inventory.begin";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_TOTAL_IMPORT_PERIOD="export.token.total.import.period";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_TOTAL_INCURRED_PERIOD="export.token.total.incurred.period";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_INVENTORY_END="export.token.inventory.end";
+    public static String CONFIG_LANGUAGE_EXPORT_MONEY_RETURN_CA="export.money.return.ca";
+    public static String CONFIG_LANGUAGE_EXPORT_TOKEN_ISSUED_PERIOD="export.token.issued.period";
+    public static String CONFIG_LANGUAGE_EXPORT_BONUS_PERIOD="export.bonus.period";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_BEFORE_VAT="export.amount.before.vat";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_AFTER_VAT="export.amount.after.vat";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_PROFILE_KEEP_MISSING="export.amount.profile.keep.missing";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_NOT_CHARGE_BEFORE="export.amount.not.charge.before";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_TOTAL_RETURN="export.amount.total.return";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_ADVANCE_PERIOD="export.amount.advance.period";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_DEPOSIT_DEDUCT_PERIOD="export.amount.deposit.deduct.period";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_FINE_RETURN_PERIOD="export.amount.fine.return.period";
+    public static String CONFIG_LANGUAGE_EXPORT_TOTAL_DISCOUNTING="export.total.discounting";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_PAYABLE_END="export.amount.payable.end";
+    public static String CONFIG_LANGUAGE_EXPORT_CUSTOMER_CANCEL="export.customer.cancel";
+    public static String CONFIG_LANGUAGE_EXPORT_CUSTOMER_ALL="export.customer.all";
+    public static String CONFIG_LANGUAGE_EXPORT_CUSTOMER_REVOKE="export.customer.revokeauto";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_FORM_SEIZE="export.profile.form.seize";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_TYPE="export.profile.type";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_LEGAL_STATUS="export.profile.legal.status";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_PROFILE_RECEIVE="export.date.profile.receive";
+    public static String CONFIG_LANGUAGE_EXPORT_CONTACT_NAME="export.contact.name";
+    public static String CONFIG_LANGUAGE_EXPORT_REPRESENTATIVE_PHONE="export.representative.phone";
+    public static String CONFIG_LANGUAGE_EXPORT_REPRESENTATIVE_EMAIL="export.representative.email";
+    public static String CONFIG_LANGUAGE_EXPORT_REPRESENTATIVE_NAME="export.representative.name";
+    public static String CONFIG_LANGUAGE_EXPORT_REPRESENTATIVE_POSITION="export.representative.position";
+    public static String CONFIG_LANGUAGE_EXPORT_REGISTER_USE="export.register.use";
+    public static String CONFIG_LANGUAGE_EXPORT_ADDRESS="export.adddress";
+    public static String CONFIG_LANGUAGE_EXPORT_NOTE_PROFILE="export.note.profile";
+    public static String CONFIG_LANGUAGE_EXPORT_REASON_REVOKE="export.reason.revoke";
+    public static String CONFIG_LANGUAGE_EXPORT_CERTIFICATION="export.certification";
+    public static String CONFIG_LANGUAGE_EXPORT_REGISTER_BUSSINESS="export.register.bussiness";
+    public static String CONFIG_LANGUAGE_EXPORT_IDENTITY_CARD="export.identity.card";
+    public static String CONFIG_LANGUAGE_EXPORT_BUSINESS_STATUS_CARD="export.business.status.profile";
+    public static String CONFIG_LANGUAGE_EXPORT_IDENTITY_STATUS_CARD="export.identity.status.profile";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_LACK="export.profile.lack";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_ENOUGH="export.profile.enough";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_OF_MONTH="export.profile.of.month";
+    public static String CONFIG_LANGUAGE_EXPORT_DATE_OUT_PROFILE="export.date.out.profile";
+    public static String CONFIG_LANGUAGE_EXPORT_HARD_VERSION="export.hard.version";
+    public static String CONFIG_LANGUAGE_EXPORT_SOFT_VERSION="export.soft.version";
+    public static String CONFIG_LANGUAGE_EXPORT_SERVICE_CHECKIN_MONTH="export.service.checkin.month";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_CONTROL_STATUS="export.profile.control.status";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_CONTROL_MONTH="export.profile.control.month";
+    public static String CONFIG_LANGUAGE_EXPORT_SYNTHETIC="export.synthetic";
+    public static String CONFIG_LANGUAGE_EXPORT_MONTH_CONTROL_DEVELOPMENT="export.month.control.development";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_CONTROL="export.profile.control";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_COMPENSATION="export.profile.compensation";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_CHECKED="export.profile.checked";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_NOT_CONTROL="export.profile.not.control";
+    public static String CONFIG_LANGUAGE_EXPORT_PROFILE_MONTH_LACK="export.profile.month.lack";
+    public static String CONFIG_LANGUAGE_EXPORT_AMOUNT_VAT="export.amount.vat";
+    public static String CONFIG_LANGUAGE_EXPORT_COLUMN_TOKEN_SN="export.column.token.sn";
+    public static String CONFIG_LANGUAGE_EXPORT_COLUMN_TOKEN_SOPIN="export.column.token.sopin";
+    public static String CONFIG_LANGUAGE_EXPORT_DOMAIN_NAME="export.domain.name";
+    public static String CONFIG_LANGUAGE_COMBOBOX_OPTION_ALL="combobox.option.all";
+    // auto synch neac
+    public static String CONFIG_SYNCH_NEAC_SOURCE_EFY="EFY";
+    public static String CONFIG_SYNCH_NEAC_SOURCE_NEAC="NEAC";
+    public static String CONFIG_SYNCH_NEAC_WS_SOURCE="SYNCH_NEAC_WS_SOURCE";
+    public static String CONFIG_SYNCH_NEAC_WS_URL="SYNCH_NEAC_WS_URL";
+    public static String CONFIG_SYNCH_NEAC_WS_USERID="SYNCH_NEAC_WS_USERID";
+    public static String CONFIG_SYNCH_NEAC_WS_USERKEY="SYNCH_NEAC_WS_USERKEY";
+    public static String CONFIG_SYNCH_NEAC_AUTO_ENABLED="SYNCH_NEAC_AUTO_ENABLED";
+    public static String CONFIG_SYNCH_NEAC_TYPE_OF_DATE="SYNCH_NEAC_TYPE_OF_DATE";
+    public static String CONFIG_SYNCH_NEAC_HOUR_OF_DATE="SYNCH_NEAC_HOUR_OF_DATE";
+    public static String CONFIG_SYNCH_NEAC_MINUTE_OF_DATE="SYNCH_NEAC_MINUTE_OF_DATE";
+    public static String CONFIG_SYNCH_NEAC_SECOND_OF_DATE="SYNCH_NEAC_SECOND_OF_DATE";
+    public static String CONFIG_SYNCH_NEAC_HARDTOKEN_TYPE_HARD_ENABLED="SYNCH_NEAC_HARDTOKEN_TYPE_HARD_ENABLED";
+    public static int CONFIG_SYNCH_NEAC_STATE_INITIALIZE=1;
+    public static int CONFIG_SYNCH_NEAC_STATE_PROCESSING=2;
+    public static int CONFIG_SYNCH_NEAC_STATE_SUCCESS=3;
+    public static int CONFIG_SYNCH_NEAC_STATE_ERROR_ASYNCHRONOUS=4;
+    public static int CONFIG_SYNCH_NEAC_STATE_ERROR_RESYNCHRONIZE=5;
+    public static int CONFIG_SYNCH_NEAC_STATE_CANCEL = 6;
+    public static int CONFIG_SYNCH_NEAC_STATE_PROCESSING_MANUALLY=7;
+    public static int CONFIG_SYNCH_NEAC_STATE_SPECIAL_CASE=8;
+    
+    // ICA
+    public static String CONFIG_REGISTER_REPRESENT_FORM_ENABLED = "REGISTER_REPRESENT_FORM_ENABLED";
+    public static String CONFIG_APPROVE_GRIDVIEW_ENABLED = "APPROVE_GRIDVIEW_ENABLED";
+    public static String CONFIG_REGISTER_INIT_GRIDVIEW_ENABLED = "REGISTER_INIT_GRIDVIEW_ENABLED";
+    public static String CONFIG_IS_UID_COLLECTION_DISPLAY_ENABLED = "UID_COLLECTION_DISPLAY_ENABLED";
+    public static String CONFIG_IS_WHICH_ABOUT_CA = "IS_WHICH_ABOUT_CA";
+    public static String CONFIG_SIGN_CERT_PROFILE_ENABLED = "SIGN_CERT_PROFILE_ENABLED";
+    public static String CONFIG_NEW_FILE_UPLOAD_HIGHLIGHTS_LABEL = "NEW_FILE_UPLOAD_HIGHLIGHTS_LABEL";
+    public static String CONFIG_KEY_PREFIX_ENTERPRISE_JSON = "PREFIX_ENTERPRISE_JSON";
+    public static String CONFIG_KEY_PREFIX_PERSONAL_JSON = "PREFIX_PERSONAL_JSON";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_HILO = "20";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_ICA = "18";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_CMC = "8";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_NC = "7";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_EFY = "1";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_NEWTEL = "6";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_WINCA = "14";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_FPT = "10";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_MID = "3";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_MATBAO = "22";
+    public static String CONFIG_IS_WHICH_ABOUT_CA_VGCA = "9";
+    public static String CONFIG_FORBIDEN_REVOKE_CONTINUOU_DOUBLE_ENABLED = "FORBIDEN_REVOKE_CONTINUOU_DOUBLE_ENABLED";
+    public static int CONFIG_AGENCY_MENU_ID_LIST_ALLOW_GENERALCONFIG = 2;
+    public static String CONFIG_SCAN_REVOKE_AUTO_ENABLED="SCAN_REVOKE_AUTO_ENABLED";
+    public static String CONFIG_SCAN_REVOKE_TYPE_OF_DATE="SCAN_REVOKE_TYPE_OF_DATE";
+    public static String CONFIG_SCAN_REVOKE_HOUR_OF_DATE="SCAN_REVOKE_HOUR_OF_DATE";
+    public static String CONFIG_SCAN_REVOKE_MINUTE_OF_DATE="SCAN_REVOKE_MINUTE_OF_DATE";
+    public static String CONFIG_SCAN_REVOKE_SECOND_OF_DATE="SCAN_REVOKE_SECOND_OF_DATE";
+    
+    public static String loadConfigLanguage() {
+        Config conf = new Config();
+        return conf.GetPropertybyCode("LANGUAGE_TEMPLATE_UID_PREFIX");
+    }
+    public static String loadPrefixCMND() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "PID";
+        } else {
+            return "CMND";
+        }
+    }
+    public static String loadPrefixPassport() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "PPID";
+        } else {
+            return "HC";
+        }
+    }
+    public static String loadPrefixCCCD() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "PEID";
+        } else {
+            return "CCCD";
+        }
+    }
+    public static String loadPrefixMST() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "TIN";
+        } else {
+            return "MST";
+        }
+    }
+    public static String loadPrefixMNS() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "BGC";
+        } else {
+            return "MNS";
+        }
+    }
+    public static String loadPrefixQD() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "DEC";
+        }
+//        else if("2".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+//            return "MDV";
+//        }
+        else {
+            return "QĐ";
+        }
+    }
+    public static String loadPrefixBHXH() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "SIC";
+        } else {
+            return "BHXH";
+        }
+    }
+    public static String loadPrefixMDV() {
+        if("0".equals(CONFIG_LANGUAGE_TEMPLATE_UID_PREFIX)) {
+            return "UNC";
+        } else {
+            return "MDV";
+        }
+    }
+    public static String CONFIG_VALUE_HSM_CONFIRM_DECLINE_ENABLED="HSM_CONFIRM_DECLINE_ENABLED";
+    public static String CONFIG_VALUE_HSM_CONFIRM_DECLINE_REASON="HSM_CONFIRM_DECLINE_REASON";
+    public static String CONFIG_VALUE_HSM_CONFIRM_DECLINE_TIME="HSM_CONFIRM_DECLINE_TIME";
+}
